@@ -1,0 +1,137 @@
+/* Contact */
+.contact-section {
+  padding: 3rem 4rem;
+  background-color: #fff;
+  color: #111;
+  border-top: 1px solid #ccc;
+}
+
+.contact-header h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ccc;
+  line-height: 1.2;
+  letter-spacing: 2px;  /* space between letters */
+  text-transform: uppercase;
+}
+
+.contact-header h1 span {
+  display: block;       /* forces each word onto its own line */
+  margin-bottom: 1rem;  /* space between words */
+}
+
+
+.back-button {
+  display: flex;
+  justify-content: flex-end; /* align right */
+  margin-top: 2rem;
+}
+
+.back-button img {
+  width: 60px;
+  height: 70px;
+  cursor: pointer;
+
+  /* Gentle transition */
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.back-button img:hover {
+  transform: scale(1.1) translateY(-2px);
+  filter: drop-shadow(0 0 8px #67FF5C);
+  opacity: 0.9;
+}
+
+
+
+.contact-header .underline {
+  display: inline-block;
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-footer .left {
+  flex: 1;
+  min-width: 250px;
+  text-align: left; /* force left */
+}
+
+.contact-footer .right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-width: 200px;
+  justify-content: flex-end;
+}
+
+.contact-footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.crafted {
+  color: #777;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  text-align: left; /* align crafted text left */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start; /* icons align left */
+  gap: 0.8rem;
+}
+
+.social-icons img {
+  height: 40px;
+  width: 40px;
+  filter: drop-shadow(1px 1px 2px rgba(211, 211, 211, 0.1));
+  transition: transform 0.2s, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #67FF5C);
+}
+
+.social-icons img:hover {
+  transform: translateY(-2px);
+}
+
+/* 📱 Mobile view */
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 3rem;
+    text-align: left;
+    letter-spacing: 3px;  /* smaller spacing for mobile */
+    word-spacing: 0px;
+  }
+
+
+
+  .contact-footer {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .contact-footer .right {
+    justify-content: flex-start;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 4rem;
+}

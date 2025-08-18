@@ -1,0 +1,125 @@
+/* Wrapper for centering */
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Navbar base styles */
+.navbar {
+  width: 100%;
+  max-width: 1300px;
+  padding: 12px 20px;
+  background: #2D2D2D;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  box-sizing: border-box;
+}
+
+/* Logo section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 32px;
+  width: auto;
+}
+
+/* Navigation links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  
+  text-decoration: none;
+  color: #111; /* default text color */
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar-links li a:hover {
+  color: #61cd59;
+}
+
+.navbar-links li a.active {
+  color: #67FF5C;
+  font-weight: 600;
+}
+
+
+/* Router links default style */
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-links a:hover {
+  color: #67FF5C;
+}
+
+/* Prevent visited links from turning purple */
+.navbar-links a:visited {
+  color: white;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 50px;
+    right: 16px;
+    background-color: #2D2D2D;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

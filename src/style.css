@@ -1,0 +1,75 @@
+/* Base Layout */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #111;
+}
+
+.section-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+
+/* About Page */
+.about-page {
+  padding: 3rem 2rem;
+}
+
+.about-header {
+  background-color: #fef4d6;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-header img {
+  max-width: 150px;
+}
+
+.bio p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.about-body {
+  padding: 2rem;
+}
+
+.highlight-box {
+  background-color: #00796b;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-body {
+    padding: 1rem;
+  }
+
+ 
+  .contact {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .contact h4 {
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+  }
+

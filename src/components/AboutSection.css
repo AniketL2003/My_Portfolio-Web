@@ -1,0 +1,185 @@
+/* ===== Global Font Setup ===== */
+body {
+  font-family: 'Epilogue', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+/* ===== Wrapper for About Section ===== */
+.about-wrapper {
+  max-width: auto;
+  margin: 0;
+  padding: 0rem 0rem;
+}
+
+/* ===== Bio Section Styling ===== */
+.about-bio-section {
+  background-color: #fff3d6;
+  border-radius: 6px;
+  padding: 5rem 10rem;
+}
+
+.bio-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 5.5rem;
+}
+
+.bio-info {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 1rem;
+  line-height: 50px;
+}
+
+.span1,
+.span2 {
+  font-size: 54px;
+  line-height: 0;
+}
+
+/* ===== Image Section ===== */
+.bio-image {
+  width: 200px;
+  height: 220px;
+  flex-shrink: 0;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+.bio-name {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 0.95rem;
+  color: #5e5e5e;
+  font-weight: 400;
+  margin-top: 0.2rem;
+  padding-bottom: 3rem;
+}
+
+/* ===== Bio Text (Right Side) ===== */
+.bio-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.bio-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.bio-text p {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #333;
+}
+
+/* ===== Story Section ===== */
+.about-story {
+  margin-top: 3rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* ===== Tags Section ===== */
+.about-tags {
+  margin: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tag {
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  color: #000000;
+  font-weight: 500;
+  font-size: 1.5rem;
+  width: fit-content;
+}
+
+/* Specific Colors */
+.green {
+  background-color: #d0f7ef;
+}
+
+.blue {
+  background-color: #b1e3ea;
+}
+
+.darkgreen {
+  background-color: #d1fee4;
+}
+
+/* ===== Availability Section ===== */
+.about-availability {
+  margin: 1.5rem 4rem 3rem 4rem;
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: #333;
+  max-width: auto;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .about-bio-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .bio-content {
+    flex-direction: column;
+    align-items: flex-start; /* keep everything left */
+    text-align: left; /* text aligned left */
+  }
+
+  .bio-info {
+    font-size: 18px;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  .span1,
+  .span2 {
+    font-size: 34px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .bio-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left; /* changed from center */
+  }
+
+  .about-story {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 4rem 1rem;
+    text-align: left; /* changed from center */
+  }
+
+  .about-availability {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left; /* changed from center */
+    margin: 1.5rem 1rem 3rem 1rem;
+  }
+
+  .tag {
+    margin: 0; /* removed auto centering */
+    font-size: 1.1rem;
+    text-align: left;
+  }
+}
