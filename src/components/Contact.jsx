@@ -23,10 +23,10 @@ const Contact = () => (
     <p className="email"
     onClick={() => {
                 window.open(
-                  "mailto:aniket@anisux.com"
+                  "mailto:aniketlamkhade934@gmail.com"
                 );
               }}
-    >aniket@anisux.com</p>
+    >aniketlamkhade934@gmail.com</p>
     <p className="crafted">
       Crafted with passion by Aniket Lamkhade | UI/UX Designer | © 2025
     </p>
