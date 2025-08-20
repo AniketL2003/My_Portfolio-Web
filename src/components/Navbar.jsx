@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // <-- Added useState import
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import AXLogo from "../assets/AXLogo.svg";
+import ALGO from "../assets/ALGO.svg";
 
 const Navbar = () => {
   // --- UNCOMMENTED THIS SECTION ---
@@ -18,7 +18,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="navbar-logo">
           <NavLink to="/" onClick={closeMenu}>
-            <img src={AXLogo} alt="AX Logo" />
+            <img src={ALGO} alt="AX Logo" />
           </NavLink>
         </div>
 

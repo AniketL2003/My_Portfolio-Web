@@ -6,7 +6,7 @@ import Crm from '../assets/Crm.png';
 import Estate from '../assets/Estate.png';
 import imageHr from '../assets/imageHr.png';
 import './Projects.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Projects = () => (
   <section className="projects">
@@ -30,7 +30,7 @@ const Projects = () => (
 
 <div
   className="project-card"
-  onClick={() => window.location.href = `/api/redirect?project=hr360`}
+  onClick={() => window.location.href = `https://www.behance.net/gallery/216047277/InGate-Visitor-Management-System`}
   style={{ background: '#E4DBEA', cursor: 'pointer' }}
 >
   <h4>InGate</h4>
@@ -45,7 +45,7 @@ const Projects = () => (
 
 <div
   className="project-card"
-  onClick={() => window.location.href = `/api/redirect?project=hr360`}
+  onClick={() => window.location.href = `https://www.behance.net/gallery/218461021/CRM-Customer-Relationship-Management`}
   style={{ background: '#E7EDFF', cursor: 'pointer' }}
 >
   <h4>CRM</h4>
@@ -59,7 +59,7 @@ const Projects = () => (
 
 <div
   className="project-card"
-  onClick={() => window.location.href = `/api/redirect?project=hr360`}
+  onClick={() => window.location.href = `https://www.behance.net/gallery/217938145/Real-Estate-Investment-System`}
   style={{ background: '#D9F5F0', cursor: 'pointer' }}
 >
   <h4>Real Estate Investment</h4>
@@ -73,7 +73,7 @@ const Projects = () => (
 
 <div
   className="project-card"
-  onClick={() => window.location.href = `/api/redirect?project=hr360`}
+  onClick={() => window.location.href = `https://www.behance.net/gallery/200075317/RetroRing-Community-App-Case-Study`}
   style={{ background: '#FEE9E3', cursor: 'pointer' }}
 >
   <h4>RetroRing</h4>
@@ -87,7 +87,7 @@ const Projects = () => (
 
 <div
   className="project-card"
-  onClick={() => window.location.href = `/api/redirect?project=hr360`}
+  onClick={() => window.location.href = `https://www.behance.net/gallery/221184171/ResolveIT-Complaint-Management-System`}
   style={{ background: '#FAF6C8', cursor: 'pointer' }}
 >
   <h4>ResolveIT</h4>

@@ -3,24 +3,38 @@ import React from 'react';
 import './AboutSection.css';
 import avatar from '../assets/avatar.png';
 import Contact from './Contact';
+import MyResume from "../assets/Aniket_Lamkhade_UI_UX_Designer_B.pdf";
 
 const AboutSection = () => {
   return (
     <>
-
       <div className="about-wrapper">
         {/* Yellow Bio Section */}
         <section className="about-bio-section">
           <div className="bio-content">
-            <div >
+            <div>
               <img src={avatar} alt="Aniket Lamkhade" className="bio-image" />
               <div className="bio-text">
                 <h3>Aniket Lamkhade</h3>
                 <p className="role">UX/UI & Product Design</p>
               </div>
+
+              {/* Resume Button */}
+              <button
+                className="resume-btn"
+                onClick={() => window.open(MyResume, '_blank')}
+              >
+                Résumé
+              </button>
+
             </div>
+
             <div>
-              <p className='bio-info'><span className='span1'>“</span> Fueled by curiosity and a love for tiny details. Designing feels like breathing – I’ve been doing it long before I knew what UX meant. People often ask where my ideas come from: usually from the odd shapes in coffee stains or the way sunlight hits a cracked wall. And occasionally... from the doodles I find hiding in my notebooks during midnight snacks.  <span className='span2'>„</span></p>
+              <p className='bio-info'>
+                <span className='span1'>“</span> Fueled by curiosity and a love for tiny details. Designing feels like breathing – I’ve been doing it long before I knew what UX meant. People often ask where my ideas come from: usually from the odd shapes in coffee stains or the way sunlight hits a cracked wall. And occasionally... from the doodles I find hiding in my notebooks during midnight snacks.
+                <span className='span2'>„</span>
+              </p>
+
             </div>
           </div>
         </section>
@@ -48,11 +62,9 @@ const AboutSection = () => {
           </p>
         </section>
         <Contact />
-      
       </div>
     </>
   );
-
 };
 
 export default AboutSection;

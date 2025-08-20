@@ -16,7 +16,7 @@ body {
 
 /* ===== Bio Section Styling ===== */
 .about-bio-section {
-  background-color: #fff3d6;
+  background-color: #F9E6F0;
   border-radius: 6px;
   padding: 5rem 10rem;
 }
@@ -61,7 +61,7 @@ body {
   color: #5e5e5e;
   font-weight: 400;
   margin-top: 0.2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 /* ===== Bio Text (Right Side) ===== */
@@ -131,6 +131,25 @@ body {
   color: #333;
   max-width: auto;
 }
+
+
+.resume-btn {
+  margin-top: 12px;
+  padding: 10px 40px;
+  background: none;
+  color: #009379;
+  border: 2px solid  #009379;
+  border-radius: 0px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #009379;
+  color: #fff;
+}
+
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {

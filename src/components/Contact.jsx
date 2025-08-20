@@ -19,12 +19,18 @@ const Contact = () => (
 
 
     <div className="contact-footer">
-      <div className="left">
-        <p>aniket@anisux.com</p>
-        <p className="crafted">
-          Crafted with passion by Aniket Lamkhade | UI/UX Designer | © 2025
-        </p>
-      </div>
+  <div className="left">
+    <p className="email"
+    onClick={() => {
+                window.open(
+                  "mailto:aniket@anisux.com"
+                );
+              }}
+    >aniket@anisux.com</p>
+    <p className="crafted">
+      Crafted with passion by Aniket Lamkhade | UI/UX Designer | © 2025
+    </p>
+  </div>
  
 
 

@@ -6,6 +6,43 @@
   border-top: 1px solid #ccc;
 }
 
+.contact-footer .email {
+  display: inline-block; /* shrink-wrap text */
+  position: relative;
+  color: #000;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.contact-footer .email::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #33b19a, #009379); /* gentle gradient */
+  border-radius: 6px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.contact-footer .email:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-footer .email:hover {
+  color: #fff; /* better contrast */
+}
+
+
+
+
 .contact-header h1 {
   font-size: 6rem;
   font-weight: 700;
@@ -38,7 +75,7 @@
 
 .back-button img:hover {
   transform: scale(1.1) translateY(-2px);
-  filter: drop-shadow(0 0 8px #67FF5C);
+  filter: drop-shadow(0 0 8px #009379);
   opacity: 0.9;
 }
 
@@ -98,7 +135,7 @@
 
 .social-icons img:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 8px #67FF5C);
+  filter: drop-shadow(0 0 8px #009379);
 }
 
 .social-icons img:hover {
