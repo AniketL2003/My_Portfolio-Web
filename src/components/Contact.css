@@ -54,7 +54,8 @@
 
 .contact-header h1 span {
   display: block;       /* forces each word onto its own line */
-  margin-bottom: 1rem;  /* space between words */
+  margin-bottom: 0.5rem;  /* space between words */
+  margin-top: 2rem; /* space above the first word */
 }
 
 

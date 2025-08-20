@@ -1,34 +1,54 @@
 /* Wrapper for centering */
 .navbar-wrapper {
   width: 100%;
+  position: fixed; /* Keeps navbar on top */
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
-  padding: 0 1rem;
+  padding: 0rem 1rem;
   box-sizing: border-box;
+  z-index: 1000;
+  pointer-events: none; /* Makes wrapper transparent to clicks */
+  
 }
+
 
 /* Navbar base styles */
 .navbar {
   width: 100%;
   max-width: 1300px;
   padding: 20px 20px;
-  background: #2D2D2D;
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(45, 45, 45, 45);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(37, 47, 43, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 30px auto;
+  transition: all 0.6s ease-in-out;
   box-sizing: border-box;
+  pointer-events: auto;
+}
+
+/* Floating Hover Effect */
+.navbar:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Add body padding so content isn’t hidden */
+body {
+  padding-top: 100px; /* Adjust if navbar height changes */
 }
 
 /* Logo section */
 .navbar-logo img {
   height: 32px;
   width: auto;
-  display: block; /* Fixes small gap below image */
+  display: block;
 }
 
 /* Navigation links */
@@ -45,11 +65,12 @@
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navbar-links a:hover {
   color: #009379;
+  transform: translateY(-2px);
 }
 
 .navbar-links a.active {
@@ -57,28 +78,23 @@
   font-weight: 600; 
 }
 
-/* --- NEW HAMBURGER STYLES --- */
-
-/* Hamburger Label Container */
+/* Hamburger */
 .hamburger {
-  display: none; /* Hidden on desktop */
+  display: none;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent; /* For mobile */
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Hide the actual checkbox */
 .hamburger input {
   display: none;
 }
 
-/* Style the SVG lines */
 .hamburger .line {
   fill: #fff;
   transition: transform 0.4s ease-out, opacity 0.2s ease-out;
   transform-origin: center;
 }
 
-/* Animate to 'X' when checkbox is checked */
 .hamburger input:checked + svg .top {
   transform: translateY(20px) rotate(45deg);
 }
@@ -92,30 +108,26 @@
   transform: translateY(-20px) rotate(-45deg);
 }
 
-
-/* --- RESPONSIVE STYLES --- */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 16px;
   }
-  
-  /* Show the hamburger on mobile */
+
   .hamburger {
     display: block;
-    z-index: 1001; /* Ensure it's above other content */
+    z-index: 1001;
   }
 
-  /* Hide the links by default on mobile */
   .navbar-links {
     position: absolute;
-    top: 80px; /* Adjust as needed */
+    top: 80px;
     right: 1rem;
-    background-color: #2D2D2D;
+    background: rgba(45, 45, 45, 0.92);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 1rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    
-    /* Hide by transforming */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     flex-direction: column;
     align-items: flex-start;
     transform: scaleY(0);
@@ -124,10 +136,21 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  /* Show the menu when the .open class is added by React */
   .navbar-links.open {
     display: flex;
     opacity: 1;
     transform: scaleY(1);
+  }
+
+  .navbar-links a {
+    padding: 8px 0;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+
+  .navbar-links a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding-left: 8px;
   }
 }

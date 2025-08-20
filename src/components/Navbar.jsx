@@ -1,19 +1,29 @@
-import React, { useState } from "react"; // <-- Added useState import
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import ALGO from "../assets/ALGO.svg";
 
 const Navbar = () => {
-  // --- UNCOMMENTED THIS SECTION ---
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  // ---------------------------------
+  const [scrolled, setScrolled] = useState(false);
 
-  // Function to close the menu, useful for NavLinks
+  const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="navbar-wrapper">
+    <div className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
       <nav className="navbar">
         {/* Logo */}
         <div className="navbar-logo">
@@ -22,38 +32,26 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Links - Class is now controlled by state */}
+        {/* Links */}
         <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={closeMenu}
-            >
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={closeMenu}
-            >
+            <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
               About
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={closeMenu}
-            >
+            <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
               Contact
             </NavLink>
           </li>
         </ul>
 
-        {/* Hamburger Menu controlled by state */}
+        {/* Hamburger */}
         <label className="hamburger">
           <input type="checkbox" checked={menuOpen} onChange={toggleMenu} />
           <svg viewBox="0 0 100 80" width="40" height="40">
