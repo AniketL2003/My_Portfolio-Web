@@ -6,8 +6,58 @@
   border-top: 1px solid #ccc;
 }
 
+/* === HEADER SVG STYLES === */
+.contact-header {
+  display: flex;
+  justify-content: flex-start; /* Align left */
+  align-items: flex-start;
+  margin-bottom: 2rem;
+   /* Small breathing space from edge */
+}
+
+.lets-work-svg {
+  width: 100%;
+  max-width: 1300px; /* Limit on large screens */
+  height: auto;
+  display: block;
+  margin-top: 6rem;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1024px) {
+  .lets-work-svg {
+    max-width: 900px;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-header {
+    justify-content: flex-start; /* Center on tablets & smaller */
+    padding-left: 0;
+  }
+  .lets-work-svg {
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lets-work-svg {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+
+/* Remove old h1 styles since SVG replaces it */
+.contact-header h1 {
+  display: none;
+}
+
+/* === EMAIL BUTTON === */
 .contact-footer .email {
-  display: inline-block; /* shrink-wrap text */
+  display: inline-block;
   position: relative;
   color: #000;
   cursor: pointer;
@@ -24,7 +74,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #33b19a, #009379); /* gentle gradient */
+  background: linear-gradient(135deg, #33b19a, #009379);
   border-radius: 6px;
   transform: scaleX(0);
   transform-origin: left;
@@ -37,31 +87,13 @@
 }
 
 .contact-footer .email:hover {
-  color: #fff; /* better contrast */
+  color: #fff;
 }
 
-
-
-
-.contact-header h1 {
-  font-size: 6rem;
-  font-weight: 700;
-  color: #ccc;
-  line-height: 1.2;
-  letter-spacing: 2px;  /* space between letters */
-  text-transform: uppercase;
-}
-
-.contact-header h1 span {
-  display: block;       /* forces each word onto its own line */
-  margin-bottom: 0.5rem;  /* space between words */
-  margin-top: 2rem; /* space above the first word */
-}
-
-
+/* === FOOTER CONTENT === */
 .back-button {
   display: flex;
-  justify-content: flex-end; /* align right */
+  justify-content: flex-end;
   margin-top: 2rem;
 }
 
@@ -69,8 +101,6 @@
   width: 60px;
   height: 70px;
   cursor: pointer;
-
-  /* Gentle transition */
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
@@ -78,12 +108,6 @@
   transform: scale(1.1) translateY(-2px);
   filter: drop-shadow(0 0 8px #009379);
   opacity: 0.9;
-}
-
-
-
-.contact-header .underline {
-  display: inline-block;
 }
 
 .contact-footer {
@@ -97,14 +121,13 @@
 .contact-footer .left {
   flex: 1;
   min-width: 250px;
-  text-align: left; /* force left */
+  text-align: left;
 }
 
 .contact-footer .right {
   display: flex;
   align-items: center;
   gap: 2rem;
-
   justify-content: flex-end;
 }
 
@@ -117,12 +140,12 @@
   color: #777;
   font-size: 0.95rem;
   margin-top: 1rem;
-  text-align: left; /* align crafted text left */
+  text-align: left;
 }
 
 .social-icons {
   display: flex;
-  justify-content: flex-start; /* icons align left */
+  justify-content: flex-start;
   gap: 0.8rem;
 }
 
@@ -135,24 +158,16 @@
 }
 
 .social-icons img:hover {
-  transform: scale(1.1);
+  transform: translateY(-2px) scale(1.1);
   filter: drop-shadow(0 0 8px #009379);
-}
-
-.social-icons img:hover {
-  transform: translateY(-2px);
 }
 
 /* 📱 Mobile view */
 @media (max-width: 768px) {
-  .contact-header h1 {
-    font-size: 3rem;
-    text-align: left;
-    letter-spacing: 3px;  /* smaller spacing for mobile */
-    word-spacing: 0px;
+  .lets-work-svg {
+    width: 100%;
+    max-width: 350px; /* smaller SVG size on mobile */
   }
-
-
 
   .contact-footer {
     flex-direction: column;
