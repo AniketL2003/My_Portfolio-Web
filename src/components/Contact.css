@@ -18,7 +18,7 @@
 .lets-work-svg {
   width: 90%;
   max-width: 1300px; /* Limit on large screens */
-  height: auto;
+  height: 90%;
   display: block;
   margin-top: 6rem;
 }
