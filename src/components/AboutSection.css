@@ -95,7 +95,7 @@ body {
 
 /* ===== Tags Section ===== */
 .about-tags {
-  margin: 3rem 1.5rem;
+  margin: 3rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
