@@ -12,8 +12,8 @@ const AutoScrollDivider = () => {
           gradient={false}
         >
           <span className="marquee-text">
-            ✦ UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Flow ✦ UI Kit ✦ 
-            ✦ UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Flow ✦ UI Kit ✦ 
+            ✦ UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Flow ✦ UI Kit  
+            ✦ UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Flow ✦ UI Kit  
           </span>
         </Marquee>
       </div>
