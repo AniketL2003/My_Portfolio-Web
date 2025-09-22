@@ -3,7 +3,7 @@ import React from 'react';
 import './AboutSection.css';
 import avatar from '../assets/avatar.png';
 import Contact from './Contact';
-import MyResume from "../assets/Aniket_Lamkhade_UI_UX_Designer_B.pdf";
+import MyResume from "../assets/Aniket_Lamkhade_UI_UX_Designer.pdf";
 
 const AboutSection = () => {
   return (
