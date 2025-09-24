@@ -1,0 +1,211 @@
+/* --- Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap');
+
+/* --- CSS Variables --- */
+:root {
+  --bg-color: #ffffff;
+  --card-bg: #f8f9fa;
+  --primary-text: #1d2b3a; /* A strong, dark blue-gray */
+  --secondary-text: #6b7789; /* Muted, professional gray */
+  --border-color: #e5e7eb;
+  --section-spacing: 4.5rem; /* Consistent vertical space */
+}
+
+/* --- Global Styles & Resets --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  line-height: 1.7;
+}
+
+/* --- Main Layout Wrapper --- */
+.case-study {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 11rem 1.5rem;
+}
+
+/* --- Hero Section --- */
+.Hero-section {
+  margin-bottom: var(--section-spacing);
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 100%; /* Ensures image doesn't overflow */
+  height: auto;    /* Maintains aspect ratio */
+  display: block;  /* Removes extra space below image */
+}
+
+/* --- Section Layout --- */
+.section {
+  margin-bottom: var(--section-spacing);
+}
+
+.section--split {
+  display: flex;
+  flex-direction: column;
+  /*grid-template-columns: 240px 1fr; /* Fixed heading width, flexible content */
+  gap: 3rem;                       /* Space between heading and content */
+  align-items: start;              /* Aligns items to the top of their row */
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Container for any content in the right column */
+.split-content {
+  color: var(--secondary-text);
+  font-size: 1rem;
+}
+
+.split-content p {
+  margin-bottom: 1.5rem; /* Consistent spacing for paragraphs */
+}
+
+/* --- Cards & Grids --- */
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  display: flex; /* Make card a flex container */
+  flex-direction: column; /* Stack contents vertically */
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 0.5rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1; /* Allows ul to take up remaining space if card stretches */
+}
+
+.card li {
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+  margin-bottom: 0.25rem; /* Small spacing for list items */
+}
+
+.grid-two, .persona-grid, .iterations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: stretch; /* IMPORTANT: Makes grid items stretch to same height */
+}
+
+/* --- Persona Specific Styles --- */
+.persona-card {
+  text-align: left;
+  background: var(--card-bg); /* Give persona card a background */
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top within card */
+  align-items: left; /* Center items horizontally */
+}
+
+.persona-card img {
+  width: 100%;
+  max-width: 180px; /* Constrain persona image width */
+  height: auto;     /* Maintain aspect ratio */
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.persona-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.persona-card p {
+  font-size: 0.95rem;
+  color: var(--secondary-text);
+  margin: 0; /* Reset margin from general split-content p */
+}
+
+/* --- Image Sections (within split-content) --- */
+.content-img {
+  width: 100%;
+  height: 100%;        /* Fill parent height */
+  object-fit: cover;   /* Crop if needed, no white space */
+  display: block;
+  border-radius: 8px;
+  margin: 0;           /* Remove extra margin */
+}
+
+
+.iterations-grid {
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for iterations */
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.iterations-grid img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* --- Design System & Prototype --- */
+.final-mockup-embed {
+  width: 100%;
+  min-height: 400px; /* Provides a clear placeholder height */
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  margin-top: 1.5rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .case-study {
+    padding: 11rem 1rem;
+  }
+  .section--split {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+    gap: 1.5rem;
+  }
+  .grid-two, .persona-grid {
+    grid-template-columns: 1fr; /* Stack cards/personas */
+  }
+}
+
+@media (max-width: 576px) {
+  .iterations-grid {
+    grid-template-columns: 1fr; /* Stack iteration images */
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .split-content, .card li, .card p, .persona-card p {
+    font-size: 0.9rem;
+  }
+}

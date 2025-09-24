@@ -11,6 +11,7 @@ import './App.css';
 import './style.css';
 import './components/AutoScrollDivider.css';
 import './components/Navbar.css';
+import HR360Details from './components/HR360CaseStudyPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -45,8 +46,12 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutSection />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Projects />} />
+        <Route path="/case-study/hr360" element={<HR360Details />} />
       </Routes>
     </Router>
+
+    
   );
 }
 
