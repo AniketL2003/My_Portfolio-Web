@@ -43,6 +43,7 @@ function App() {
       <Navbar />
       {/* This tracks route changes */}
       <TrackPageView />
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutSection />} />
