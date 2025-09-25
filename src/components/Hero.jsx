@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import circle1 from '../assets/Circle1.png';
 import './Hero.css';
 
-const Hero = () => (
-  <section className="hero">
+const Hero = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  return (
+    <section className="hero">
     <div className="hero-text">
       <p className="hero-tagline">UX/UI | Product Design</p>
       <h2>
@@ -21,6 +25,7 @@ const Hero = () => (
       <img src={circle1} alt="Aniket profile" />
     </div>
   </section>
-);
+  )
+};
 
 export default Hero;

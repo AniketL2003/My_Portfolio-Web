@@ -1,11 +1,16 @@
 // src/components/AboutSection.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import './AboutSection.css';
 import avatar from '../assets/avatar.png';
 import Contact from './Contact';
 import MyResume from "../assets/Aniket_Lamkhade_UI_UX_Designer.pdf";
 
 const AboutSection = () => {
+
+  useEffect(() => {
+  window.scrollTo(0, 0);  
+  },[]);
+
   return (
     <>
       <div className="about-wrapper">

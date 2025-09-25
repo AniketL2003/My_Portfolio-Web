@@ -171,10 +171,19 @@ const HR360CaseStudyPage = () => {
       <section className="section section--split">
         <h2 className="section-title">Brainstorming & Ideation</h2>
         <div className="split-content">
-          <p>
-            Sketched workflows, mapped features, and prioritized usability before
-            moving into digital wireframes.
-          </p>
+          <div className="grid-two">
+            <div className="card">
+              <h4>My Approach</h4>
+              <p>Understand HR pain points and user groups (HR managers, employees, admins). Focus on key areas like onboarding, engagement, and performance.</p>
+              <p>Use divergent thinking to generate ideas, then narrow using feasibility-impact matrix. Prioritize employee-centric solutions with tech enhancements.</p>
+            </div>
+            <div className="card">
+              <h4>Possible Solutions</h4>
+              <p>Attendance & Payroll: Mobile check-ins and automated leave workflows. Transparent payslip generator with tax calculators.</p>
+              <p>Analytics & Admin Tools: Predictive attrition analysis and HR efficiency dashboards. Custom report builder with drag-and-drop features</p>
+            </div>
+            </div>
+        <br/>
           <img src={sketches} alt="Sketches and Wireframes" className="content-img" />
         </div>
       </section>

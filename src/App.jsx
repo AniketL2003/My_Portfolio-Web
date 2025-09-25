@@ -37,6 +37,7 @@ function TrackPageView() {
 }
 
 function App() {
+  
   return (
     <Router>
       <Navbar />
