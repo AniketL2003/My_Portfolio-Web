@@ -12,10 +12,9 @@ import iteration3 from "../assets/iteration3.png";
 import mockups from "../assets/mockups.png";
 
 const HR360CaseStudyPage = () => {
-
-    useEffect(() => {
+  React.useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
   return (
     <div className="case-study">
       {/* ========== Hero Section ========== */}
