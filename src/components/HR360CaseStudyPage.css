@@ -60,6 +60,10 @@ body {
   align-items: start;              /* Aligns items to the top of their row */
 }
 
+.project-title {
+  margin-bottom: 2rem;
+  
+}
 .section-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -113,17 +117,29 @@ body {
 }
 
 /* --- Persona Specific Styles --- */
+/* Personas Grid */
+.persona-grid {
+  display: flex;                 /* Use flexbox instead of grid */
+  justify-content: center;       /* Center them horizontally */
+  gap: 2rem;                     /* Space between persona cards */
+  flex-wrap: wrap;               /* Allow wrapping on smaller screens */
+  margin-top: 2rem;
+}
+
+/* Persona Card */
 .persona-card {
+  flex: 1 1 300px;               /* Cards resize but don’t shrink too small */
+  max-width: auto;              /* Prevent cards from becoming too wide */
   text-align: left;
-  background: var(--card-bg); /* Give persona card a background */
+  background: var(--card-bg);
   border-radius: 8px;
   padding: 1.5rem;
   border: 1px solid var(--border-color);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align content to the top within card */
-  align-items: left; /* Center items horizontally */
+  align-items: stretch;
+    flex-direction: column;
 }
+
 
 .persona-card img {
   width: 100%;

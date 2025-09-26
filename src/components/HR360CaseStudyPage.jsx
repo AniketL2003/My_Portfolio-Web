@@ -18,6 +18,7 @@ const HR360CaseStudyPage = () => {
   return (
     <div className="case-study">
       {/* ========== Hero Section ========== */}
+       <h2 className="project-title">HR360</h2>
       <section className="Hero-section">
         <img src={hr360Hero} alt="HR360 Case Study Banner" className="hero-img" />
       </section>
@@ -115,7 +116,7 @@ const HR360CaseStudyPage = () => {
               <h5>Goals:</h5>
               <p>Apply for leave, resignation, or regularization quickly.</p>
               <p>Access salary slips, attendance, and HR policies easily.</p>
-              <br />
+              <br/>
               <h5>Frustrations:</h5>
               <p>Has to use multiple tools for different HR tasks.</p>
               <p>Doesn’t get real-time updates on request approvals.</p>
