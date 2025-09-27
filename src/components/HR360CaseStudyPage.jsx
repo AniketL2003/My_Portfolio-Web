@@ -10,6 +10,7 @@ import iteration1 from "../assets/iteration1.png";
 import iteration2 from "../assets/iteration2.png";
 import iteration3 from "../assets/iteration3.png";
 import mockups from "../assets/mockups.png";
+import DesignColors from "../assets/ColorHR360.svg";
 
 const HR360CaseStudyPage = () => {
   React.useEffect(() => {
@@ -17,8 +18,13 @@ const HR360CaseStudyPage = () => {
   }, []);
   return (
     <div className="case-study">
+      <div className="project-type">
+         <span>Mobile & Web</span>
+    <span>Case Study</span>
+      </div>
+
       {/* ========== Hero Section ========== */}
-       <h2 className="project-title">HR360</h2>
+      <h2 className="project-title">HR360 - Smarter HR. Stronger Productivity.</h2>
       <section className="Hero-section">
         <img src={hr360Hero} alt="HR360 Case Study Banner" className="hero-img" />
       </section>
@@ -112,11 +118,11 @@ const HR360CaseStudyPage = () => {
               <h3>Riya Sharma</h3>
               <h5>HR Manager</h5>
               <h6>Age: 27</h6>
-              <br/>
+              <br />
               <h5>Goals:</h5>
               <p>Apply for leave, resignation, or regularization quickly.</p>
               <p>Access salary slips, attendance, and HR policies easily.</p>
-              <br/>
+              <br />
               <h5>Frustrations:</h5>
               <p>Has to use multiple tools for different HR tasks.</p>
               <p>Doesn’t get real-time updates on request approvals.</p>
@@ -124,19 +130,19 @@ const HR360CaseStudyPage = () => {
             </div>
             <div className="persona-card">
               <img src={persona2} alt="Persona of an Employee" />
-                 <h3>Amit Verma</h3>
+              <h3>Amit Verma</h3>
               <h5>Project Manager</h5>
               <h6>Age: 35</h6>
-               <br/>
-             <h5>Goals:</h5>
-               <p>Approve/reject leave, resignation, and other requests efficiently.</p>
-               <p>View team availability and performance in one place.</p>
-               <p>Focus more on productivity and less on admin tasks.</p>
+              <br />
+              <h5>Goals:</h5>
+              <p>Approve/reject leave, resignation, and other requests efficiently.</p>
+              <p>View team availability and performance in one place.</p>
+              <p>Focus more on productivity and less on admin tasks.</p>
               <br />
               <h5>Frustrations:</h5>
-                <p>Wastes time tracking employee requests manually.</p>
-                <p>Needs to rely on emails and calls with HR for updates.</p>
-                <p>Lacks a single dashboard to manage HR-related decisions.</p>
+              <p>Wastes time tracking employee requests manually.</p>
+              <p>Needs to rely on emails and calls with HR for updates.</p>
+              <p>Lacks a single dashboard to manage HR-related decisions.</p>
             </div>
           </div>
         </div>
@@ -186,8 +192,8 @@ const HR360CaseStudyPage = () => {
               <p>Attendance & Payroll: Mobile check-ins and automated leave workflows. Transparent payslip generator with tax calculators.</p>
               <p>Analytics & Admin Tools: Predictive attrition analysis and HR efficiency dashboards. Custom report builder with drag-and-drop features</p>
             </div>
-            </div>
-        <br/>
+          </div>
+          <br />
           <img src={sketches} alt="Sketches and Wireframes" className="content-img" />
         </div>
       </section>
@@ -220,6 +226,7 @@ const HR360CaseStudyPage = () => {
             A consistent visual system with colors, typography, and reusable
             components for scalability.
           </p>
+          <img  className ="color"  src={DesignColors} alt="Colors of an HR360" />
         </div>
       </section>
 

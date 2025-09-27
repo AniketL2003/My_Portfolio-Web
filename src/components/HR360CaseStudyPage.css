@@ -32,6 +32,17 @@ body {
   padding: 11rem 1.5rem;
 }
 
+.project-type {
+  display: flex;
+  justify-content: space-between; /* pushes one left, one right */
+  align-items: center;            /* vertical alignment */
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
 /* --- Hero Section --- */
 .Hero-section {
   margin-bottom: var(--section-spacing);
@@ -186,24 +197,28 @@ body {
   border: 1px solid var(--border-color);
 }
 
-/* --- Design System & Prototype --- */
-.final-mockup-embed {
-  width: 100%;
-  min-height: 400px; /* Provides a clear placeholder height */
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
+.color {
+  max-width: 100%;  /* never exceed container width */
+  height: auto;
+  display: block;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #adb5bd;
   margin-top: 1.5rem;
 }
+
+
+/* --- Design System & Prototype --- */ .final-mockup-embed { width: 100%; min-height: 400px; /* Provides a clear placeholder height */ background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #adb5bd; margin-top: 1.5rem; }
+
+
+
+
+
+
+
 
 /* --- Responsive Design --- */
 @media (max-width: 900px) {
   .case-study {
-    padding: 11rem 1rem;
+    padding: 10rem 1rem;
   }
   .section--split {
     grid-template-columns: 1fr; /* Stack on smaller screens */
