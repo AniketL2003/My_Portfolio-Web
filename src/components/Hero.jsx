@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import circle1 from '../assets/Circle1.png';
+import circle1 from '../assets/Circle1.svg';
 import './Hero.css';
 
 const Hero = () => {
