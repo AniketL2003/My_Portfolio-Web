@@ -29,7 +29,9 @@ body {
 .case-study {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 11rem 1.5rem;
+  padding: 11rem 1.5rem 0rem 1.5rem;
+/* top | right | bottom | left */
+
 }
 
 .project-type {

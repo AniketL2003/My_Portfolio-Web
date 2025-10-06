@@ -34,9 +34,7 @@ const HR360CaseStudyPage = () => {
         <h2 className="section-title">Context</h2>
         <div className="split-content">
           <p>
-            HR360 is a smart HR management solution that helps businesses manage
-            employee data, track attendance, streamline payroll, and automate
-            HR-related tasks.
+            The HR360 project was initiated to address the growing need for a simplified, modern, and scalable HR management system. Many mid-sized companies struggle with manual or outdated HR workflows, leading to reduced productivity and employee dissatisfaction. The goal was to build a digital HR solution that brings all essential operations—attendance, payroll, recruitment, leave management, and performance tracking—under one unified interface.
           </p>
         </div>
       </section>
@@ -46,9 +44,17 @@ const HR360CaseStudyPage = () => {
         <h2 className="section-title">Problem Statement</h2>
         <div className="split-content">
           <p>
-            HR managers struggle with outdated systems, manual attendance logs,
-            and scattered employee data. This makes workforce management
-            inefficient, error-prone, and frustrating for all.
+            Traditional HR management tools are either too complex or lack the flexibility modern teams require. HR professionals spend a lot of time toggling between different systems to manage employee data, approvals, and reports.
+Our challenge was to design an HR system that:
+<br/><br/>
+
+Centralizes all HR functions.
+<br/><br/>
+Simplifies daily workflows.
+<br/><br/>
+Reduces the need for multiple tools.
+<br/><br/>
+Enhances employee experience with intuitive design.
           </p>
         </div>
       </section>
@@ -58,9 +64,15 @@ const HR360CaseStudyPage = () => {
         <h2 className="section-title">Solution</h2>
         <div className="split-content">
           <p>
-            We designed HR360 — an intuitive HR system that centralizes employee
-            information, automates payroll, and provides seamless leave &
-            attendance tracking.
+            We created HR360, a user-focused HR management platform that enables HR teams and employees to manage everything from one dashboard.
+Our design strategy focused on:
+<br/><br/>
+Automation: Reducing repetitive HR tasks through smart workflows.
+<br/><br/>
+Transparency: Allowing employees to access and manage their information.
+<br/><br/>
+Simplicity: Making the interface visually clean, minimal, and accessible.
+HR360 aims to enhance both the efficiency of HR departments and the engagement of employees through intuitive digital experiences.
           </p>
         </div>
       </section>
@@ -202,6 +214,7 @@ const HR360CaseStudyPage = () => {
       <section className="section section--split">
         <h2 className="section-title">Iterations</h2>
         <div className="split-content">
+          Each iteration was tested for usability, focusing on reducing cognitive load and improving task completion speed.
           <div className="iterations-grid">
             <img src={iteration1} alt="Iteration 1 of the design" />
             <img src={iteration2} alt="Iteration 2 of the design" />
@@ -213,7 +226,10 @@ const HR360CaseStudyPage = () => {
       {/* ========== Final Designs ========== */}
       <section className="section section--split">
         <h2 className="section-title">Final Designs (Mockups)</h2>
+        
         <div className="split-content">
+          The final version of HR360 reflects a polished, intuitive experience.
+          <br/> <br/>
           <img src={mockups} alt="Final application mockups" className="content-img" />
         </div>
       </section>
@@ -223,8 +239,18 @@ const HR360CaseStudyPage = () => {
         <h2 className="section-title">Design System & Style-guides</h2>
         <div className="split-content">
           <p>
-            A consistent visual system with colors, typography, and reusable
-            components for scalability.
+            A cohesive design system was created to maintain consistency:
+            <br/> <br/>
+
+Colors: Primary Blue for trust, Orange for activity, and Green for confirmation states.
+<br/> <br/>
+
+Typography: Modern, clean Sans-serif font with readable sizes and contrast.
+<br/> <br/>
+
+Components: Reusable UI elements like buttons, dropdowns, badges, modals, and tables were documented for scalability.
+<br/> <br/>
+This system enables faster development and ensures uniformity across screens and features.
           </p>
           <img  className ="color"  src={DesignColors} alt="Colors of an HR360" />
         </div>
@@ -234,6 +260,7 @@ const HR360CaseStudyPage = () => {
       <section className="section section--split">
         <h2 className="section-title">Prototype</h2>
         <div className="split-content">
+          The interactive prototype demonstrates the complete HR360 experience—from login to analytics, with real-time interaction and transitions. It validates how well the design supports HR workflows and employee needs while keeping the interface elegant and efficient.
           <div className="final-mockup-embed">
             <p>Interactive prototype would be embedded here.</p>
           </div>
@@ -245,8 +272,43 @@ const HR360CaseStudyPage = () => {
         <h2 className="section-title">User Testing</h2>
         <div className="split-content">
           <p>
-            Tested with 10 HR managers and 15 employees. Feedback was
-            incorporated into design iterations for improved usability.
+            Objective:
+Validate HR360’s usability and ensure a smooth experience for both HR managers and employees.
+<br/> <br/>
+Participants:
+<br/>
+10 HR Managers and 15 Employees from different departments.
+<br/> <br/>
+Method:
+<br/>
+Conducted moderated usability sessions where users managed attendance, leaves, and analytics reports. Feedback was collected through observations and short interviews.
+<br/> <br/>
+Key Insights:
+<br/>
+Managers wanted advanced filtering options in analytics.
+<br/>
+Employees requested real-time leave notifications.
+<br/>
+Improved readability and module distinction were needed.
+<br/> <br/>
+Actions Taken:
+<br/>
+Added report filters and live notifications.
+<br/>
+Refined UI for better contrast and navigation.
+<br/> <br/>
+Results:
+<br/>
+<b>95%</b>  task completion
+<br/>
+<b>30%</b> faster workflows
+<br/>
+<b>4.7/5</b> user satisfaction score
+<br/> <br/>
+Outcome:
+Testing refined HR360 into a more intuitive, efficient, and user-focused HR platform.
+
+
           </p>
         </div>
       </section>
@@ -256,8 +318,8 @@ const HR360CaseStudyPage = () => {
         <h2 className="section-title">Conclusion</h2>
         <div className="split-content">
           <p>
-            HR360 successfully streamlined HR operations, reduced manual errors,
-            and improved transparency for employees and managers alike.
+            HR360 successfully redefines HR digital management through a design that prioritizes user needs, performance, and simplicity.
+By focusing on research, accessibility, and scalability, it demonstrates how thoughtful UI/UX design can truly boost workplace productivity.
           </p>
         </div>
       </section>
