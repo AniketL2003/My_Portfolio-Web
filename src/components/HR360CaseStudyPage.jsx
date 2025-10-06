@@ -11,6 +11,8 @@ import iteration2 from "../assets/iteration2.png";
 import iteration3 from "../assets/iteration3.png";
 import mockups from "../assets/mockups.png";
 import DesignColors from "../assets/ColorHR360.svg";
+import prototypeVideo from '../assets/prototype.mp4';
+
 
 const HR360CaseStudyPage = () => {
   React.useEffect(() => {
@@ -257,15 +259,28 @@ This system enables faster development and ensures uniformity across screens and
       </section>
 
       {/* ========== Prototype ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Prototype</h2>
-        <div className="split-content">
-          The interactive prototype demonstrates the complete HR360 experience—from login to analytics, with real-time interaction and transitions. It validates how well the design supports HR workflows and employee needs while keeping the interface elegant and efficient.
-          <div className="final-mockup-embed">
-            <p>Interactive prototype would be embedded here.</p>
-          </div>
-        </div>
-      </section>
+<section className="section section--split">
+  <h2 className="section-title">Prototype</h2>
+  <div className="split-content">
+    <p>
+      The interactive prototype demonstrates the complete HR360 experience—from login to analytics, with real-time interaction and transitions. It validates how well the design supports HR workflows and employee needs while keeping the interface elegant and efficient.
+    </p>
+
+    <div className="final-mockup-embed">
+      <video
+        className="prototype-video"
+        src={prototypeVideo}  // ✅ use imported variable
+        controls
+        muted
+        autoPlay
+        loop
+        playsInline
+      />
+    </div>
+  </div>
+</section>
+
+
 
       {/* ========== User Testing ========== */}
       <section className="section section--split">
@@ -277,7 +292,7 @@ Validate HR360’s usability and ensure a smooth experience for both HR managers
 <br/> <br/>
 Participants:
 <br/>
-10 HR Managers and 15 Employees from different departments.
+<b>5</b>HR Managers and <b>15</b> Employees from different departments.
 <br/> <br/>
 Method:
 <br/>

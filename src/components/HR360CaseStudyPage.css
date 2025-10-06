@@ -245,17 +245,15 @@ body {
 /* --- Design System & Prototype --- */
 .final-mockup-embed {
   width: 100%;
-  min-height: 400px;
-  /* Provides a clear placeholder height */
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #adb5bd;
   margin-top: 1.5rem;
+  background: transparent; /* remove grey background */
+  border: none;
+  min-height: auto; /* let video define height */
 }
+
 
 
 
@@ -279,6 +277,21 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 147, 121, 0.25);
 }
+
+.final-mockup-embed {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.prototype-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 0; /* or 12px if you still want rounded corners */
+  object-fit: contain; /* ensures full video is visible — no cropping */
+  display: block;
+  
+}
+
 
 
 /* --- Responsive Design --- */
