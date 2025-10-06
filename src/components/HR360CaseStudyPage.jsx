@@ -314,7 +314,7 @@ Testing refined HR360 into a more intuitive, efficient, and user-focused HR plat
       </section>
 
       {/* ========== Conclusion ========== */}
-      <section className="section section--split">
+      <section className="section--split">
         <h2 className="section-title">Conclusion</h2>
         <div className="split-content">
           <p>
@@ -323,6 +323,22 @@ By focusing on research, accessibility, and scalability, it demonstrates how tho
           </p>
         </div>
       </section>
+      
+       {/* Live Project Button */}
+                   
+
+<button
+  className="live-project-btn"
+  onClick={() =>
+    window.open(
+      "https://play.google.com/store/apps/details?id=com.mobigic.attendance&pcampaignid=web_share",
+      "_blank"
+    )
+  }
+>
+  Live Project
+
+</button>
     </div>
   );
 };

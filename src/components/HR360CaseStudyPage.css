@@ -5,10 +5,13 @@
 :root {
   --bg-color: #ffffff;
   --card-bg: #f8f9fa;
-  --primary-text: #1d2b3a; /* A strong, dark blue-gray */
-  --secondary-text: #6b7789; /* Muted, professional gray */
+  --primary-text: #1d2b3a;
+  /* A strong, dark blue-gray */
+  --secondary-text: #6b7789;
+  /* Muted, professional gray */
   --border-color: #e5e7eb;
-  --section-spacing: 4.5rem; /* Consistent vertical space */
+  --section-spacing: 4.5rem;
+  /* Consistent vertical space */
 }
 
 /* --- Global Styles & Resets --- */
@@ -28,16 +31,18 @@ body {
 /* --- Main Layout Wrapper --- */
 .case-study {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 11rem 1.5rem 0rem 1.5rem;
-/* top | right | bottom | left */
+  /* top | right | bottom | left */
 
 }
 
 .project-type {
   display: flex;
-  justify-content: space-between; /* pushes one left, one right */
-  align-items: center;            /* vertical alignment */
+  justify-content: space-between;
+  /* pushes one left, one right */
+  align-items: center;
+  /* vertical alignment */
   font-size: 0.85rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -55,9 +60,12 @@ body {
 
 .hero-img {
   width: 100%;
-  max-width: 100%; /* Ensures image doesn't overflow */
-  height: auto;    /* Maintains aspect ratio */
-  display: block;  /* Removes extra space below image */
+  max-width: 100%;
+  /* Ensures image doesn't overflow */
+  height: auto;
+  /* Maintains aspect ratio */
+  display: block;
+  /* Removes extra space below image */
 }
 
 /* --- Section Layout --- */
@@ -69,14 +77,17 @@ body {
   display: flex;
   flex-direction: column;
   /*grid-template-columns: 240px 1fr; /* Fixed heading width, flexible content */
-  gap: 3rem;                       /* Space between heading and content */
-  align-items: start;              /* Aligns items to the top of their row */
+  gap: 3rem;
+  /* Space between heading and content */
+  align-items: start;
+  /* Aligns items to the top of their row */
 }
 
 .project-title {
   margin-bottom: 2rem;
-  
+
 }
+
 .section-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -90,7 +101,8 @@ body {
 }
 
 .split-content p {
-  margin-bottom: 1.5rem; /* Consistent spacing for paragraphs */
+  margin-bottom: 2.5rem;
+  /* Consistent spacing for paragraphs */
 }
 
 /* --- Cards & Grids --- */
@@ -99,8 +111,10 @@ body {
   border-radius: 8px;
   padding: 1.5rem;
   border: 1px solid var(--border-color);
-  display: flex; /* Make card a flex container */
-  flex-direction: column; /* Stack contents vertically */
+  display: flex;
+  /* Make card a flex container */
+  flex-direction: column;
+  /* Stack contents vertically */
 }
 
 .card h4 {
@@ -113,36 +127,47 @@ body {
 .card ul {
   list-style: none;
   padding: 0;
-  flex-grow: 1; /* Allows ul to take up remaining space if card stretches */
+  flex-grow: 1;
+  /* Allows ul to take up remaining space if card stretches */
 }
 
 .card li {
   font-size: 0.95rem;
   color: var(--secondary-text);
-  margin-bottom: 0.25rem; /* Small spacing for list items */
+  margin-bottom: 0.25rem;
+  /* Small spacing for list items */
 }
 
-.grid-two, .persona-grid, .iterations-grid {
+.grid-two,
+.persona-grid,
+.iterations-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  align-items: stretch; /* IMPORTANT: Makes grid items stretch to same height */
+  align-items: stretch;
+  /* IMPORTANT: Makes grid items stretch to same height */
 }
 
 /* --- Persona Specific Styles --- */
 /* Personas Grid */
 .persona-grid {
-  display: flex;                 /* Use flexbox instead of grid */
-  justify-content: center;       /* Center them horizontally */
-  gap: 2rem;                     /* Space between persona cards */
-  flex-wrap: wrap;               /* Allow wrapping on smaller screens */
+  display: flex;
+  /* Use flexbox instead of grid */
+  justify-content: center;
+  /* Center them horizontally */
+  gap: 2rem;
+  /* Space between persona cards */
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
   margin-top: 2rem;
 }
 
 /* Persona Card */
 .persona-card {
-  flex: 1 1 300px;               /* Cards resize but don’t shrink too small */
-  max-width: auto;              /* Prevent cards from becoming too wide */
+  flex: 1 1 300px;
+  /* Cards resize but don’t shrink too small */
+  max-width: auto;
+  /* Prevent cards from becoming too wide */
   text-align: left;
   background: var(--card-bg);
   border-radius: 8px;
@@ -150,14 +175,16 @@ body {
   border: 1px solid var(--border-color);
   display: flex;
   align-items: stretch;
-    flex-direction: column;
+  flex-direction: column;
 }
 
 
 .persona-card img {
   width: 100%;
-  max-width: 180px; /* Constrain persona image width */
-  height: auto;     /* Maintain aspect ratio */
+  max-width: 180px;
+  /* Constrain persona image width */
+  height: auto;
+  /* Maintain aspect ratio */
   display: block;
   margin-bottom: 1rem;
 }
@@ -170,22 +197,27 @@ body {
 .persona-card p {
   font-size: 0.95rem;
   color: var(--secondary-text);
-  margin: 0; /* Reset margin from general split-content p */
+  margin: 0;
+  /* Reset margin from general split-content p */
 }
 
 /* --- Image Sections (within split-content) --- */
 .content-img {
   width: 100%;
-  height: 100%;        /* Fill parent height */
-  object-fit: cover;   /* Crop if needed, no white space */
+  height: 100%;
+  /* Fill parent height */
+  object-fit: cover;
+  /* Crop if needed, no white space */
   display: block;
   border-radius: 8px;
-  margin: 0;           /* Remove extra margin */
+  margin: 0;
+  /* Remove extra margin */
 }
 
 
 .iterations-grid {
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for iterations */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns for iterations */
   gap: 1rem;
   margin-top: 1.5rem;
 }
@@ -200,7 +232,8 @@ body {
 }
 
 .color {
-  max-width: 100%;  /* never exceed container width */
+  max-width: 100%;
+  /* never exceed container width */
   height: auto;
   display: block;
   border-radius: 8px;
@@ -208,37 +241,84 @@ body {
 }
 
 
-/* --- Design System & Prototype --- */ .final-mockup-embed { width: 100%; min-height: 400px; /* Provides a clear placeholder height */ background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #adb5bd; margin-top: 1.5rem; }
+
+/* --- Design System & Prototype --- */
+.final-mockup-embed {
+  width: 100%;
+  min-height: 400px;
+  /* Provides a clear placeholder height */
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  margin-top: 1.5rem;
+}
 
 
 
 
+/* Hover Effect */
+.live-project-btn {
+  margin-top: 12px;
+  padding: 10px 40px;
+  background: none;
+  color: #009379;
+  border: 2px solid #009379;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-
+/* Button hover */
+.live-project-btn:hover {
+  background: #009379;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 147, 121, 0.25);
+}
 
 
 /* --- Responsive Design --- */
 @media (max-width: 900px) {
-  .case-study {
-    padding: 10rem 1rem;
+  
+ .case-study {
+    padding: 8rem 1rem 0rem 1rem;
+    /* Reduce padding on small screens */
   }
   .section--split {
-    grid-template-columns: 1fr; /* Stack on smaller screens */
+    grid-template-columns: 1fr;
+    /* Stack on smaller screens */
     gap: 1.5rem;
   }
-  .grid-two, .persona-grid {
-    grid-template-columns: 1fr; /* Stack cards/personas */
+
+  .grid-two,
+  .persona-grid {
+    grid-template-columns: 1fr;
+    /* Stack cards/personas */
   }
 }
 
 @media (max-width: 576px) {
   .iterations-grid {
-    grid-template-columns: 1fr; /* Stack iteration images */
+    grid-template-columns: 1fr;
+    /* Stack iteration images */
+  }
+
+  .case-study {
+    padding: 8rem 1rem 0rem 1rem;
+    /* Reduce padding on small screens */
   }
   .section-title {
     font-size: 1.5rem;
   }
-  .split-content, .card li, .card p, .persona-card p {
+
+  .split-content,
+  .card li,
+  .card p,
+  .persona-card p {
     font-size: 0.9rem;
   }
 }

@@ -8,8 +8,8 @@ import MyResume from "../assets/Aniket_Lamkhade_UI_UX_Designer.pdf";
 const AboutSection = () => {
 
   useEffect(() => {
-  window.scrollTo(0, 0);  
-  },[]);
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
