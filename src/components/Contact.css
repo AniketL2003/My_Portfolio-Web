@@ -42,7 +42,7 @@
   width: 100%;
   max-width: 1300px; /* Limit width for alignment with page content */
   margin: 0 auto; /* Center container horizontally */
-  padding: 0 1.5rem; /* Add horizontal spacing from edges */
+ padding: 0.5rem 0rem; /* Top/Bottom: 2rem, Left/Right: 10rem */
   box-sizing: border-box;
 }
 
@@ -173,7 +173,7 @@
 .social-icons {
   display: flex;
   justify-content: flex-start;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .social-icons img {
