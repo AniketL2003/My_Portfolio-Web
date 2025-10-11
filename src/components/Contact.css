@@ -20,8 +20,33 @@
   max-width: 1300px; /* Limit on large screens */
   height: 90%;
   display: block;
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
+
+/* .bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;  
+  gap: 2rem;
+} */
+
+/* Flex Containers with spacing */
+.bottom,
+.c-s {
+  display: flex;
+  justify-content: space-between; /* Push left & right sides apart */
+  align-items: center;
+  flex-wrap: wrap;  
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px; /* Limit width for alignment with page content */
+  margin: 0 auto; /* Center container horizontally */
+  padding: 0 1.5rem; /* Add horizontal spacing from edges */
+  box-sizing: border-box;
+}
+
+
 
 /* === Responsive Adjustments === */
 @media (max-width: 1024px) {
@@ -41,6 +66,8 @@
     margin-top: 3rem;
   }
 }
+
+
 
 @media (max-width: 480px) {
   .lets-work-svg {
@@ -110,19 +137,19 @@
   opacity: 0.9;
 }
 
-.contact-footer {
+/* .contact-footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 4rem;
   flex-wrap: wrap;
-}
+} */
 
-.contact-footer .left {
+/* .contact-footer .left {
   flex: 1;
   min-width: 250px;
   text-align: left;
-}
+} */
 
 .contact-footer .right {
   display: flex;
@@ -169,6 +196,9 @@
     max-width: 350px; /* smaller SVG size on mobile */
   }
 
+  .contact-section {
+    padding: 6rem 1.5rem;
+  } 
   .contact-footer {
     flex-direction: column;
     gap: 2rem;
