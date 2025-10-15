@@ -1,19 +1,16 @@
 import React from 'react';
 import Marquee from "react-fast-marquee";
 import './AutoScrollDivider.css';
+import Star from "./CustomStar";
 
 const AutoScrollDivider = () => {
   return (
     <div className="yellow-wrapper">
       <div className="white-box"> 
-        <Marquee
-          direction="right"
-          speed={150}
-          gradient={false}
-        >
+        <Marquee direction="right" speed={150} gradient={false}>
           <span className="marquee-text">
-            ✦ UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Flow ✦ UI Kit  
-            ✦ UX Design ✦ App Design ✦ Dashboard ✦ Wireframe ✦ User Flow ✦ UI Kit ✦  
+            <Star /> UX Design <Star /> App Design <Star /> Dashboard <Star /> Wireframe <Star /> User Flow <Star /> UI Kit 
+            <Star /> UX Design <Star /> App Design <Star /> Dashboard <Star /> Wireframe <Star /> User Flow <Star /> UI Kit <Star />
           </span>
         </Marquee>
       </div>

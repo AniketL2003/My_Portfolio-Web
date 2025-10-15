@@ -19,16 +19,21 @@ import './components/Navbar.css';
 const HomePage = () => (
   <>
     <Helmet>
-      <title>Aniket Lamkhade | UI/UX Designer Portfolio</title>
+      <title>Aniket Lamkhade | UI/UX Design Portfolio</title>
       <meta 
         name="description" 
-        content="Portfolio of Aniket Lamkhade, a UI/UX designer creating user-centric and consistent digital experiences. Explore case studies like HR360, RetroRing, and more." 
+        content="Portfolio of Aniket Lamkhade, a UI/UX designer creating user-centric and consistent digital experiences. Explore case studies like HR360, InGate, and more." 
       />
       <meta 
         name="keywords" 
-        content="UI/UX designer, portfolio, product design, anisux, sventis, web design, app design" 
+        content="UI/UX designer, portfolio, product design, anisux, sventis, web design, app design, aniket lamkhade, hr360, ingate, design case studies, freelance designer, user experience, 
+        user interface, digital design, interaction design, visual design, responsive design, prototyping, wireframing, user research, usability testing, design thinking, creative design, 
+        branding, graphic design, design portfolio, design projects, design solutions, user-centered design, design trends, modern design, minimalist design, clean design, professional design, 
+        innovative design, design inspiration, design process, design tools, adobe xd, figma, sketch, invision, ux/ui best practices, design systems, design collaboration, remote design, 
+        freelance projects, design consultancy, design agency, sventis design, anisux portfolio, product design case studies, design for startups, design for businesses, digital product design, 
+        mobile app design, web app design, user interface trends, user experience trends" 
       />
-      <link rel="canonical" href="https://anisux.com/" />
+      <link rel="canonical" href="https://aniketlamkhade.vercel.app"/>
     </Helmet>
 
     <Hero />
@@ -61,18 +66,18 @@ function App() {
       <Helmet>
         <script type="application/ld+json">{`
           {
-            "@context": "https://schema.org",
+            "@context": "https://aniketlamkhade.vercel.app",
             "@type": "Person",
             "name": "Aniket Lamkhade",
             "jobTitle": "UI/UX Designer",
-            "url": "https://anisux.com",
+            "url": "https://aniketlamkhade.vercel.app",
             "sameAs": [
               "https://linkedin.com/in/aniketlamkhade",
-              "https://behance.net/anisux"
+              "https://behance.net/aniketlamkhade1",
             ],
             "worksFor": {
               "@type": "Organization",
-              "name": "Sventis"
+              "name": "myself"
             }
           }
         `}</script>
@@ -90,7 +95,7 @@ function App() {
                   name="description" 
                   content="Learn more about Aniket Lamkhade, a passionate UI/UX designer crafting meaningful digital experiences." 
                 />
-                <link rel="canonical" href="https://anisux.com/about" />
+                <link rel="canonical" href="https://aniketlamkhade.vercel.app/about" />
               </Helmet>
               <AboutSection />
             </>
@@ -106,7 +111,7 @@ function App() {
                   name="description" 
                   content="Get in touch with Aniket Lamkhade for collaborations, projects, or freelance opportunities in UI/UX design." 
                 />
-                <link rel="canonical" href="https://anisux.com/contact" />
+                <link rel="canonical" href="https://aniketlamkhade.vercel.app/contact" />
               </Helmet>
               <Contact />
             </>
@@ -122,7 +127,7 @@ function App() {
                   name="description" 
                   content="Detailed case study of HR360 – a UI/UX solution for simplifying HR management, designed by Aniket Lamkhade." 
                 />
-                <link rel="canonical" href="https://anisux.com/case-study/hr360" />
+                <link rel="canonical" href="https://aniketlamkhade.vercel.app/case-study/hr360" />
               </Helmet>
               <HR360Details />
             </>

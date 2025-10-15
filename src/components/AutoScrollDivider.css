@@ -1,49 +1,90 @@
 .yellow-wrapper {
   background-color: #F9E6F0;
-  padding: 3rem 0;
+  padding: 2rem 0;
   overflow: hidden;
   width: 100%;
 }
 
 .white-box {
   background: white;
-  transform: rotate(-2deg);
-  padding: 2rem 0;
-  margin: auto;
+  /* 1. KEEP THE ROTATION - It's a visual effect */
+  transform: rotate(-1.5deg); 
+  
+  padding: 0rem 0;
   width: 100%;
   max-width: 100vw;
-  white-space: nowrap;
-  font-weight: 600;
-  font-size: 2rem;
+  /* Removed white-space: nowrap; - Marquee component handles this */
+  
+  /* 2. ADD FLEXBOX TO THE CONTAINER TO CENTRALIZE CONTENT VERTICALLY */
   display: flex;
-  align-items: center;
+  align-items: center; 
+  /* Crucial for vertical centering if needed, but the line-height fix below is more direct */
 }
 
-.white-box span {
-  margin: 0 2rem;
-  display: inline-block;
+/* 3. TARGET THE MARQUEE CONTENT AND FORCE A CONSISTENT LINE HEIGHT */
+.marquee-text {
+  font-family: 'Lufga', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+
+  /* --- FIX 1: FORCE LINE-HEIGHT TO BE '1' --- */
+  /* This ensures the bounding box of the text is exactly the height of the font, preventing extra space. */
+  line-height: 1; 
+  
+  /* Setting padding on the marquee-text element will add the vertical space around the text, 
+     instead of relying on line-height or the wrapper padding alone. */
+  padding: 0.5rem 0; 
+  
+  /* Ensure it behaves like a block for strict line-height control, though typically not needed in Marquee */
+  display: block; 
 }
+
+/* REMOVED: .white-box span { ... } - The Marquee component manages spacing, relying on this was less predictable. 
+   Spacing will be handled by padding/margin *inside* the marquee-text content.
+*/
+
+
+/* 4. TIGHTEN CONTROL OVER THE STAR SYMBOL */
+.star {
+  color: #009379;
+  font-weight: bold;
+  display: inline-block;
+  
+  /* --- FIX 2: APPLY VERTICAL-ALIGN MIDDLE --- */
+  /* This aligns the star precisely with the center of the text content. */
+  vertical-align: middle; 
+
+  /* Transform and animation can remain, but be aware they can still cause minor visual shifts */
+  transform: scale(0.8);
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  /* Using 'scale(1)' instead of 'scale(1.2)' and 'scale(1.5)' may help prevent a visual jump, 
+     as large scaling can exceed the bounding box of the line-height. */
+  0%, 100% { opacity: 0.8; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .white-box {
-    font-size: 1.5rem;
-    padding: 1.5rem 0;
+  .yellow-wrapper {
+    padding: 1.2rem 0;
   }
-
-  .white-box span {
-    margin: 0 1.5rem;
+  
+  .marquee-text {
+    font-size: 2rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-  .white-box {
-    font-size: 1.1rem;
+  .yellow-wrapper {
     padding: 1rem 0;
   }
 
-  .white-box span {
-    margin: 0 1rem;
+  .marquee-text {
+    font-size: 1.5rem;
   }
 }
