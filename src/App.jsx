@@ -31,7 +31,9 @@ const HomePage = () => (
         branding, graphic design, design portfolio, design projects, design solutions, user-centered design, design trends, modern design, minimalist design, clean design, professional design, 
         innovative design, design inspiration, design process, design tools, adobe xd, figma, sketch, invision, ux/ui best practices, design systems, design collaboration, remote design, 
         freelance projects, design consultancy, design agency, sventis design, anisux portfolio, product design case studies, design for startups, design for businesses, digital product design, 
-        mobile app design, web app design, user interface trends, user experience trends" 
+        mobile app design, web app design, user interface trends, user experience trends, aniket lamkhade portfolio, aniket lamkhade ui/ux, aniket lamkhade designer, freelance ui/ux designer, hire aniket lamkhade,
+        aniket lamkhade case studies, aniket lamkhade projects, aniket lamkhade hr360, aniket lamkhade ingate, aniket lamkhade freelance, aniket lamkhade digital design, aniket lamkhade interaction design,
+        aniket lamkhade visual design, aniket lamkhade responsive design, aniket lamkhade prototyping, aniket lamkhade wireframing, aniket lamkhade user research" 
       />
       <link rel="canonical" href="https://aniketlamkhade.vercel.app"/>
     </Helmet>
