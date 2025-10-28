@@ -1,13 +1,12 @@
 /* Base Styling */
 .yellow-wrapper {
-  background-color: #F9E6F0;
   padding: 2rem 0;
   overflow: hidden;
   width: 100%;
 }
 
 .white-box {
-  background: white;
+  background: #F9E6F0;
   transform: rotate(-1.5deg);
   padding: 0;
   width: 100%;
@@ -19,7 +18,8 @@
 
 .marquee-text {
   font-family: 'Lufga', sans-serif;
-  font-weight: 600;
+  color: #424B5A;
+  font-weight: 400;
   font-size: 3rem;
   line-height: 1;
   padding: 0.5rem 0;
@@ -30,7 +30,7 @@
 }
 
 .star {
-  color: #009379;
+ /* color: #6CD0BF; */
   font-weight: bold;
   display: inline-flex;
   align-items: center;

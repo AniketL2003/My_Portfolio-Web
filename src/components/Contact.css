@@ -101,7 +101,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #33b19a, #009379);
+  background: linear-gradient(135deg, #33b19a, #6CD0BF);
   border-radius: 6px;
   transform: scaleX(0);
   transform-origin: left;
@@ -186,7 +186,7 @@
 
 .social-icons img:hover {
   transform: translateY(-2px) scale(1.1);
-  filter: drop-shadow(0 0 8px #009379);
+  filter: drop-shadow(0 0 8px #6CD0BF);
 }
 
 /* 📱 Mobile view */
