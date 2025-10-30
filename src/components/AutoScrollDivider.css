@@ -1,6 +1,7 @@
 /* Base Styling */
 .yellow-wrapper {
-  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   overflow: hidden;
   width: 100%;
 }
