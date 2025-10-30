@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import ALGO from "../assets/ALGO.svg";
+import ALGO from "../assets/ALGO.svg"; // your logo file
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,13 +25,12 @@ const Navbar = () => {
     const scrollToWork = () => {
       const section = document.getElementById("latest-work");
       if (section) {
-        const yOffset = -80; // adjust if navbar height changes
+        const yOffset = -80;
         const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     };
 
-    // if not on homepage, navigate first then scroll
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(scrollToWork, 400);
@@ -43,12 +42,13 @@ const Navbar = () => {
   return (
     <nav className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
-        {/* Logo */}
+        {/* ✅ Logo */}
         <NavLink to="/" className="navbar-logo" onClick={closeMenu}>
           <img src={ALGO} alt="Logo" />
+          
         </NavLink>
 
-        {/* Hamburger */}
+        {/* ✅ Hamburger */}
         <button
           className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={toggleMenu}
@@ -59,9 +59,8 @@ const Navbar = () => {
           <span></span>
         </button>
 
-        {/* Nav Links */}
+        {/* ✅ Nav Links */}
         <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
-          {/* 👇 WORK scrolls smoothly */}
           <li>
             <a href="#latest-work" onClick={handleWorkClick}>
               Work
@@ -80,11 +79,11 @@ const Navbar = () => {
 
           {/* <li>
             <NavLink
-              to="/services"
+              to="/contact"
               onClick={closeMenu}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Services
+              Contact
             </NavLink>
           </li> */}
         </ul>
