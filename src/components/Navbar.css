@@ -104,6 +104,10 @@
     display: flex;
   }
 
+  .navbar-container {
+    padding: 1rem 2rem;
+  }
+
   .navbar-links {
     position: absolute;
     top: 100%;
