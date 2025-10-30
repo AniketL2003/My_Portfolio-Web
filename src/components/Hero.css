@@ -30,7 +30,8 @@
 } */
 
 .hero-text h2 {
-  font-family: 'Lufga', sans-serif;
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 550;
   font-size: 5.5rem;
   margin-top: 0rem;
   margin-bottom: 2rem;
@@ -38,28 +39,31 @@
   letter-spacing: 0.2rem;
   display: inline-block; /* or just remove display entirely */
   white-space: normal;
-  color: #14161a;
+  color: #2D2D2D;
 }
 
 
 .light-Hey {
-  font-family: 'Lufga', sans-serif;
-  color: #424B5A;
+ font-family: 'Epilogue', sans-serif;
+  color: #D5D5D5;
   font-weight: 400
 }
 
 .light-of {
-  font-family: 'Lufga', sans-serif;
-  color: #424B5A;
+  font-family: 'Epilogue', sans-serif;
+  color: #D5D5D5;
   font-weight: 400
 }
 
 .light-based {
-  font-family: 'Lufga', sans-serif;
-  color: #424B5A;
+  font-family: 'Epilogue', sans-serif;
+  color: #D5D5D5;
   font-weight: 400
 }
 
+.peach{
+font-family: 'Epilogue', sans-serif;
+}
 
 .hero-tagline {
   font-size: 1.25rem;
