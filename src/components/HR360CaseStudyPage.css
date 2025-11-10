@@ -263,8 +263,8 @@ body {
   margin-top: 12px;
   padding: 10px 40px;
   background: none;
-  color: #009379;
-  border: 2px solid #009379;
+  color: #2D2D2D;
+  border: 2px solid #2D2D2D;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -272,7 +272,7 @@ body {
 
 /* Button hover */
 .live-project-btn:hover {
-  background: #009379;
+  background: #2D2D2D;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 147, 121, 0.25);
