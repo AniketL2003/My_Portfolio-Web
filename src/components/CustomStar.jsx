@@ -1,7 +1,7 @@
 // CustomStar.jsx
 import React from "react";
 
-const CustomStar = ({ size = 35, color = "#95ccc3ff" }) => (
+const CustomStar = ({ size = 30, color = "#f6cce1ff" }) => (
   <svg
     width={size}
     height={size}

@@ -1,14 +1,14 @@
 /* Base Styling */
 .yellow-wrapper {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   overflow: hidden;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .white-box {
-  background: #F9E6F0;
-  transform: rotate(-1.5deg);
+  /* background: #F9E6F0; */
+  /* transform: rotate(-1.5deg); */
   padding: 0;
   width: 100%;
   max-width: 100vw;
@@ -19,11 +19,11 @@
 
 .marquee-text {
   font-family: 'Lufga', sans-serif;
-  color: #424B5A;
+  color: #F9E6F0;
   font-weight: 400;
   font-size: 3rem;
   line-height: 1;
-  padding: 0.5rem 0;
+  padding: 3rem 0;
   display: flex; /* ✅ Use flex to align star + text */
   align-items: center;
   gap: 0.5rem; /* space between star and text */
@@ -70,7 +70,7 @@
   }
 
   .marquee-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     gap: 0.3rem;
   }
 

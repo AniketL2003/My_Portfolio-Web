@@ -137,8 +137,8 @@ body {
   margin-top: 12px;
   padding: 10px 40px;
   background: none;
-  color: #009379;
-  border: 2px solid #009379;
+  color: #2D2D2D;
+  border: 2px solid #2D2D2D;
   border-radius: 0px;
   font-size: 14px;
   cursor: pointer;
@@ -146,11 +146,11 @@ body {
 }
 
 .resume-btn:hover {
-  background: #6CD0BF;
+  background: #2D2D2D;
   color: #fff;
   transform: translateY(-2px);
   /* subtle lift effect */
-  box-shadow: 0 4px 10px rgba(0, 147, 121, 0.3);
+  box-shadow: 0 4px 10px rgba(48, 55, 53, 0.3);
 }
 
 
