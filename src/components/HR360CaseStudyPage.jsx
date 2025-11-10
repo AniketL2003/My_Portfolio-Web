@@ -292,7 +292,7 @@ Validate HR360’s usability and ensure a smooth experience for both HR managers
 <br/> <br/>
 Participants:
 <br/>
-<b>5</b>HR Managers and <b>15</b> Employees from different departments.
+<b>5</b> HR Managers and <b>15</b> Employees from different departments.
 <br/> <br/>
 Method:
 <br/>
