@@ -30,9 +30,9 @@ const Hero = () => {
         {/* Star icon – springy pop on mount, tiny hover lift */}
         <motion.div
           className="hero-StarIcon"
-          initial={{ scale: 0.85, opacity: 0, rotate: -10 }}
-          animate={{ scale: 1, opacity: 1, rotate: 0 }}
-          transition={{ type: 'spring', stiffness: 100, damping: 18, delay: 0.10 }}
+          initial={{ scale: 0.85, opacity: 0, rotate: 10 }}
+          animate={{ scale: 1, opacity: 1, rotate: 1 }}
+          transition={{ type: 'ease-in', delay: 0.30 }}
           whileHover={{ y: -2, scale: 1.02 }}
           style={{ willChange: 'transform' }}
         >
