@@ -32,7 +32,7 @@ const Hero = () => {
           className="hero-StarIcon"
           initial={{ scale: 0.85, opacity: 0, rotate: -10 }}
           animate={{ scale: 1, opacity: 1, rotate: 0 }}
-          transition={{ type: 'spring', stiffness: 160, damping: 18, delay: 0.05 }}
+          transition={{ type: 'spring', stiffness: 100, damping: 18, delay: 0.10 }}
           whileHover={{ y: -2, scale: 1.02 }}
           style={{ willChange: 'transform' }}
         >
@@ -40,7 +40,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Tagline – gentle fade up */}
-        <FadeIn>
+        <FadeIn delay={0.40}>
           <p className="hero-tagline">UX/UI | Product Design</p>
         </FadeIn>
 
@@ -49,7 +49,7 @@ const Hero = () => {
           className="hero-text"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, delay: 0.40, ease: [0.22, 1, 0.36, 1] }}
           style={{ willChange: 'transform' }}
         >
           <span className="light-Hey">HEY! I’m</span> Aniket,{' '}
@@ -60,7 +60,7 @@ const Hero = () => {
         </motion.h2>
 
         {/* Description – delayed fade up for nice rhythm */}
-        <FadeIn delay={0.2}>
+        <FadeIn delay={0.4}>
           <p className="hero-description">
             Helping tech startups passionately for reshaping their brands,
             user experiences, and app/website designs.
