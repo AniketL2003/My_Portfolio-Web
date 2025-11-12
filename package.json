@@ -1,39 +1,24 @@
 {
-  "homepage": "https://anisux.com",
-  "name": "anis-ux",
+  "name": "my-portfolio-web",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@heroicons/react": "^2.2.0",
-    "@material-tailwind/react": "^2.1.10",
-    "@mui/icons-material": "^7.3.4",
-    "@mui/material": "^7.3.4",
-    "framer-motion": "^12.23.24",
-    "mixpanel-browser": "^2.68.0",
-    "motion": "^12.23.24",
+    "@studio-freight/lenis": "^1.0.39",
+    "framer-motion": "^10.18.0",
+    "mixpanel-browser": "^2.50.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-fast-marquee": "^1.6.5",
+    "react-fast-marquee": "^1.6.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^7.9.1",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "gh-pages": "^6.3.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11"
+    "web-vitals": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
