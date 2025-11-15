@@ -31,7 +31,7 @@
 
 .hero-text h2 {
   font-family: 'Epilogue', sans-serif;
-  font-weight: 550;
+  font-weight: 500;
   font-size: 5.5rem;
   margin-top: 0rem;
   margin-bottom: 2rem;
@@ -63,13 +63,15 @@
 
 .peach{
 font-family: 'Epilogue', sans-serif;
+font-weight: 400;
+color: #D5D5D5;
 }
 
 .hero-tagline {
   font-size: 1.25rem;
   color: #747878;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
@@ -91,6 +93,42 @@ font-family: 'Epilogue', sans-serif;
   height: auto;
   border-radius: 10px;
 } */
+
+/* outer wrapper preserves text flow */
+.name-magnetic-outer { display: inline-block; }
+
+/* inner element is moved; keep it above everything */
+.name-magnetic-inner {
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* small extra gap so 'Based In' doesn't sit too close */
+.name-magnetic-outer + .light-based,
+.name-magnetic-outer + span.light-based {
+  margin-left: 8px;
+}
+
+.name-magnetic-outer { display: inline-block; }
+.name-magnetic-inner {
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Example: use a bold serif type just for the name */
+.name-font {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
 
 /* ✅ Mobile & Tablet Responsive */
 @media (max-width: 1024px) {

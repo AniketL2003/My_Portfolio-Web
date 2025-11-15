@@ -1,34 +1,64 @@
-// src/components/SplitReveal.jsx
-import { useEffect, useRef } from 'react';
-import SplitType from 'split-type';
-import { motion, useAnimation } from 'framer-motion';
+import React, { useMemo } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import "./SplitReveal.css";
 
-export default function SplitReveal({ as: Tag = 'h1', children, delay = 0 }) {
-  const ref = useRef(null);
-  const controls = useAnimation();
+export default function SplitReveal({
+  text = "",
+  by = "chars",
+  className = "",
+  delay = 0.06,
+  stagger = 0.03,
+}) {
+  const shouldReduce = useReducedMotion();
 
-  useEffect(() => {
-    const split = new SplitType(ref.current, { types: 'lines, words' });
-    controls.start(i => ({
-      y: 0, opacity: 1,
-      transition: { delay: delay + i * 0.035, duration: 0.6, ease: [0.22,1,0.36,1] }
-    }));
-    return () => split.revert();
-  }, [controls, delay]);
+  const tokens = useMemo(() => {
+    if (by === "words") return text.split(/(\s+)/).filter(Boolean);
+    return Array.from(text);
+  }, [text, by]);
+
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: stagger,
+        delayChildren: delay,
+      },
+    },
+  };
+
+  // stronger values: larger vertical slide, bigger skew, bigger rotateX, longer duration
+  const child = {
+    hidden: { y: "140%", opacity: 0, skewY: 10, rotateX: 18 },
+    show: {
+      y: "0%",
+      opacity: 1,
+      skewY: 0,
+      rotateX: 0,
+      transition: { duration: 0.8, ease: [0.2, 0.9, 0.3, 1] },
+    },
+  };
+
+  if (shouldReduce) return <span className={`split-reveal ${className}`}>{text}</span>;
 
   return (
-    <Tag ref={ref} style={{ overflow: 'hidden' }}>
-      {String(children).split(' ').map((w, i) => (
-        <motion.span
-          key={i}
-          custom={i}
-          initial={{ y: '1em', opacity: 0 }}
-          animate={controls}
-          style={{ display: 'inline-block', willChange: 'transform' }}
-        >
-          {w + (i < children.split(' ').length - 1 ? ' ' : '')}
-        </motion.span>
-      ))}
-    </Tag>
+    <motion.span
+      className={`split-reveal split-3d ${className}`}
+      aria-label={text}
+      initial="hidden"
+      animate="show"
+      variants={container}
+      style={{ display: "inline-block", lineHeight: 1 }}
+    >
+      {tokens.map((tok, i) => {
+        if (/\s+/.test(tok)) return <span key={`space-${i}`} className="split-space">{tok}</span>;
+        return (
+          <span key={i} className="split-token" aria-hidden>
+            <motion.span className="split-inner" variants={child}>
+              {tok}
+            </motion.span>
+          </span>
+        );
+      })}
+    </motion.span>
   );
 }

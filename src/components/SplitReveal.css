@@ -1,0 +1,47 @@
+.split-reveal {
+  display: inline-block;
+  white-space: pre-wrap;
+  line-height: 1;
+  vertical-align: baseline;
+  transform-style: preserve-3d;
+}
+
+/* bigger perspective so 3D is obvious */
+.split-reveal.split-3d {
+  perspective: 900px;
+}
+
+/* token wrapper */
+.split-token { display:inline-block; overflow:hidden; vertical-align:bottom; line-height:1; }
+
+/* the animated inner piece — make font-rendering crisp */
+.split-inner {
+  display:inline-block;
+  line-height:1;
+  white-space:pre-wrap;
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  letter-spacing: -0.01em;
+  /* add subtle text-shadow to help depth */
+  text-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+/* slightly larger visible shadow under characters to emphasize depth */
+.split-inner::after{
+  content: "";
+  display: block;
+  height: 0.08em;
+  width: 100%;
+  transform: translateY(0.14em) scaleY(0.82);
+  opacity: 0.075;
+  background: currentColor;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* spacing for spaces */
+.split-space { display:inline-block; width:0.45ch; }
+
+/* responsive */
+@media (max-width:520px){ .split-space{ width:0.35ch; } }
