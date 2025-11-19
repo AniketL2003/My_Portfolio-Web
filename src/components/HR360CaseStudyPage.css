@@ -199,6 +199,25 @@ body {
   /* Reset margin from general split-content p */
 }
 
+.IA-section {
+  margin-top: 3rem;
+}
+
+.IA-card {
+  max-width: auto;
+  height: 100%;
+  /* Limit width of IA image */
+  margin-top: 1.5rem;
+}
+
+.IA-card img {
+  width: 100%;
+  max-width: auto;
+  /* Limit width of IA image */
+  height: 100%;
+  border-radius: 8px;
+}
+
 /* --- Image Sections (within split-content) --- */
 .content-img {
   width: 100%;

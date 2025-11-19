@@ -5,7 +5,7 @@ import "./HR360CaseStudyPage.css";
 import hr360Hero from "../assets/hr360-hero.png";
 import persona1 from "../assets/persona1.svg";
 import persona2 from "../assets/persona2.svg";
-import sketches from "../assets/sketches.svg";
+import sketches from "../assets/sketches1.svg";
 // import iteration1 from "../assets/iteration1.png";
 // import iteration2 from "../assets/iteration2.png";
 // import iteration3 from "../assets/iteration3.png";
@@ -13,6 +13,7 @@ import iterationall from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.png";
 import DesignColors from "../assets/ColorHR360.svg";
 import prototypeVideo from '../assets/prototype.mp4';
+import IA from "../assets/Information Architecture.svg";
 
 
 const HR360CaseStudyPage = () => {
@@ -159,6 +160,12 @@ HR360 aims to enhance both the efficiency of HR departments and the engagement o
               <p>Needs to rely on emails and calls with HR for updates.</p>
               <p>Lacks a single dashboard to manage HR-related decisions.</p>
             </div>
+          </div>
+          <div className="IA-section">
+          <h2>Information Architecture</h2>
+          <div className="IA-card">
+          <img className="IAIMG" src={IA} alt="IA"/> 
+          </div>
           </div>
         </div>
       </section>
