@@ -138,9 +138,7 @@ body {
   /* Small spacing for list items */
 }
 
-.grid-two,
-.persona-grid,
-.iterations-grid {
+.grid-two {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -226,9 +224,15 @@ body {
   width: 100%;
   max-width: 100%;
   height: auto;
-  display: block;
+ 
+  flex: row;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
+
+}
+
+.iterations-grid{
+  display: flex;
+  gap: 1rem;
 }
 
 .color {

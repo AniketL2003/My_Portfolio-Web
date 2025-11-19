@@ -6,9 +6,10 @@ import hr360Hero from "../assets/hr360-hero.png";
 import persona1 from "../assets/persona1.svg";
 import persona2 from "../assets/persona2.svg";
 import sketches from "../assets/sketches.svg";
-import iteration1 from "../assets/iteration1.png";
-import iteration2 from "../assets/iteration2.png";
-import iteration3 from "../assets/iteration3.png";
+// import iteration1 from "../assets/iteration1.png";
+// import iteration2 from "../assets/iteration2.png";
+// import iteration3 from "../assets/iteration3.png";
+import iterationall from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.png";
 import DesignColors from "../assets/ColorHR360.svg";
 import prototypeVideo from '../assets/prototype.mp4';
@@ -218,9 +219,10 @@ HR360 aims to enhance both the efficiency of HR departments and the engagement o
         <div className="split-content">
           Each iteration was tested for usability, focusing on reducing cognitive load and improving task completion speed.
           <div className="iterations-grid">
-            <img src={iteration1} alt="Iteration 1 of the design" />
-            <img src={iteration2} alt="Iteration 2 of the design" />
-            <img src={iteration3} alt="Iteration 3 of the design" />
+            {/* <img src={iteration1} alt="Iteration 1 of the design" />
+            <img src={iteration2} alt="Iteration 2 of the design" /> */}
+            {/* <img src={iteration3} alt="Iteration 3 of the design" /> */}
+            <img src={iterationall} alt="Iteration 3 of the design" />
           </div>
         </div>
       </section>
