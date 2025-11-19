@@ -70,13 +70,13 @@ const Projects = () => {
           background="#E4DBEA"
           onClick={() => window.open(`https://www.behance.net/gallery/216047277/InGate-Visitor-Management-System`, "_blank")}
         />
-        <ProjectCard
+        {/* <ProjectCard
           title="CRM"
           description="CRM helps businesses manage sales, track interactions, and strengthen client relationships efficiently."
           image={Crm}
           background="#E7EDFF"
           onClick={() => window.open(`https://www.behance.net/gallery/218461021/CRM-Customer-Relationship-Management`, "_blank")}
-        />
+        /> */}
         <ProjectCard
           title="Real Estate Investment"
           description="Invest is a modern platform that simplifies property analysis, portfolio tracking, and decision-making for investors."
@@ -84,13 +84,13 @@ const Projects = () => {
           background="#D9F5F0"
           onClick={() => window.open(`https://www.behance.net/gallery/217938145/Real-Estate-Investment-System`, "_blank")}
         />
-        <ProjectCard
+        {/* <ProjectCard
           title="RetroRing"
           description="RetroRing is a modern social media app that fosters meaningful connections through seamless content."
           image={Retroring}
           background="#FEE9E3"
           onClick={() => window.open(`https://www.behance.net/gallery/200075317/RetroRing-Community-App-Case-Study`, "_blank")}
-        />
+        /> */}
         <ProjectCard
           title="ResolveIT"
           description="ResolveIT is a complaint management system that streamlines issue reporting, tracking, and resolution."
