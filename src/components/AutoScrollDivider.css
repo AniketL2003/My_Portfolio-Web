@@ -19,7 +19,8 @@
 
 .marquee-text {
   font-family: 'Lufga', sans-serif;
-  color: #F9E6F0;
+  /* color: #F9E6F0; */
+  color: #f6cce1ff;
   font-weight: 400;
   font-size: 3rem;
   line-height: 1;
