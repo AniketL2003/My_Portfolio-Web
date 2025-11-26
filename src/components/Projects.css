@@ -19,8 +19,9 @@
 /* Project card styling */
 .project-card {
   padding: 2rem;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); */
+  border: #F9E6F0 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,6 +31,13 @@
   will-change: transform;
   height: 560px;
 }
+
+
+.project-card:hover {
+  background: #F9E6F0;          /* change this to any color you want */
+  box-shadow: 0 12px 30px #ffffff93;
+}
+
 
 .project-card h4 {
   font-size: 1.5rem;
@@ -55,7 +63,7 @@
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   margin-top: auto;
   display: block;
   position: relative;

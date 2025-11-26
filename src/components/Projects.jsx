@@ -60,14 +60,14 @@ const Projects = () => {
           title="HR360"
           description="HR360 is a modern HR management solution that streamlines attendance, payroll, and leave tracking, making workforce management effortless for businesses."
           image={imageHr}
-          background="#DDEFFF"
+          background="#f7f7f7ff"
           onClick={() => navigate('/case-study/hr360')}
         />
         <ProjectCard
           title="InGate"
           description="InGate is a smart visitor management app that streamlines check-ins, tracks visitors in real time, and notifies hosts instantly."
           image={hr360}
-          background="#E4DBEA"
+          background="#f7f7f7ff"
           onClick={() => window.open(`https://www.behance.net/gallery/216047277/InGate-Visitor-Management-System`, "_blank")}
         />
         {/* <ProjectCard
@@ -81,7 +81,7 @@ const Projects = () => {
           title="Real Estate Investment"
           description="Invest is a modern platform that simplifies property analysis, portfolio tracking, and decision-making for investors."
           image={Estate}
-          background="#D9F5F0"
+          background="#f7f7f7ff"
           onClick={() => window.open(`https://www.behance.net/gallery/217938145/Real-Estate-Investment-System`, "_blank")}
         />
         {/* <ProjectCard
@@ -95,7 +95,7 @@ const Projects = () => {
           title="ResolveIT"
           description="ResolveIT is a complaint management system that streamlines issue reporting, tracking, and resolution."
           image={Resolveit}
-          background="#FAF6C8"
+          background="#f7f7f7ff"
           onClick={() => window.open(`https://www.behance.net/gallery/221184171/ResolveIT-Complaint-Management-System`, "_blank")}
         />
       </div>
