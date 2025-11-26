@@ -24,24 +24,51 @@ const HR360CaseStudyPage = () => {
     <div className="case-study">
       <div className="project-type">
          <span>Mobile & Web</span>
+         <span>|</span>
     <span>Case Study</span>
       </div>
 
       {/* ========== Hero Section ========== */}
       <h2 className="project-title">HR360 - Smarter HR. Stronger Productivity.</h2>
+      <h3 className="project-subtitle">A Web + Mobile HR Platform | UX/UI Case Study</h3>
       <section className="Hero-section">
         <img src={hr360Hero} alt="HR360 Case Study Banner" className="hero-img" />
       </section>
 
       {/* ========== Context ========== */}
       <section className="section section--split">
-        <h2 className="section-title">Context</h2>
-        <div className="split-content">
-          <p>
-            The HR360 project was initiated to address the growing need for a simplified, modern, and scalable HR management system. Many mid-sized companies struggle with manual or outdated HR workflows, leading to reduced productivity and employee dissatisfaction. The goal was to build a digital HR solution that brings all essential operations—attendance, payroll, recruitment, leave management, and performance tracking—under one unified interface.
-          </p>
-        </div>
-      </section>
+  <h2 className="section-title">Overview</h2>
+
+  <div className="grid-2">
+    {/* LEFT COLUMN – text */}
+    <div className="split-content">
+      <p>
+        The HR360 project was initiated to address the growing need for a
+        simplified, modern, and scalable HR management system. Many mid-sized
+        companies struggle with manual or outdated HR workflows, leading to
+        reduced productivity and employee dissatisfaction. The goal was to build
+        a digital HR solution that brings all essential operations—attendance,
+        payroll, recruitment, leave management, and performance
+        tracking—under one unified interface.
+      </p>
+    </div>
+
+    {/* RIGHT COLUMN – card */}
+    {/* <div className="card-1">
+      <h4>The Team</h4>
+      <ul>
+        <li>
+          UI/UX Designer (Me – leading research, wireframes, and final UI)  
+          <li>Backend Developer (handling database and system logic) </li>
+         <li>Frontend Developer (building user interface interactions)</li>  
+         <li>HR Consultant (providing domain insights on HR workflows)</li>
+        </li>
+      </ul>
+    </div> */}
+  </div>
+</section>
+
+      
 
       {/* ========== Problem Statement ========== */}
       <section className="section section--split">

@@ -54,7 +54,7 @@ const Projects = () => {
 
   return (
     <section id="latest-work" className="projects">
-      <h3>My latest work</h3>
+      <h3>Selected Work</h3>
       <div className="project-grid">
         <ProjectCard
           title="HR360"
