@@ -30,7 +30,7 @@ const HR360CaseStudyPage = () => {
 
       {/* ========== Hero Section ========== */}
       <h2 className="project-title">HR360 - Smarter HR. Stronger Productivity.</h2>
-      <h3 className="project-subtitle">A Web + Mobile HR Platform | UX/UI Case Study</h3>
+      {/* <h3 className="project-subtitle">A Web + Mobile HR Platform | UX/UI Case Study</h3> */}
       <section className="Hero-section">
         <img src={hr360Hero} alt="HR360 Case Study Banner" className="hero-img" />
       </section>
