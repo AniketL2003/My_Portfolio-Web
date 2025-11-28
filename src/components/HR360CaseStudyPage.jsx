@@ -2,7 +2,7 @@ import React from "react";
 import "./HR360CaseStudyPage.css";
 
 // Ensure your image paths are correct in your project's assets folder
-import hr360Hero from "../assets/hr360-hero.png";
+import hr360Hero from "../assets/hr360-hero.svg";
 import persona1 from "../assets/persona1.svg";
 import persona2 from "../assets/persona2.svg";
 import sketches from "../assets/sketches1.svg";
