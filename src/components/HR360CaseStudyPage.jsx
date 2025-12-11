@@ -1,396 +1,365 @@
 import React from "react";
 import "./HR360CaseStudyPage.css";
 
-// Ensure your image paths are correct in your project's assets folder
 import hr360Hero from "../assets/hr360-hero.svg";
 import persona1 from "../assets/persona1.svg";
 import persona2 from "../assets/persona2.svg";
 import sketches from "../assets/sketches1.svg";
-// import iteration1 from "../assets/iteration1.png";
-// import iteration2 from "../assets/iteration2.png";
-// import iteration3 from "../assets/iteration3.png";
 import iterationall from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.png";
 import DesignColors from "../assets/ColorHR360.svg";
-import prototypeVideo from '../assets/prototype.mp4';
+import prototypeVideo from "../assets/prototype.mp4";
 import IA from "../assets/Information Architecture.svg";
-
+import HRFlow from "../assets/HR-User-Flow.jpg";
 
 const HR360CaseStudyPage = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
-    <div className="case-study">
+    <main className="case-study" aria-labelledby="page-title">
       <div className="project-type">
-         <span>Mobile & Web</span>
-         <span>|</span>
-    <span>Case Study</span>
+        {/* <span>Mobile & Web</span>
+        <span className="divider">|</span>
+        <span>Case Study</span> */}
       </div>
 
-      {/* ========== Hero Section ========== */}
-      <h2 className="project-title">HR360 - Smarter HR. Stronger Productivity.</h2>
-      {/* <h3 className="project-subtitle">A Web + Mobile HR Platform | UX/UI Case Study</h3> */}
-      <section className="Hero-section">
-        <img src={hr360Hero} alt="HR360 Case Study Banner" className="hero-img" />
-      </section>
+      {/* ========== 01_Hero ========== */}
+      <header id="page-title" className="frame hero-frame" role="banner">
+        <div className="hero-inner-grid">
+          <div className="col col-6 hero-copy">
+            <h1 className="project-title">HR360 – Smarter HR. Stronger Productivity.</h1>
+            <h3 className="project-subtitle">Mobile & Web | Case Study</h3>
 
-      {/* ========== Context ========== */}
-      <section className="section section--split">
-  <h2 className="section-title">Overview</h2>
+            <p className="lead">
+              HR360 centralizes attendance, payroll, recruitment, leave, and
+              performance tracking into a single, modern interface—designed to
+              simplify HR workflows and improve employee experience.
+            </p>
 
-  <div className="grid-2">
-    {/* LEFT COLUMN – text */}
-    <div className="split-content">
-      <p>
-        The HR360 project was initiated to address the growing need for a
-        simplified, modern, and scalable HR management system. Many mid-sized
-        companies struggle with manual or outdated HR workflows, leading to
-        reduced productivity and employee dissatisfaction. The goal was to build
-        a digital HR solution that brings all essential operations—attendance,
-        payroll, recruitment, leave management, and performance
-        tracking—under one unified interface.
-      </p>
-    </div>
+            <div className="hero-cta">
+              <button
+                className="live-project-btn"
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.mobigic.attendance&pcampaignid=web_share",
+                    "_blank"
+                  )
+                }
+              >
+                Live Project
+              </button>
+            </div>
+          </div>
 
-    {/* RIGHT COLUMN – card */}
-    {/* <div className="card-1">
-      <h4>The Team</h4>
-      <ul>
-        <li>
-          UI/UX Designer (Me – leading research, wireframes, and final UI)  
-          <li>Backend Developer (handling database and system logic) </li>
-         <li>Frontend Developer (building user interface interactions)</li>  
-         <li>HR Consultant (providing domain insights on HR workflows)</li>
-        </li>
-      </ul>
-    </div> */}
-  </div>
-</section>
+          <div className="col col-6 hero-visual">
+            <div className="hero-mockup">
+              <img src={hr360Hero} alt="HR360 Case Study Banner" />
+            </div>
+          </div>
+        </div>
+      </header>
 
-      
+      {/* ========== 02_Project_Overview ========== */}
+      <section id="project-overview" className="frame overview-frame">
+        <div className="section-title-block">
+          <h2 className="section-title">Project Overview</h2>
+        </div>
 
-      {/* ========== Problem Statement ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Problem Statement</h2>
-        <div className="split-content">
-          <p>
-            Traditional HR management tools are either too complex or lack the flexibility modern teams require. HR professionals spend a lot of time toggling between different systems to manage employee data, approvals, and reports.
-Our challenge was to design an HR system that:
-<br/><br/>
+        <div className="grid overview-grid">
+          <div className="overview-text">
+            <p>
+              The HR360 project was initiated to address the growing need for a
+              simplified, scalable HR management system. Mid-sized companies
+              often use multiple, disjointed tools which reduce productivity and transparency.
+            </p>
 
-Centralizes all HR functions.
-<br/><br/>
-Simplifies daily workflows.
-<br/><br/>
-Reduces the need for multiple tools.
-<br/><br/>
-Enhances employee experience with intuitive design.
-          </p>
+            <h4>Problem Statement</h4>
+            <p className="small">
+              Traditional HR tools are too complex or inflexible. HR professionals spend too much time toggling between systems for approvals, payroll and reporting.
+            </p>
+
+            <h4>Solution Summary</h4>
+            <p className="small">
+              Build a unified HR platform focused on automation, transparency and simplicity — enabling employees and HR teams to work from one dashboard.
+            </p>
+          </div>
+
+          <aside className="col col-4 overview-details">
+            <dl className="details-list">
+              <div>
+                <dt>Role</dt>
+                <dd>UI/UX Designer (End-to-end)</dd>
+              </div>
+              <div>
+                <dt>Team</dt>
+                <dd>Designer • Backend • Frontend • HR Consultant</dd>
+              </div>
+              <div>
+                <dt>Duration</dt>
+                <dd>3 months</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>Figma, Miro, Notion, Teams</dd>
+              </div>
+              <div>
+                <dt>Methods</dt>
+                <dd>Interviews, Surveys, IA, Wireframes, Prototyping</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
-      {/* ========== Solution ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Solution</h2>
-        <div className="split-content">
-          <p>
-            We created HR360, a user-focused HR management platform that enables HR teams and employees to manage everything from one dashboard.
-Our design strategy focused on:
-<br/><br/>
-Automation: Reducing repetitive HR tasks through smart workflows.
-<br/><br/>
-Transparency: Allowing employees to access and manage their information.
-<br/><br/>
-Simplicity: Making the interface visually clean, minimal, and accessible.
-HR360 aims to enhance both the efficiency of HR departments and the engagement of employees through intuitive digital experiences.
-          </p>
+      {/* ========== 03_Discovery_Research ========== */}
+      <section id="discovery-research" className="frame discovery-frame">
+        <h2 className="section-title">Discovery &amp; Research</h2>
+
+        {/* Competitive Analysis */}
+        <div className="subsection competitive">
+          <h3>Competitive Analysis</h3>
+          <p className="small">Workday & SAP are powerful but expensive and complex; smaller orgs need usability and customization.</p>
+
+          <div className="cards-row">
+            <div className="cmp-card">
+              <h4>Workday</h4>
+              <p className="small">Enterprise features, steep learning curve.</p>
+            </div>
+            <div className="cmp-card">
+              <h4>SAP SuccessFactors</h4>
+              <p className="small">Robust but costly and rigid.</p>
+            </div>
+            <div className="cmp-card">
+              <h4>Other HRMS</h4>
+              <p className="small">Many trade-offs in features vs. usability.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* User Research */}
+        <div className="subsection user-research">
+          <h3>User Research</h3>
+          <p className="small">Interviews & surveys with HR managers and employees to uncover pain points.</p>
+
+          <div className="insights-row">
+            <div className="insight">Lack of transparency</div>
+            <div className="insight">Manual & scattered tools</div>
+            <div className="insight">Employees face delays</div>
+            <div className="insight">Repetitive HR tasks</div>
+          </div>
+        </div>
+
+        {/* Personas */}
+        <div className="subsection personas">
+          <h3>Personas</h3>
+          <div className="persona-cards">
+            <article className="persona-card">
+              <img src={persona1} alt="Riya Sharma - HR Manager" />
+              <h4>Riya Sharma</h4>
+              <p className="muted">HR Manager • Age 27</p>
+
+              <div className="persona-info">
+                <ul>
+                  <li>GOALS: Apply for leave/resignation quickly,
+                    Access payslips & policies</li>
+                  <br />
+                  <li>FRUSTRATION: Has to use multiple tools for different HR tasks.
+                    Doesn’t get real-time updates on request approvals.
+                    Feels a lack of transparency and control.</li>
+                </ul>
+              </div>
+            </article>
+
+
+            <article className="persona-card">
+              <img src={persona2} alt="Amit Verma - Project Manager" />
+              <h4>Amit Verma</h4>
+              <p className="muted">Project Manager • Age 35</p>
+
+              <div className="persona-info">
+                <ul>
+                  <li>GOALS: Approve/reject requests efficiently,<br />
+                    View team availability</li>
+                  <br />
+                  <li>FRUSTRATION: Wastes time tracking employee requests manually.
+                    Needs to rely on emails and calls with HR for updates.
+                    Lacks a single dashboard to manage HR-related decisions.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div className="ia-block">
+            <h4>Information Architecture</h4>
+            <div className="ia-image">
+              <img src={IA} alt="Information architecture diagram" />
+            </div>
+          </div>
+        </div>
+
+        {/* Key insights & Problem definition */}
+        <div className="subsection insights-problem">
+          <h3>Key Insights</h3>
+          <div className="three-insights">
+            <div className="insight-box">Delays caused by scattered tools</div>
+            <div className="insight-box">Managers need faster approvals & filters</div>
+            <div className="insight-box">Employees want transparency & live updates</div>
+          </div>
+
+          <div className="problem-box">
+            <strong>Problem Definition:</strong>
+            <p>How might we centralize HR tasks, improve transparency, and simplify workflows for employees & managers?</p>
+          </div>
         </div>
       </section>
 
-      {/* ========== How I Reached There ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">How I Reached There — The Story</h2>
-        <div className="split-content">
-          <div className="grid-two">
-            <div className="card">
-              <h4>The Team</h4>
+      {/* ========== 04_Design_Process ========== */}
+      <section id="design-process" className="frame process-frame">
+        <h2 className="section-title">UX Design Process</h2>
+
+        <div className="subsection flows">
+          <h3>User Flows</h3>
+          <p className="small">Designed flows for leave, attendance, payroll, resignation.</p>
+          <div className="flow-placeholder">
+            <img src={HRFlow}/>
+          </div>
+        </div>
+
+        <div className="subsection wireframes">
+          <h3>Wireframes</h3>
+          <div className="wireframe-grid">
+            {/* <div className="wireframe"> </div> */}
+                <img src={sketches}/>
+            {/* <div className="wireframe">Low-fi 2</div>
+            <div className="wireframe">Low-fi 3</div>
+            <div className="wireframe">Low-fi 4</div> */}
+          </div>
+        </div>
+
+        <div className="subsection-prototype">
+          <h3>Prototype</h3>
+          <p className="small">Interactive prototype validated core flows and interactions.</p>
+          <div className="prototype-row">
+            <video
+              className="prototype-vid"
+              src={prototypeVideo}  // ✅ use imported variable
+              controls
+              muted
+              autoPlay
+              loop
+              playsInline
+            />
+          </div>
+        </div>
+
+        <div className="subsection usability">
+          <div className="usability-grid">
+            <div>
+              <h3>Usability Testing</h3>
+              <p className="small">
+                Participants: <strong>5 HR Managers</strong> and <strong>15 Employees</strong>.
+                Moderated sessions to validate attendance, leave, and report flows.
+              </p>
+            </div>
+
+            <div>
+              <h3>Top findings</h3>
               <ul>
-                <li>UI/UX Designer (Me – leading research, wireframes, and final UI)
-                  Backend Developer (handling database and system logic)
-                  Frontend Developer (building user interface interactions)
-                  HR Consultant (providing domain insights on HR workflows)</li>
+                <li>Managers wanted advanced filters</li>
+                <li>Employees wanted real-time leave notifications</li>
+                <li>UI contrast and module distinction needed improvement</li>
               </ul>
             </div>
-            <div className="card">
-              <h4>My Role</h4>
-              <ul>
-                <li>Conducted user research with employees, managers, and HR representatives.
-                  Mapped workflows (leave, payroll, resignation, attendance).
-                  Designed wireframes, high-fidelity screens, and interactive prototypes.
-                  Ensured consistency in UI, usability, and brand alignment.</li>
-              </ul>
-            </div>
-            <div className="card">
-              <h4>Duration</h4>
-              <ul>
-                <li>3 months (Concept → Research → Wireframing → Design → Handoff)</li>
-              </ul>
-            </div>
-            <div className="card">
-              <h4>Tools</h4>
-              <ul>
-                <li>Figma – Wireframing & UI Design</li>
-                <li>Miro – Journey Mapping & Brainstorming</li>
-                <li>Notion – Documentation & Project Management</li>
-                <li>Teams – Team Communication</li>
-              </ul>
-            </div>
+          </div>
+        </div>
+
+        <div className="subsection iterations">
+          <h3>Iterations — Before → After</h3>
+
+          <div className="before-after-row">
+            <figure className="before">
+              <figcaption>Before</figcaption>
+              <img src={iterationall} alt="Iteration before" />
+            </figure>
+
+            <figure className="after">
+              <figcaption>After</figcaption>
+              <img src={mockups} alt="Iteration after (final)" />
+            </figure>
+          </div>
+
+          <p className="small caption">Changes: added live notifications, report filters, refined UI contrast.</p>
+        </div>
+      </section>
+
+      {/* ========== 05_Final_Design ========== */}
+      <section id="final-design" className="frame final-frame">
+        <h2 className="section-title">Final Design</h2>
+
+        <p className="small">The final HR360 UI: dashboard, attendance, leave flow, analytics and profile.</p>
+
+        <div className="final-gallery">
+          <div className="final-card"><img src={mockups} alt="Dashboard mockup" /></div>
+          <div className="final-card"><img src={mockups} alt="Attendance mockup" /></div>
+          <div className="final-card"><img src={mockups} alt="Analytics mockup" /></div>
+        </div>
+
+        <div className="design-system">
+          <h4>Design System & Style-guides</h4>
+          <p className="small">Primary Blue, Orange, Green — typography and reusable components (buttons, tables, badges).</p>
+          <img className="color" src={DesignColors} alt="Design colors" />
+        </div>
+      </section>
+
+      {/* ========== 06_Impact ========== */}
+      <section id="impact" className="frame impact-frame">
+        <h2 className="section-title">Impact</h2>
+
+        <div className="stats-row">
+          <div className="stat-card">
+            <div className="stat-value">95%</div>
+            <div className="stat-label">Task completion</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-value">30%</div>
+            <div className="stat-label">Faster workflows</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-value">4.7/5</div>
+            <div className="stat-label">User satisfaction</div>
+          </div>
+        </div>
+
+        <blockquote className="testimonial">
+          “HR360 reduced time spent on admin tasks and improved team transparency.” — HR Manager (participant)
+        </blockquote>
+      </section>
+
+      {/* ========== 07_Learnings ========== */}
+      <section id="learnings" className="frame learnings-frame">
+        <h2 className="section-title">Learnings</h2>
+
+        <div className="three-spot">
+          <div className="spot">
+            <h4>Validate early</h4>
+            <p className="small">Prototype tests saved weeks of rework.</p>
+          </div>
+          <div className="spot">
+            <h4>Collaborate closely</h4>
+            <p className="small">Tighter engineering collaboration improved deliverability.</p>
+          </div>
+          <div className="spot">
+            <h4>Enhance analytics</h4>
+            <p className="small">Future focus: deeper, customizable reporting & filters.</p>
           </div>
         </div>
       </section>
 
-      {/* ========== Research Part ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Research Part</h2>
-        <div className="split-content">
-          <h2>Personas</h2>
-          <div className="grid-two persona-grid">
-            <div className="persona-card">
-              <img src={persona1} alt="Persona of an HR Manager" />
-              <h3>Riya Sharma</h3>
-              <h5>HR Manager</h5>
-              <h6>Age: 27</h6>
-              <br />
-              <h5>Goals:</h5>
-              <p>Apply for leave, resignation, or regularization quickly.</p>
-              <p>Access salary slips, attendance, and HR policies easily.</p>
-              <br />
-              <h5>Frustrations:</h5>
-              <p>Has to use multiple tools for different HR tasks.</p>
-              <p>Doesn’t get real-time updates on request approvals.</p>
-              <p>Feels a lack of transparency and control.</p>
-            </div>
-            <div className="persona-card">
-              <img src={persona2} alt="Persona of an Employee" />
-              <h3>Amit Verma</h3>
-              <h5>Project Manager</h5>
-              <h6>Age: 35</h6>
-              <br />
-              <h5>Goals:</h5>
-              <p>Approve/reject leave, resignation, and other requests efficiently.</p>
-              <p>View team availability and performance in one place.</p>
-              <p>Focus more on productivity and less on admin tasks.</p>
-              <br />
-              <h5>Frustrations:</h5>
-              <p>Wastes time tracking employee requests manually.</p>
-              <p>Needs to rely on emails and calls with HR for updates.</p>
-              <p>Lacks a single dashboard to manage HR-related decisions.</p>
-            </div>
-          </div>
-          <div className="IA-section">
-          <h2>Information Architecture</h2>
-          <div className="IA-card">
-          <img className="IAIMG" src={IA} alt="IA"/> 
-          </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== Analysis ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Analysis</h2>
-        <div className="split-content">
-          <div className="grid-two">
-            <div className="card">
-              <h4>Competitive Analysis</h4>
-              <p>Existing HR tools (Workday, SAP SuccessFactors) are powerful but complex and expensive.</p>
-              <p>Small to mid-size companies struggle to adapt due to lack of customisation and usability.</p>
-            </div>
-            <div className="card">
-              <h4>Use Case Analysis</h4>
-              <p>Employees use HR360 for leave, payroll, attendance, and resignation in one place.</p>
-              <p>Managers and HR teams track, approve, and analyse workforce activities with ease.</p>
-            </div>
-            <div className="card">
-              <h4>Pain Points</h4>
-              <p>Employees face delays, scattered tools, and lack of transparency in HR processes.</p>
-              <p>Managers and HR teams waste time on repetitive tasks without real-time insights.</p>
-            </div>
-            <div className="card">
-              <h4>Target Audience</h4>
-              <p>Employees, managers, and HR teams of growing small-to-mid sized organisations.</p>
-              <p>Companies seeking a unified, cost-effective, and user-friendly HR platform.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== Brainstorming & Ideation ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Brainstorming & Ideation</h2>
-        <div className="split-content">
-          <div className="grid-two">
-            <div className="card">
-              <h4>My Approach</h4>
-              <p>Understand HR pain points and user groups (HR managers, employees, admins). Focus on key areas like onboarding, engagement, and performance.</p>
-              <p>Use divergent thinking to generate ideas, then narrow using feasibility-impact matrix. Prioritize employee-centric solutions with tech enhancements.</p>
-            </div>
-            <div className="card">
-              <h4>Possible Solutions</h4>
-              <p>Attendance & Payroll: Mobile check-ins and automated leave workflows. Transparent payslip generator with tax calculators.</p>
-              <p>Analytics & Admin Tools: Predictive attrition analysis and HR efficiency dashboards. Custom report builder with drag-and-drop features</p>
-            </div>
-          </div>
-          <br />
-          <img src={sketches} alt="Sketches and Wireframes" className="content-img" />
-        </div>
-      </section>
-
-      {/* ========== Iterations ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Iterations</h2>
-        <div className="split-content">
-          Each iteration was tested for usability, focusing on reducing cognitive load and improving task completion speed.
-          <div className="iterations-grid">
-            {/* <img src={iteration1} alt="Iteration 1 of the design" />
-            <img src={iteration2} alt="Iteration 2 of the design" /> */}
-            {/* <img src={iteration3} alt="Iteration 3 of the design" /> */}
-            <img src={iterationall} alt="Iteration 3 of the design" />
-          </div>
-        </div>
-      </section>
-
-      {/* ========== Final Designs ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Final Designs (Mockups)</h2>
-        
-        <div className="split-content">
-          The final version of HR360 reflects a polished, intuitive experience.
-          <br/> <br/>
-          <img src={mockups} alt="Final application mockups" className="content-img" />
-        </div>
-      </section>
-
-      {/* ========== Design System ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">Design System & Style-guides</h2>
-        <div className="split-content">
-          <p>
-            A cohesive design system was created to maintain consistency:
-            <br/> <br/>
-
-Colors: Primary Blue for trust, Orange for activity, and Green for confirmation states.
-<br/> <br/>
-
-Typography: Modern, clean Sans-serif font with readable sizes and contrast.
-<br/> <br/>
-
-Components: Reusable UI elements like buttons, dropdowns, badges, modals, and tables were documented for scalability.
-<br/> <br/>
-This system enables faster development and ensures uniformity across screens and features.
-          </p>
-          <img  className ="color"  src={DesignColors} alt="Colors of an HR360" />
-        </div>
-      </section>
-
-      {/* ========== Prototype ========== */}
-<section className="section section--split">
-  <h2 className="section-title">Prototype</h2>
-  <div className="split-content">
-    <p>
-      The interactive prototype demonstrates the complete HR360 experience—from login to analytics, with real-time interaction and transitions. It validates how well the design supports HR workflows and employee needs while keeping the interface elegant and efficient.
-    </p>
-
-    <div className="final-mockup-embed">
-      <video
-        className="prototype-video"
-        src={prototypeVideo}  // ✅ use imported variable
-        controls
-        muted
-        autoPlay
-        loop
-        playsInline
-      />
-    </div>
-  </div>
-</section>
-
-
-
-      {/* ========== User Testing ========== */}
-      <section className="section section--split">
-        <h2 className="section-title">User Testing</h2>
-        <div className="split-content">
-          <p>
-            Objective:
-Validate HR360’s usability and ensure a smooth experience for both HR managers and employees.
-<br/> <br/>
-Participants:
-<br/>
-<b>5</b> HR Managers and <b>15</b> Employees from different departments.
-<br/> <br/>
-Method:
-<br/>
-Conducted moderated usability sessions where users managed attendance, leaves, and analytics reports. Feedback was collected through observations and short interviews.
-<br/> <br/>
-Key Insights:
-<br/>
-Managers wanted advanced filtering options in analytics.
-<br/>
-Employees requested real-time leave notifications.
-<br/>
-Improved readability and module distinction were needed.
-<br/> <br/>
-Actions Taken:
-<br/>
-Added report filters and live notifications.
-<br/>
-Refined UI for better contrast and navigation.
-<br/> <br/>
-Results:
-<br/>
-<b>95%</b>  task completion
-<br/>
-<b>30%</b> faster workflows
-<br/>
-<b>4.7/5</b> user satisfaction score
-<br/> <br/>
-Outcome:
-Testing refined HR360 into a more intuitive, efficient, and user-focused HR platform.
-
-
-          </p>
-        </div>
-      </section>
-
-      {/* ========== Conclusion ========== */}
-      <section className="section--split">
-        <h2 className="section-title">Conclusion</h2>
-        <div className="split-content">
-          <p>
-            HR360 successfully redefines HR digital management through a design that prioritizes user needs, performance, and simplicity.
-By focusing on research, accessibility, and scalability, it demonstrates how thoughtful UI/UX design can truly boost workplace productivity.
-          </p>
-        </div>
-      </section>
-      
-       {/* Live Project Button */}
-                   
-
-<button
-  className="live-project-btn"
-  onClick={() =>
-    window.open(
-      "https://play.google.com/store/apps/details?id=com.mobigic.attendance&pcampaignid=web_share",
-      "_blank"
-    )
-  }
->
-  Live Project
-
-</button>
-    </div>
+      {/* <div style={{ height: 160 }} />  */}
+      {/* bottom padding */}
+    </main>
   );
 };
 
