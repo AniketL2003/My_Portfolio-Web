@@ -9,7 +9,7 @@ import iterationall from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.png";
 import DesignColors from "../assets/ColorHR360.svg";
 import prototypeVideo from "../assets/prototype.mp4";
-import IA from "../assets/Information Architecture.svg";
+import IA from "../assets/InformationArchi.svg";
 import HRFlow from "../assets/HR-User-Flow.jpg";
 
 const HR360CaseStudyPage = () => {
