@@ -10,7 +10,8 @@ import mockups from "../assets/mockups.png";
 import DesignColors from "../assets/ColorHR360.svg";
 import prototypeVideo from "../assets/prototype.mp4";
 import IA from "../assets/InformationArchi.svg";
-import HRFlow from "../assets/HR-User-Flow.jpg";
+import HRFlow from "../assets/HRFlow.png";
+import PrototypeWeb from "../assets/PrototypeWeb.mp4";
 
 const HR360CaseStudyPage = () => {
   React.useEffect(() => {
@@ -48,7 +49,18 @@ const HR360CaseStudyPage = () => {
                   )
                 }
               >
-                Live Project
+                Live App
+              </button>
+              <button
+                className="live-project-btn"
+                onClick={() =>
+                  window.open(
+                    "https://hr360app.com",
+                    "_blank"
+                  )
+                }
+              >
+                Live Web
               </button>
             </div>
           </div>
@@ -123,15 +135,15 @@ const HR360CaseStudyPage = () => {
           <p className="small">Workday & SAP are powerful but expensive and complex; smaller orgs need usability and customization.</p>
 
           <div className="cards-row">
-            <div className="cmp-card">
+            <div className="cmp-card1">
               <h4>Workday</h4>
               <p className="small">Enterprise features, steep learning curve.</p>
             </div>
-            <div className="cmp-card">
+            <div className="cmp-card2">
               <h4>SAP SuccessFactors</h4>
               <p className="small">Robust but costly and rigid.</p>
             </div>
-            <div className="cmp-card">
+            <div className="cmp-card3">
               <h4>Other HRMS</h4>
               <p className="small">Many trade-offs in features vs. usability.</p>
             </div>
@@ -144,10 +156,10 @@ const HR360CaseStudyPage = () => {
           <p className="small">Interviews & surveys with HR managers and employees to uncover pain points.</p>
 
           <div className="insights-row">
-            <div className="insight">Lack of transparency</div>
-            <div className="insight">Manual & scattered tools</div>
-            <div className="insight">Employees face delays</div>
-            <div className="insight">Repetitive HR tasks</div>
+            <div className="insight1">Lack of transparency</div>
+            <div className="insight2">Manual & scattered tools</div>
+            <div className="insight3">Employees face delays</div>
+            <div className="insight4">Repetitive HR tasks</div>
           </div>
         </div>
 
@@ -203,9 +215,9 @@ const HR360CaseStudyPage = () => {
         <div className="subsection insights-problem">
           <h3>Key Insights</h3>
           <div className="three-insights">
-            <div className="insight-box">Delays caused by scattered tools</div>
-            <div className="insight-box">Managers need faster approvals & filters</div>
-            <div className="insight-box">Employees want transparency & live updates</div>
+            <div className="insight-box1">Delays caused by scattered tools</div>
+            <div className="insight-box2">Managers need faster approvals & filters</div>
+            <div className="insight-box3">Employees want transparency & live updates</div>
           </div>
 
           <div className="problem-box">
@@ -221,17 +233,17 @@ const HR360CaseStudyPage = () => {
 
         <div className="subsection flows">
           <h3>User Flows</h3>
-          <p className="small">Designed flows for leave, attendance, payroll, resignation.</p>
+          <p className="small">Designed flows for leave, attendance, payroll, timesheet.</p>
           <div className="flow-placeholder">
-            <img src={HRFlow}/>
+            <img src={HRFlow} />
           </div>
         </div>
 
-        <div className="subsection wireframes">
+        <div className="subsection-wireframes">
           <h3>Wireframes</h3>
-          <div className="wireframe-grid">
+          <div className="sketches-grid">
             {/* <div className="wireframe"> </div> */}
-                <img src={sketches}/>
+            <img src={sketches} />
             {/* <div className="wireframe">Low-fi 2</div>
             <div className="wireframe">Low-fi 3</div>
             <div className="wireframe">Low-fi 4</div> */}
@@ -244,13 +256,23 @@ const HR360CaseStudyPage = () => {
           <div className="prototype-row">
             <video
               className="prototype-vid"
-              src={prototypeVideo}  // ✅ use imported variable
+              src={prototypeVideo} // ✅ use imported variable
               controls
               muted
               autoPlay
               loop
               playsInline
             />
+            <video
+              className="prototype-vid2"
+              src={PrototypeWeb} // ✅ use imported variable
+              controls
+              muted
+              autoPlay
+              loop
+              playsInline
+            />
+
           </div>
         </div>
 
@@ -303,7 +325,7 @@ const HR360CaseStudyPage = () => {
         <div className="final-gallery">
           <div className="final-card"><img src={mockups} alt="Dashboard mockup" /></div>
           <div className="final-card"><img src={mockups} alt="Attendance mockup" /></div>
-          <div className="final-card"><img src={mockups} alt="Analytics mockup" /></div>
+          {/* <div className="final-card"><img src={mockups} alt="Analytics mockup" /></div> */}
         </div>
 
         <div className="design-system">
@@ -318,15 +340,15 @@ const HR360CaseStudyPage = () => {
         <h2 className="section-title">Impact</h2>
 
         <div className="stats-row">
-          <div className="stat-card">
+          <div className="stat-card1">
             <div className="stat-value">95%</div>
             <div className="stat-label">Task completion</div>
           </div>
-          <div className="stat-card">
+          <div className="stat-card2">
             <div className="stat-value">30%</div>
             <div className="stat-label">Faster workflows</div>
           </div>
-          <div className="stat-card">
+          <div className="stat-card3">
             <div className="stat-value">4.7/5</div>
             <div className="stat-label">User satisfaction</div>
           </div>
