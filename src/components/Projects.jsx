@@ -68,7 +68,7 @@ const Projects = () => {
           description="InGate is a smart visitor management app that streamlines check-ins, tracks visitors in real time, and notifies hosts instantly."
           image={hr360}
           background="#f7f7f7ff"
-          onClick={() => window.open(`https://www.behance.net/gallery/216047277/InGate-Visitor-Management-System`, "_blank")}
+          onClick={() =>navigate('/case-study/ingate') }
         />
         {/* <ProjectCard
           title="CRM"

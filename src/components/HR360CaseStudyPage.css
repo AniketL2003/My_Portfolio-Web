@@ -149,7 +149,25 @@ body {
 }
 
 .overview-grid {
-  align-items: start
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) ;
+  align-items: start;
+}
+
+.overview-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.overview-text p,
+.overview-text .small {
+  max-width: 100%; /* safety */
+}
+
+
+.overview-text h4 {
+  margin-top: 1.5rem;
 }
 
 .overview-text p,
@@ -160,11 +178,13 @@ body {
 }
 
 .overview-details .details-list {
-  background: #FAF5FF;
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
+    background: #FAF5FF;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
 }
+
 
 .details-list dt {
   font-weight: 700;
@@ -257,7 +277,7 @@ body {
   background: #F9FAFB;
   padding: 1rem;
   width: 100%;
-  max-width: 700px;
+  /* max-width: 700px; */
   display: flex;
   gap: 1rem;
   align-items: flex-start;
@@ -434,7 +454,6 @@ transform: translateY(-6px);
 .before-after-row figure {
   flex: 1;
   background: #fff;
-  border: 1px solid var(--border);
   padding: 0.5rem;
   display: flex;
   max-width: 100%;
@@ -449,30 +468,96 @@ transform: translateY(-6px);
   margin-bottom: 0.5rem
 }
 
-/* ---- Final design gallery ---- */
-.final-gallery {
-  gap: 1rem;
-  display: flex;
-  max-width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  flex-direction: column;
+.small-caption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
 }
 
-.final-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  padding: 0.5rem;
+.scroll-wrapper {
+  overflow: hidden;
+  height: 520px; /* adjust based on design */
+  width: 100%;
+  position: relative;
+}
+
+.scroll-track {
   display: flex;
-  max-width: 100%;
-  height: auto;
-  margin-top: 1rem;
   flex-direction: column;
+  animation: verticalLoop 14s linear infinite;
+  will-change: transform;
+}
+
+.before-after-row {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.before img,
+.after img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes verticalLoop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* ⏸ Pause on hover (nice UX) */
+.scroll-wrapper:hover .scroll-track {
+  animation-play-state: paused;
+}
+
+/* ---- Final design gallery ---- */
+.final-scroll-wrapper.vertical {
+  overflow: hidden;
+  width: 100%;
+  height: 520px;      /* visible window height */
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.final-scroll-track {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: finalVerticalLoop 18s linear infinite;
+  will-change: transform;
+}
+
+/* Borderless image */
+.final-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Infinite vertical loop */
+@keyframes finalVerticalLoop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* Pause on hover */
+.final-scroll-wrapper:hover .final-scroll-track {
+  animation-play-state: paused;
 }
 
 /* design system */
 .design-system {
-  margin-top: 1.25rem;
+  margin-top: 2rem;
   display: flex;
   gap: 1rem;
   align-items: stretch;
@@ -549,6 +634,7 @@ transform: translateY(-6px);
 .hero-cta {
   display: flex;
   gap: 2rem;
+  
 }
 
 .live-project-btn {
@@ -558,7 +644,44 @@ transform: translateY(-6px);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 8px;
 }
+
+.next-project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 28px;
+  border: 2px solid var(--text);
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text);
+}
+
+.arrowForward {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.next-project-btn:hover {
+  background: var(--text);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(10, 20, 40, 0.08);
+}
+
+.next-project-btn:hover .arrowForward {
+  transform: translateX(4px);
+}
+
+
 
 .live-project-btn:hover {
   background: var(--text);
@@ -570,7 +693,7 @@ transform: translateY(-6px);
 /* ---- Responsive ---- */
 @media (max-width: 1100px) {
   .grid {
-    grid-template-columns: repeat(8, 1fr)
+    grid-template-columns: repeat(0, 1fr)
   }
 
   .col-6 {
@@ -628,6 +751,7 @@ transform: translateY(-6px);
   }
 }
 
+
 @media (max-width: 640px) {
   .case-study {
     padding: 48px 24px 4rem;
@@ -663,4 +787,20 @@ transform: translateY(-6px);
   .prototype-row {
     flex-direction: column;
   }
+
+  .final-scroll-wrapper.vertical {
+    height: 300px;
+  }
+
+  .before-after-row {
+    flex-direction: column;
+  }
+
+  .insights-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
 }

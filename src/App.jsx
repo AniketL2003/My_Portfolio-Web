@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import AboutSection from './components/AboutSection';
 import HR360Details from './components/HR360CaseStudyPage';
+import InGate from './components/InGateCaseStudy';
 import mixpanel from './mixpanel';
 import { initLenis } from './lib/lenis';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -118,7 +119,7 @@ export default function App() {
           element={
             <>
               <Helmet>
-                <title>HR360 Case Study | UI/UX Design by Aniket Lamkhade</title>
+                <title>HR360 Case Study | Aniket Lamkhade Portfolio</title>
                 <meta
                   name="description"
                   content="Detailed case study of HR360 – a UI/UX solution for simplifying HR management, designed by Aniket Lamkhade."
@@ -129,6 +130,26 @@ export default function App() {
                 />
               </Helmet>
               <HR360Details />
+            </>
+          }
+        />
+
+        <Route
+          path="/case-study/ingate"
+          element={
+            <>
+              <Helmet>
+                <title>InGate Case Study | Aniket Lamkhade Portfolio</title>
+                <meta
+                  name="description"
+                  content="Detailed case study of InGate – a UI/UX solution for simplifying Visitor management, designed by Aniket Lamkhade."
+                />
+                <link
+                  rel="canonical"
+                  href="https://aniketlamkhade.vercel.app/case-study/ingate"
+                />
+              </Helmet>
+              <InGate />
             </>
           }
         />

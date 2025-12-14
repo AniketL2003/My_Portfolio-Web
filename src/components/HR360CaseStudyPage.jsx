@@ -6,12 +6,15 @@ import persona1 from "../assets/persona1.svg";
 import persona2 from "../assets/persona2.svg";
 import sketches from "../assets/sketches1.svg";
 import iterationall from "../assets/iterationall.svg";
-import mockups from "../assets/mockups.png";
+import before from "../assets/Before.svg";
+import after from "../assets/After.svg";
+import mockups from "../assets/mockups.svg";
 import DesignColors from "../assets/ColorHR360.svg";
 import prototypeVideo from "../assets/prototype.mp4";
 import IA from "../assets/InformationArchi.svg";
 import HRFlow from "../assets/HRFlow.png";
 import PrototypeWeb from "../assets/PrototypeWeb.mp4";
+import Arrow from "../assets/ArrowForward.svg";
 
 const HR360CaseStudyPage = () => {
   React.useEffect(() => {
@@ -49,7 +52,7 @@ const HR360CaseStudyPage = () => {
                   )
                 }
               >
-                Live App
+                App
               </button>
               <button
                 className="live-project-btn"
@@ -60,7 +63,7 @@ const HR360CaseStudyPage = () => {
                   )
                 }
               >
-                Live Web
+                Web
               </button>
             </div>
           </div>
@@ -80,23 +83,7 @@ const HR360CaseStudyPage = () => {
         </div>
 
         <div className="grid overview-grid">
-          <div className="overview-text">
-            <p>
-              The HR360 project was initiated to address the growing need for a
-              simplified, scalable HR management system. Mid-sized companies
-              often use multiple, disjointed tools which reduce productivity and transparency.
-            </p>
 
-            <h4>Problem Statement</h4>
-            <p className="small">
-              Traditional HR tools are too complex or inflexible. HR professionals spend too much time toggling between systems for approvals, payroll and reporting.
-            </p>
-
-            <h4>Solution Summary</h4>
-            <p className="small">
-              Build a unified HR platform focused on automation, transparency and simplicity — enabling employees and HR teams to work from one dashboard.
-            </p>
-          </div>
 
           <aside className="col col-4 overview-details">
             <dl className="details-list">
@@ -122,6 +109,25 @@ const HR360CaseStudyPage = () => {
               </div>
             </dl>
           </aside>
+
+          <div className="overview-text">
+            <p>
+              The HR360 project was initiated to address the growing need for a
+              simplified, scalable HR management system. Mid-sized companies
+              often use multiple, disjointed tools which reduce productivity and transparency.
+            </p>
+
+            <h4>Problem Statement</h4>
+            <p className="small">
+              Traditional HR tools are too complex or inflexible. HR professionals spend too much time toggling between systems for approvals, payroll and reporting.
+            </p>
+
+            <h4>Solution Summary</h4>
+            <p className="small">
+              Build a unified HR platform focused on automation, transparency and simplicity — enabling employees and HR teams to work from one dashboard.
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -300,33 +306,80 @@ const HR360CaseStudyPage = () => {
         <div className="subsection iterations">
           <h3>Iterations — Before → After</h3>
 
-          <div className="before-after-row">
-            <figure className="before">
-              <figcaption>Before</figcaption>
-              <img src={iterationall} alt="Iteration before" />
-            </figure>
+          <div className="scroll-wrapper">
+            <div className="scroll-track">
 
-            <figure className="after">
-              <figcaption>After</figcaption>
-              <img src={mockups} alt="Iteration after (final)" />
-            </figure>
+              {/* 🔁 FIRST SET */}
+              <div className="before-after-row">
+                <figure className="before">
+                  <figcaption>Before</figcaption>
+                  <img src={before} alt="Iteration before" />
+                </figure>
+
+                <figure className="after">
+                  <figcaption>After</figcaption>
+                  <img src={after} alt="Iteration after (final)" />
+                </figure>
+                <figure className="itrations">
+                  <figcaption>3 Step Iterations For Attendance</figcaption>
+                  <img src={iterationall} alt="Iteration all" />
+                </figure>
+              </div>
+
+              {/* 🔁 DUPLICATE SET (for infinite loop) */}
+              <div className="before-after-row">
+                <figure className="before">
+                  <figcaption>Before</figcaption>
+                  <img src={before} alt="Iteration before duplicate" />
+                </figure>
+
+                <figure className="after">
+                  <figcaption>After</figcaption>
+                  <img src={after} alt="Iteration after duplicate" />
+                </figure>
+
+                <figure className="itrations">
+                  <figcaption>After</figcaption>
+                  <img src={iterationall} alt="Iteration all" />
+                </figure>
+              </div>
+
+            </div>
           </div>
 
-          <p className="small caption">Changes: added live notifications, report filters, refined UI contrast.</p>
+          <p className="small-caption">
+            Changes: redesigned HR app flow, improved UX, aesthetics, and refined UI contrast.
+          </p>
         </div>
+
       </section>
 
       {/* ========== 05_Final_Design ========== */}
       <section id="final-design" className="frame final-frame">
         <h2 className="section-title">Final Design</h2>
 
-        <p className="small">The final HR360 UI: dashboard, attendance, leave flow, analytics and profile.</p>
+        <p className="small">
+          The final HR360 UI: dashboard, attendance, leave flow, analytics, profile and Web pages.
+        </p>
 
-        <div className="final-gallery">
-          <div className="final-card"><img src={mockups} alt="Dashboard mockup" /></div>
-          <div className="final-card"><img src={mockups} alt="Attendance mockup" /></div>
-          {/* <div className="final-card"><img src={mockups} alt="Analytics mockup" /></div> */}
+        <div className="final-scroll-wrapper vertical">
+          <div className="final-scroll-track">
+
+            {/* 🔁 First set */}
+            <div className="final-item">
+              <img src={mockups} alt="Dashboard mockup" />
+            </div>
+
+            {/* 🔁 Duplicate set for seamless loop */}
+            <div className="final-item">
+              <img src={mockups} alt="Dashboard mockup duplicate" />
+            </div>
+
+          </div>
         </div>
+
+
+
 
         <div className="design-system">
           <h4>Design System & Style-guides</h4>
@@ -378,6 +431,25 @@ const HR360CaseStudyPage = () => {
           </div>
         </div>
       </section>
+
+      <div className="footer-cta">
+        <button
+          className="next-project-btn"
+          onClick={() => {
+            window.location.href = "/case-study/ingate";
+          }}
+        >
+
+          Nxt Study
+          <svg
+            className="arrowForward"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M5 12h14M13 5l6 7-6 7" />
+          </svg>
+        </button>
+      </div>
 
       {/* <div style={{ height: 160 }} />  */}
       {/* bottom padding */}
