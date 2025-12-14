@@ -126,7 +126,6 @@ body {
 .lead {
   color: var(--muted);
   margin-bottom: 1.25rem;
-  max-width: 720px
 }
 
 .hero-visual {
@@ -178,7 +177,7 @@ body {
 }
 
 .overview-details .details-list {
-    background: #FAF5FF;
+       background: #FAF5FF;
     padding: 1rem;
     display: flex;
     flex-direction: row;
@@ -696,6 +695,11 @@ transform: translateY(-6px);
     grid-template-columns: repeat(0, 1fr)
   }
 
+  .overview-details .details-list {
+    flex-direction: column;  
+    gap: 2rem; 
+}
+
   .col-6 {
     grid-column: span 8
   }
@@ -757,9 +761,25 @@ transform: translateY(-6px);
     padding: 48px 24px 4rem;
   }
 
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+  .overview-details .details-list {
+    flex-direction: column; 
+    gap: 2rem; 
+}
+
+.stats-row {
+    flex-direction: column;
+  }
+
+ .overview-text {
+    margin-top: 2rem;
+  } 
+
+.cards-row {
+    flex-direction: column;
+  }
+  
+  .grid {  
+  display: block;
   }
 
   .sketches-grid {
