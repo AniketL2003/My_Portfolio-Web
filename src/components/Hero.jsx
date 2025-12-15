@@ -161,10 +161,15 @@ const Hero = () => {
 
         <FadeIn delay={0.4}>
           <p className="hero-description">
-            Helping tech startups passionately for reshaping their brands,
-            user experiences, and app/website designs.
+            Fueled by curiosity and a love for tiny details.
           </p>
         </FadeIn>
+
+        <FadeIn delay={0.4}>
+          <p className="hero-scroll-hint">
+            scroll  &#8595;
+          </p>
+        </FadeIn> 
       </div>
 
       {/* Optional hero visual (commented) */}

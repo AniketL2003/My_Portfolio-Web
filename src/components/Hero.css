@@ -29,6 +29,13 @@
 
 } */
 
+.hero-scroll-hint {
+  font-size: 0.9rem;
+  color: #A0A0A0;
+  margin-top: 6rem;
+  font-weight: 400;
+}
+
 .hero-text h2 {
   font-family: 'Epilogue', sans-serif;
   font-weight: 500;
@@ -77,7 +84,7 @@ color: #D5D5D5;
 
 .hero-description {
   font-size: 1.25rem;
-  color: #747878;
+  color: #A0A0A0;
 }
 
 /* .hero-imgs {
@@ -173,6 +180,10 @@ color: #D5D5D5;
     margin-right: 1rem;
   }
 
+  .hero-scroll-hint {
+  margin-top: 4rem;
+  
+}
   /* .hero-text h2 {
     font-size: 3.25rem;
     letter-spacing: 0.2rem;
@@ -185,8 +196,8 @@ color: #D5D5D5;
     margin: 1rem;
   }
 
-  .hero-taglne {
-    font-size: 1rem;
+  .hero-tagline {
+    font-size: 1.1rem;
     margin: 1rem;
   }
 
