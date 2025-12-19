@@ -1,38 +1,61 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   margin: 5.5rem 2rem;
   padding-left: 3rem;
   padding-right: 3rem;
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 2.8rem;
-  flex-wrap: wrap; 
-  gap: 4rem; 
+  flex-wrap: wrap;
+  gap: 4rem;
 }
 
 .hero-StarIcon {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-left: 0rem;
-  margin-right: 3rem;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: grid;
+  place-items: center;
+  /* 🔥 cleanest centering */
+  pointer-events: none;
 }
 
 
-/* .hero-text {
-  /* max-width: 600px; 
-  flex: 1;
+/* 🔁 Pink rotating background */
+.hero-bg-spin {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform-origin: center;
+}
 
-} */
+
+/* 🧍 Profile image stays still */
+.hero-profile-img {
+  position: absolute;
+  z-index: 2;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* ✅ perfect center */
+  cursor: pointer;
+
+}
+
+
 
 .hero-scroll-hint {
   font-size: 0.9rem;
   color: #A0A0A0;
-  margin-top: 6rem;
+  margin-top: 5rem;
   font-weight: 400;
 }
 
@@ -42,16 +65,18 @@
   font-size: 5.5rem;
   margin-top: 0rem;
   margin-bottom: 2rem;
-  line-height: 1.5; /* cleaner spacing */
+  line-height: 1.5;
+  /* cleaner spacing */
   letter-spacing: 0.2rem;
-  display: inline-block; /* or just remove display entirely */
+  display: inline-block;
+  /* or just remove display entirely */
   white-space: normal;
   color: #2D2D2D;
 }
 
 
 .light-Hey {
- font-family: 'Epilogue', sans-serif;
+  font-family: 'Epilogue', sans-serif;
   color: #D5D5D5;
   font-weight: 400
 }
@@ -68,10 +93,10 @@
   font-weight: 400
 }
 
-.peach{
-font-family: 'Epilogue', sans-serif;
-font-weight: 400;
-color: #D5D5D5;
+.peach {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400;
+  color: #D5D5D5;
 }
 
 .hero-tagline {
@@ -102,7 +127,9 @@ color: #D5D5D5;
 } */
 
 /* outer wrapper preserves text flow */
-.name-magnetic-outer { display: inline-block; }
+.name-magnetic-outer {
+  display: inline-block;
+}
 
 /* inner element is moved; keep it above everything */
 .name-magnetic-inner {
@@ -115,12 +142,15 @@ color: #D5D5D5;
 }
 
 /* small extra gap so 'Based In' doesn't sit too close */
-.name-magnetic-outer + .light-based,
-.name-magnetic-outer + span.light-based {
+.name-magnetic-outer+.light-based,
+.name-magnetic-outer+span.light-based {
   margin-left: 8px;
 }
 
-.name-magnetic-outer { display: inline-block; }
+.name-magnetic-outer {
+  display: inline-block;
+}
+
 .name-magnetic-inner {
   display: inline-block;
   position: relative;
@@ -159,11 +189,12 @@ color: #D5D5D5;
     margin: 1rem 0;
   }
 
-  .hero-StarIcon
-  {
+  .hero-StarIcon {
     justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    align-self: center;
   }
 
   /* .hero-imgs img {
@@ -181,9 +212,11 @@ color: #D5D5D5;
   }
 
   .hero-scroll-hint {
-  margin-top: 4rem;
-  
-}
+    margin-top: 4rem;
+
+  }
+
+
   /* .hero-text h2 {
     font-size: 3.25rem;
     letter-spacing: 0.2rem;
@@ -201,14 +234,14 @@ color: #D5D5D5;
     margin: 1rem;
   }
 
-  .hero-StarIcon
-  {
+  .hero-StarIcon {
     justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
   }
 
-  /* .hero-imgs img {
+  /* .hero-profile-img {
     width: 250px;
   } */
 }

@@ -5,7 +5,8 @@ import { FadeIn } from "./Reveal";
 import SplitReveal from "./SplitReveal";
 import "./Hero.css";
 import HeroStarIcon from "../assets/HeroStarIcon.svg";
-import circle1 from "../assets/Circle1.svg";
+import Profile from "../assets/Profile.svg";
+import Profile1 from "../assets/Profile1.svg";
 
 const Hero = () => {
   useEffect(() => {
@@ -92,13 +93,44 @@ const Hero = () => {
       <div className="hero-text">
         <motion.div
           className="hero-StarIcon"
-          initial={{ scale: 0.85, opacity: 0, rotate: 10 }}
-          animate={{ scale: 1, opacity: 1, rotate: 1 }}
-          transition={{ type: "ease-in", delay: 0.3 }}
-          style={{ willChange: "transform" }}
+          initial={{ scale: 0.85, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.3 }}
         >
-          <img src={HeroStarIcon} alt="Star Icon Hero" />
+
+          {/* 🧍 Static profile image */}
+          <img
+            src={Profile}
+            alt="Aniket profile"
+            className="hero-profile-img"
+            whileHover={{
+              scale: 1.08,
+              y: -2,
+            }}
+
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 18,
+
+            }}
+          />
+
+          {/* 🔁 Rotating pink background */}
+          <motion.img
+            src={Profile1}   // <-- your pink burst SVG
+            alt="Background burst"
+            className="hero-bg-spin"
+            animate={{ rotate: 360 }}
+            transition={{
+              repeat: Infinity,
+              duration: 18,     // ⏱ adjust speed here
+              ease: "linear"
+            }}
+          />
+
         </motion.div>
+
 
         <FadeIn delay={0.4}>
           <p className="hero-tagline">UX/UI | Product Design</p>
@@ -169,7 +201,7 @@ const Hero = () => {
           <p className="hero-scroll-hint">
             scroll  &#8595;
           </p>
-        </FadeIn> 
+        </FadeIn>
       </div>
 
       {/* Optional hero visual (commented) */}
