@@ -103,7 +103,6 @@ body {
 
 .tag {
   padding: 0.75rem 1.25rem;
-  border-radius: 6px;
   color: #000000;
   font-weight: 500;
   font-size: 1.5rem;
@@ -112,15 +111,15 @@ body {
 
 /* Specific Colors */
 .green {
-  background-color: #d0f7ef;
+  background-color: #e7e7e7;
 }
 
 .blue {
-  background-color: #b1e3ea;
+  background-color: #e7e7e7;
 }
 
 .darkgreen {
-  background-color: #d1fee4;
+  background-color: #e7e7e7;
 }
 
 /* ===== Availability Section ===== */

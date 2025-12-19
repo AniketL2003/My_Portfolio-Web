@@ -4,6 +4,7 @@ import './AboutSection.css';
 import avatar from '../assets/avatar.png';
 import Contact from './Contact';
 import MyResume from "../assets/Aniket_Lamkhade_UI_UX_Designer.pdf";
+import CircularGallery from './CircularGallery'
 
 const AboutSection = () => {
 
@@ -66,6 +67,10 @@ const AboutSection = () => {
             Project history includes: rebranding asteroid cafes, retrofitting moon craters into minimalist lounges, and decoding ancient alien wireframes.
           </p>
         </section>
+<div style={{ marginTop: '4rem', justifyItems: 'center' }}>
+      <CircularGallery />
+    </div>
+        {/* Contact Section */}
         <Contact />
       </div>
     </>
