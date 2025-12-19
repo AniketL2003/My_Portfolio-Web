@@ -73,3 +73,82 @@ body {
     padding: 2rem;
   }
 
+
+
+/* ================================
+   HARD KILL SYSTEM CURSOR
+================================ */
+
+html,
+body,
+*,
+*::before,
+*::after,
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none !important;
+}
+
+/* ================================
+   CHARACTER CURSOR
+================================ */
+
+.character-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 15px 9px 2px; /* tighter to arrow */
+  font-size: 16px;
+  font-weight: 600;
+
+  pointer-events: none;
+  z-index: 2147483647;
+  user-select: none;
+
+  mix-blend-mode: difference;
+  color: #ffffff;
+
+  transform-origin: left center;
+}
+
+/* Arrow — MATCHES YOUR IMAGE */
+.cursor-arrow {
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  width: 0;
+  height: 0;
+
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 14px solid currentColor;
+
+  transform: translateY(-90%) rotate(40deg);
+  transform-origin: center right;
+  opacity: 0.85;
+}
+
+/* Cursor personalities */
+.character-cursor.focus {
+  letter-spacing: 0.02em;
+}
+
+.character-cursor.warm {
+  font-style: italic;
+}
+
+.character-cursor.bold {
+  text-transform: uppercase;
+}
+
+.character-cursor.neutral {
+  opacity: 0.95;
+}

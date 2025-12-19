@@ -1,27 +1,31 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
-import Hero from './components/Hero';
-import Divider from './components/AutoScrollDivider';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Navbar from './components/Navbar';
-import AboutSection from './components/AboutSection';
-import HR360Details from './components/HR360CaseStudyPage';
-import InGate from './components/InGateCaseStudy';
-import InvestorCaseStudy from './components/InvestorCaseStudy';
-import mixpanel from './mixpanel';
-import { initLenis } from './lib/lenis';
-import ErrorBoundary from './components/ErrorBoundary';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Divider from "./components/AutoScrollDivider";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import AboutSection from "./components/AboutSection";
+import HR360Details from "./components/HR360CaseStudyPage";
+import InGate from "./components/InGateCaseStudy";
+import InvestorCaseStudy from "./components/InvestorCaseStudy";
+import OBACaseStudy from "./components/OBACaseStudy";
+import ErrorBoundary from "./components/ErrorBoundary";
+import NameCursor from "./components/NameCursor";
 
-import './App.css';
-import './style.css';
-import './components/AutoScrollDivider.css';
-import './components/Navbar.css';
-import OBACaseStudy from './components/OBACaseStudy';
+import mixpanel from "./mixpanel";
+import { initLenis } from "./lib/lenis";
 
-// Home page layout
+import "./App.css";
+import "./style.css";
+import "./components/AutoScrollDivider.css";
+import "./components/Navbar.css";
+
+/* ----------------------------------
+   Home Page Layout
+---------------------------------- */
 const HomePage = () => (
   <>
     <Helmet>
@@ -40,165 +44,188 @@ const HomePage = () => (
   </>
 );
 
-// Page tracking (must be inside Router, which we do in index.js)
+/* ----------------------------------
+   Page View Tracking (Mixpanel)
+---------------------------------- */
 function TrackPageView() {
   const location = useLocation();
+
   useEffect(() => {
-    mixpanel.track('Page Viewed', { page: location.pathname + location.hash });
+    mixpanel.track("Page Viewed", {
+      page: location.pathname + location.hash,
+    });
   }, [location]);
+
   return null;
 }
 
+/* ----------------------------------
+   Main App Component
+---------------------------------- */
 export default function App() {
-  // ✅ init Lenis on mount (inside a component)
+  // Initialize Lenis (smooth scroll)
   useEffect(() => {
-    const l = initLenis?.();
-    return () => l && l.destroy?.();
+    const lenis = initLenis?.();
+    return () => lenis && lenis.destroy?.();
   }, []);
 
   return (
-    <ErrorBoundary>
-      <Navbar />
-      <TrackPageView />
+    <>
+      <ErrorBoundary>
+        {/* 🔥 Global Custom Cursor */}
+        <NameCursor />
 
-      {/* Global schema (small fix: use schema.org for @context) */}
-      <Helmet>
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Aniket Lamkhade",
-            "jobTitle": "UI/UX Designer",
-            "url": "https://aniketlamkhade.vercel.app",
-            "sameAs": [
-              "https://linkedin.com/in/aniketlamkhade",
-              "https://behance.net/aniketlamkhade1"
-            ],
-            "worksFor": { "@type": "Organization", "name": "Independent" }
-          }
-        `}</script>
-      </Helmet>
+        <Navbar />
+        <TrackPageView />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+        {/* Global SEO Schema */}
+        <Helmet>
+          <script type="application/ld+json">{`
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Aniket Lamkhade",
+              "jobTitle": "UI/UX Designer",
+              "url": "https://aniketlamkhade.vercel.app",
+              "sameAs": [
+                "https://linkedin.com/in/aniketlamkhade",
+                "https://behance.net/aniketlamkhade1"
+              ],
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Independent"
+              }
+            }
+          `}</script>
+        </Helmet>
 
-        <Route
-          path="/about"
-          element={
-            <>
-              <Helmet>
-                <title>About Me | Aniket Lamkhade – UI/UX Designer</title>
-                <meta
-                  name="description"
-                  content="Learn more about Aniket Lamkhade, a passionate UI/UX designer crafting meaningful digital experiences."
-                />
-                <link rel="canonical" href="https://aniketlamkhade.vercel.app/about" />
-              </Helmet>
-              <AboutSection />
-            </>
-          }
-        />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
 
-        <Route
-          path="/contact"
-          element={
-            <>
-              <Helmet>
-                <title>Contact | Aniket Lamkhade – UI/UX Designer</title>
-                <meta
-                  name="description"
-                  content="Get in touch with Aniket Lamkhade for collaborations, projects, or freelance opportunities in UI/UX design."
-                />
-                <link rel="canonical" href="https://aniketlamkhade.vercel.app/contact" />
-              </Helmet>
-              <Contact />
-            </>
-          }
-        />
+          <Route
+            path="/about"
+            element={
+              <>
+                <Helmet>
+                  <title>About Me | Aniket Lamkhade – UI/UX Designer</title>
+                  <meta
+                    name="description"
+                    content="Learn more about Aniket Lamkhade, a passionate UI/UX designer crafting meaningful digital experiences."
+                  />
+                  <link
+                    rel="canonical"
+                    href="https://aniketlamkhade.vercel.app/about"
+                  />
+                </Helmet>
+                <AboutSection />
+              </>
+            }
+          />
 
-        <Route
-          path="/case-study/hr360"
-          element={
-            <>
-              <Helmet>
-                <title>HR360 Case Study | Aniket Lamkhade Portfolio</title>
-                <meta
-                  name="description"
-                  content="Detailed case study of HR360 – a UI/UX solution for simplifying HR management, designed by Aniket Lamkhade."
-                />
-                <link
-                  rel="canonical"
-                  href="https://aniketlamkhade.vercel.app/case-study/hr360"
-                />
-              </Helmet>
-              <HR360Details />
-            </>
-          }
-        />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <Helmet>
+                  <title>Contact | Aniket Lamkhade – UI/UX Designer</title>
+                  <meta
+                    name="description"
+                    content="Get in touch with Aniket Lamkhade for collaborations, projects, or freelance opportunities in UI/UX design."
+                  />
+                  <link
+                    rel="canonical"
+                    href="https://aniketlamkhade.vercel.app/contact"
+                  />
+                </Helmet>
+                <Contact />
+              </>
+            }
+          />
 
-        <Route
-          path="/case-study/ingate"
-          element={
-            <>
-              <Helmet>
-                <title>InGate Case Study | Aniket Lamkhade Portfolio</title>
-                <meta
-                  name="description"
-                  content="Detailed case study of InGate – a UI/UX solution for simplifying Visitor management, designed by Aniket Lamkhade."
-                />
-                <link
-                  rel="canonical"
-                  href="https://aniketlamkhade.vercel.app/case-study/ingate"
-                />
-              </Helmet>
-              <InGate />
-            </>
-          }
-        />
+          <Route
+            path="/case-study/hr360"
+            element={
+              <>
+                <Helmet>
+                  <title>HR360 Case Study | Aniket Lamkhade</title>
+                  <meta
+                    name="description"
+                    content="Detailed case study of HR360 – a UI/UX solution for simplifying HR management."
+                  />
+                  <link
+                    rel="canonical"
+                    href="https://aniketlamkhade.vercel.app/case-study/hr360"
+                  />
+                </Helmet>
+                <HR360Details />
+              </>
+            }
+          />
 
- <Route
-          path="/case-study/investor"
-          element={
-            <>
-              <Helmet>
-                <title>Real Estate Investor Case Study | Aniket Lamkhade Portfolio</title>
-                <meta
-                  name="description"
-                  content="Detailed case study of Investor – a UI/UX solution for Streamline real estate investor management, designed by Aniket Lamkhade."
-                />
-                <link
-                  rel="canonical"
-                  href="https://aniketlamkhade.vercel.app/case-study/investor"
-                />
-              </Helmet>
-              <InvestorCaseStudy />
-            </>
-          }
-        />
-        
-        <Route
-          path="/case-study/oba"
-          element={
-            <>
-              <Helmet>
-                <title>OBA Case Study | Aniket Lamkhade Portfolio</title>
-                <meta
-                  name="description"
-                  content="Detailed case study of OBA – a UI/UX solution for Streamline order management, designed by Aniket Lamkhade."
-                />
-                <link
-                  rel="canonical"
-                  href="https://aniketlamkhade.vercel.app/case-study/oba"
-                />
-              </Helmet>
-              <OBACaseStudy/>
-            </>
-          }
-        />
+          <Route
+            path="/case-study/ingate"
+            element={
+              <>
+                <Helmet>
+                  <title>InGate Case Study | Aniket Lamkhade</title>
+                  <meta
+                    name="description"
+                    content="Detailed case study of InGate – a UI/UX solution for visitor management."
+                  />
+                  <link
+                    rel="canonical"
+                    href="https://aniketlamkhade.vercel.app/case-study/ingate"
+                  />
+                </Helmet>
+                <InGate />
+              </>
+            }
+          />
 
-        {/* fallback */}
-        <Route path="*" element={<HomePage />} />
-      </Routes>
-    </ErrorBoundary>
+          <Route
+            path="/case-study/investor"
+            element={
+              <>
+                <Helmet>
+                  <title>Investor Case Study | Aniket Lamkhade</title>
+                  <meta
+                    name="description"
+                    content="Detailed case study of Investor – real estate investment platform UI/UX."
+                  />
+                  <link
+                    rel="canonical"
+                    href="https://aniketlamkhade.vercel.app/case-study/investor"
+                  />
+                </Helmet>
+                <InvestorCaseStudy />
+              </>
+            }
+          />
+
+          <Route
+            path="/case-study/oba"
+            element={
+              <>
+                <Helmet>
+                  <title>OBA Case Study | Aniket Lamkhade</title>
+                  <meta
+                    name="description"
+                    content="Detailed case study of OBA – order & business automation UI/UX solution."
+                  />
+                  <link
+                    rel="canonical"
+                    href="https://aniketlamkhade.vercel.app/case-study/oba"
+                  />
+                </Helmet>
+                <OBACaseStudy />
+              </>
+            }
+          />
+
+          {/* Fallback */}
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </ErrorBoundary>
+    </>
   );
 }
