@@ -1,13 +1,12 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import hr360 from '../assets/Ingate.png';
-import Resolveit from '../assets/Resolveit.png';
-import Retroring from '../assets/Retroring.jpg';
-import Crm from '../assets/Crm.png';
+import InGateCover from '../assets/InGateCover.svg';
 import Estate from '../assets/Estate.png';
 import imageHr from '../assets/imageHr.png';
 import './Projects.css';
+import OBACover from '../assets/OBACover.svg';
+
 
 const ProjectCard = ({ title, description, image, background, onClick }) => {
   const ref = useRef(null);
@@ -66,38 +65,26 @@ const Projects = () => {
         <ProjectCard
           title="InGate"
           description="InGate is a smart visitor management app that streamlines check-ins, tracks visitors in real time, and notifies hosts instantly."
-          image={hr360}
+          image={InGateCover}
           background="#f7f7f7ff"
           onClick={() =>navigate('/case-study/ingate') }
         />
-        {/* <ProjectCard
-          title="CRM"
-          description="CRM helps businesses manage sales, track interactions, and strengthen client relationships efficiently."
-          image={Crm}
-          background="#E7EDFF"
-          onClick={() => window.open(`https://www.behance.net/gallery/218461021/CRM-Customer-Relationship-Management`, "_blank")}
-        /> */}
+        
         <ProjectCard
           title="Real Estate Investment"
           description="Invest is a modern platform that simplifies property analysis, portfolio tracking, and decision-making for investors."
           image={Estate}
           background="#f7f7f7ff"
-          onClick={() => window.open(`https://www.behance.net/gallery/217938145/Real-Estate-Investment-System`, "_blank")}
-        />
-        {/* <ProjectCard
-          title="RetroRing"
-          description="RetroRing is a modern social media app that fosters meaningful connections through seamless content."
-          image={Retroring}
-          background="#FEE9E3"
-          onClick={() => window.open(`https://www.behance.net/gallery/200075317/RetroRing-Community-App-Case-Study`, "_blank")}
-        /> */}
+          onClick={() =>navigate('/case-study/investor') }
+          />
+       
         <ProjectCard
-          title="ResolveIT"
-          description="ResolveIT is a complaint management system that streamlines issue reporting, tracking, and resolution."
-          image={Resolveit}
+          title="OBA"
+          description="OBA is a order management system that streamlines ordering, tracking, and delivery."
+          image={OBACover}
           background="#f7f7f7ff"
-          onClick={() => window.open(`https://www.behance.net/gallery/221184171/ResolveIT-Complaint-Management-System`, "_blank")}
-        />
+          onClick={() => navigate('/case-study/oba')}
+          />
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import AboutSection from './components/AboutSection';
 import HR360Details from './components/HR360CaseStudyPage';
 import InGate from './components/InGateCaseStudy';
+import InvestorCaseStudy from './components/InvestorCaseStudy';
 import mixpanel from './mixpanel';
 import { initLenis } from './lib/lenis';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -18,6 +19,7 @@ import './App.css';
 import './style.css';
 import './components/AutoScrollDivider.css';
 import './components/Navbar.css';
+import OBACaseStudy from './components/OBACaseStudy';
 
 // Home page layout
 const HomePage = () => (
@@ -150,6 +152,46 @@ export default function App() {
                 />
               </Helmet>
               <InGate />
+            </>
+          }
+        />
+
+ <Route
+          path="/case-study/investor"
+          element={
+            <>
+              <Helmet>
+                <title>Real Estate Investor Case Study | Aniket Lamkhade Portfolio</title>
+                <meta
+                  name="description"
+                  content="Detailed case study of Investor – a UI/UX solution for Streamline real estate investor management, designed by Aniket Lamkhade."
+                />
+                <link
+                  rel="canonical"
+                  href="https://aniketlamkhade.vercel.app/case-study/investor"
+                />
+              </Helmet>
+              <InvestorCaseStudy />
+            </>
+          }
+        />
+        
+        <Route
+          path="/case-study/oba"
+          element={
+            <>
+              <Helmet>
+                <title>OBA Case Study | Aniket Lamkhade Portfolio</title>
+                <meta
+                  name="description"
+                  content="Detailed case study of OBA – a UI/UX solution for Streamline order management, designed by Aniket Lamkhade."
+                />
+                <link
+                  rel="canonical"
+                  href="https://aniketlamkhade.vercel.app/case-study/oba"
+                />
+              </Helmet>
+              <OBACaseStudy/>
             </>
           }
         />

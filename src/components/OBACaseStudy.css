@@ -1,0 +1,19 @@
+/* OBACaseStudy.css */
+ .case-study-oba {
+   padding: 2rem;
+   background-color: #f9fafb; /* Tailwind Gray-50 */
+   margin-top: 4rem;
+ }
+
+ .page-title-oba {
+   font-size: 2.25rem;
+   font-weight: 700;
+   color: #111827; /* Tailwind Gray-900 */
+   margin-top: 0.5rem;
+ }
+
+ .case-study.oba .case-study-intro {
+   font-size: 1rem;
+   color: #374151; /* Tailwind Gray-700 */
+   margin: 1rem 0;
+ }
