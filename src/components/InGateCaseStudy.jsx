@@ -12,7 +12,7 @@ const InGateCaseStudy = () => {
     <main className="case-study-ingate" aria-labelledby="page-title">
       
         <span>Case Study</span>
-        <h1 id="page-title">InGate: Project is ongoing, coming soon</h1>
+        <h1 id="page-title">InGate: Project coming soon...</h1>
         {/* <h1 id="page-title">InGate: Revolutionizing Access Control with app</h1> */}
 {/* 
       <p className="case-study-intro">
