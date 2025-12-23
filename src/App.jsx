@@ -13,7 +13,7 @@ import InGate from "./components/InGateCaseStudy";
 import InvestorCaseStudy from "./components/InvestorCaseStudy";
 import OBACaseStudy from "./components/OBACaseStudy";
 import ErrorBoundary from "./components/ErrorBoundary";
-import NameCursor from "./components/NameCursor";
+
 
 import mixpanel from "./mixpanel";
 import { initLenis } from "./lib/lenis";
@@ -72,9 +72,7 @@ export default function App() {
   return (
     <>
       <ErrorBoundary>
-        {/* 🔥 Global Custom Cursor */}
-        <NameCursor />
-
+        
         <Navbar />
         <TrackPageView />
 
