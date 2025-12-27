@@ -93,9 +93,9 @@ const Hero = () => {
       <div className="hero-text">
         <motion.div
           className="hero-StarIcon"
-          initial={{ scale: 0.85, opacity: 0 }}
+          initial={{ scale: 1.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
         >
 
           {/* 🧍 Static profile image */}
@@ -111,13 +111,13 @@ const Hero = () => {
             transition={{
               type: "spring",
               stiffness: 300,
-              damping: 18,
+              damping: 40,
 
             }}
           />
 
           {/* 🔁 Rotating pink background */}
-          <motion.img
+          {/* <motion.img
             src={Profile1}   // <-- your pink burst SVG
             alt="Background burst"
             className="hero-bg-spin"
@@ -127,7 +127,7 @@ const Hero = () => {
               duration: 18,     // ⏱ adjust speed here
               ease: "linear"
             }}
-          />
+          /> */}
 
         </motion.div>
 

@@ -32,9 +32,10 @@ const HR360CaseStudyPage = () => {
       {/* ========== 01_Hero ========== */}
       <header id="page-title" className="frame hero-frame" role="banner">
         <div className="hero-inner-grid">
-          <div className="col col-6 hero-copy">
+            <div className="col col-6 hero-copy">
+              <h4 className="project-subtitle">Mobile & Web | Case Study</h4>
             <h1 className="project-title">HR360 – Smarter HR. Stronger Productivity.</h1>
-            <h3 className="project-subtitle">Mobile & Web | Case Study</h3>
+            
 
             <p className="lead">
               HR360 centralizes attendance, payroll, recruitment, leave, and
@@ -52,7 +53,7 @@ const HR360CaseStudyPage = () => {
                   )
                 }
               >
-                App
+                Android App
               </button>
               <button
                 className="live-project-btn"
@@ -63,7 +64,7 @@ const HR360CaseStudyPage = () => {
                   )
                 }
               >
-                Web
+                Website
               </button>
             </div>
           </div>
@@ -97,7 +98,7 @@ const HR360CaseStudyPage = () => {
               </div>
               <div>
                 <dt>Duration</dt>
-                <dd>3 months</dd>
+                <dd>5 Weeks</dd>
               </div>
               <div>
                 <dt>Tools</dt>
@@ -105,7 +106,7 @@ const HR360CaseStudyPage = () => {
               </div>
               <div>
                 <dt>Methods</dt>
-                <dd>Interviews, Surveys, IA, Wireframes, Prototyping</dd>
+                <dd>Interviews, Surveys, IA, Wireframes,<br/> Prototyping</dd>
               </div>
             </dl>
           </aside>
