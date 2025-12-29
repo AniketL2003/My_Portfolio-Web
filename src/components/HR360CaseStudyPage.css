@@ -137,7 +137,8 @@ body {
 .hero-mockup img {
   width: 100%;
   max-width: 1300px;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08)
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
 }
 
 /* ---- Overview ---- */
@@ -173,7 +174,7 @@ body {
 .small {
   color: var(--muted);
   font-size: 1rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .overview-details .details-list {
@@ -182,6 +183,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 4rem;
+    border-radius: 12px;
 }
 
 
@@ -220,24 +222,27 @@ body {
   background: #EFF6FF;
   padding: 1rem;
   flex: 1;
+  border-radius: 12px;
 }
 
 .cmp-card2 {
   background: #ECFDF5;
   padding: 1rem;
   flex: 1;
+  border-radius: 12px;
 }
 
 .cmp-card3 {
   background: #EFF6FF;
   padding: 1rem;
   flex: 1;
+  border-radius: 12px;
 }
 
 .insights-row {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem
+  margin-top: 1rem;
 }
 
 .insight1 {
@@ -281,7 +286,8 @@ body {
   gap: 1rem;
   align-items: flex-start;
   justify-content: space-between;
-  flex-direction: column
+  flex-direction: column;
+  border-radius: 12px;
 }
 
 .persona-card img {
@@ -334,19 +340,22 @@ transform: translateY(-6px);
 .insight-box1 {
   background: #EFF6FF;
   padding: 1rem;
-  flex: 1
+  flex: 1;
+  border-radius: 12px;
 }
 
 .insight-box2 {
   background: #ECFDF5;
   padding: 1rem;
-  flex: 1
+  flex: 1;
+  border-radius: 12px;
 }
 
 .insight-box3 {
   background: #FAF5FF;
   padding: 1rem;
-  flex: 1
+  flex: 1;
+  border-radius: 12px;
 }
 
 /* problem box */
@@ -432,6 +441,7 @@ transform: translateY(-6px);
   margin-top: 1rem;
   padding: 1.5rem;
   background: #F0FDF4;
+  border-radius: 12px;
 }
 
 .usability-grid ul {
@@ -567,6 +577,7 @@ transform: translateY(-6px);
   border: 1px solid var(--border);
   padding: 1rem;
   flex: 1;
+  border-radius: 12px;
 }
 
 /* ---- Impact ---- */
@@ -580,21 +591,24 @@ transform: translateY(-6px);
   background: #EFF6FF;
   padding: 1rem;
   text-align: center;
-  flex: 1
+  flex: 1;
+  border-radius: 12px;
 }
 
 .stat-card2 {
   background: #ECFDF5;
   padding: 1rem;
   text-align: center;
-  flex: 1
+  flex: 1;
+  border-radius: 12px;
 }
 
 .stat-card3 {
   background: #FAF5FF;
   padding: 1rem;
   text-align: center;
-  flex: 1
+  flex: 1;
+  border-radius: 12px;
 }
 
 .stat-value {
@@ -647,6 +661,7 @@ transform: translateY(-6px);
   align-items: center;
   display: flex;
   gap: 8px;
+  border-radius: 8px;
 }
 
 .next-project-btn {
@@ -660,6 +675,7 @@ transform: translateY(-6px);
   cursor: pointer;
   transition: all 0.3s ease;
   color: var(--text);
+  border-radius: 8px;
 }
 
 .arrowForward {
