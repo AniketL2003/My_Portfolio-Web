@@ -89,13 +89,19 @@
   border:1px solid #E5E7EB;
   border-radius:14px;
   background:white;
-  box-shadow:0 8px 24px rgba(0,0,0,.06);
+  /* box-shadow:0 8px 24px rgba(0,0,0,.06); */
   padding:10px;
 }
 
 .final-design-figure img{
   height:auto;
   width: 100%;
+}
+
+.small{
+  color:var(--muted);
+  margin-bottom:.5rem;
+  display:block;
 }
 
 /* ---------- Insights ---------- */
@@ -119,6 +125,7 @@
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:1rem;
+  margin-bottom: 2rem;
 }
 
 .spot{
@@ -126,6 +133,43 @@
   border:1px solid var(--border);
   padding:1rem;
   border-radius:12px;
+}
+
+.badge-list {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+}
+
+.badge-list li {
+  counter-increment: step;
+  margin: 14px 0;
+  padding-left: 36px;
+  position: relative;
+}
+
+.badge-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #5d5d5d;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.problem-box-ingate{
+  background:#F4F4FF;
+  border:1px solid #E9D5FF;
+  padding:1rem 1.2rem;
+  border-radius:12px;
+  margin-bottom:1.5rem;
 }
 
 /* ---------- Responsive ---------- */

@@ -84,10 +84,24 @@ const InGateCaseStudyPage = () => {
           <div>Manual entry errors</div>
           <div>No digital verification</div>
           <div>Security dependency on guards</div>
+          <ol className="badge-list">
+  <li>Visitor movement was rarely recorded accurately, leading to security blind spots.</li>
+  <li>Manual data entry created frequent errors and time delays at the gate.</li>
+  <li>There was no consistent verification process for visitors and deliveries.</li>
+  <li>Security outcomes depended largely on individual guards instead of a system.</li>
+</ol>
+
+
         </div>
 
         <div className="figure">
           <h4>User Journey</h4>
+          <div className="problem-box-ingate">
+            {/* <strong>Definition:</strong> */}
+            <p>Mapping the journey helped identify friction at approval and verification touchpoints — 
+              especially during peak visitor hours. This guided us to design a faster, 
+              clearer approval workflow across resident, admin, and security roles.</p>
+          </div>
           <img src={UJI} alt="User Journey" />
         </div>
       </section>
@@ -98,21 +112,42 @@ const InGateCaseStudyPage = () => {
 
         <div className="figure">
           <h4>Card Sorting</h4>
+          <div className="problem-box-ingate">
+            {/* <strong>Definition:</strong> */}
+            <p>I used card-sorting to structure the navigation so each role — resident, 
+              guard, or admin — only sees what’s relevant to them. This ensured clarity, 
+              minimized cognitive load, and avoided feature clutter.</p>
+          </div>
           <img src={CSI} alt="Card Sorting" />
         </div>
 
         <div className="figure">
           <h4>Information Architecture</h4>
+          <div className="problem-box-ingate">
+            {/* <strong>Definition:</strong> */}
+            <p>The IA defines clear pathways for Approvals, Visitor Logs, Security Alerts, 
+              and Settings — helping users complete key actions in under 3 taps.</p>
+          </div>
           <img src={IAI} alt="Information Architecture" />
         </div>
 
         <div className="figure">
           <h4>User Flows</h4>
+          <div className="problem-box-ingate">
+            {/* <strong>Definition:</strong> */}
+            <p>I designed role-specific flows so actions like granting access, logging visitors, 
+              and reviewing history happen smoothly without confusion or redundant steps.</p>
+          </div>
           <img src={UFI} alt="User Flows" />
         </div>
 
         <div className="figure">
           <h4>Wireframes</h4>
+          <div className="problem-box-ingate">
+            {/* <strong>Definition:</strong> */}
+            <p>Wireframes focused on speed and clarity: large CTAs, real-time states, 
+              and readable logs optimized for quick scanning by on-ground staff.</p>
+          </div>
           <img src={WSI} alt="Wireframes" />
         </div>
       </section>
@@ -120,10 +155,14 @@ const InGateCaseStudyPage = () => {
       {/* FINAL */}
       <section className="frame">
         <h2 className="section-title">Final Design</h2>
-        <p className="small">
-          Smart access app interface for residents, security guards & admins.
-        </p><div className="final-design-figure">
-        <img src={FDI} alt="Final Design" />
+        <div className="problem-box-ingate">
+            {/* <strong>Definition:</strong> */}
+            <p>The final UI balances security and simplicity — bold actions for quick approvals, 
+              color-coded states for instant clarity, 
+              and accessible typography to support fast decision-making in real-world gate environments.</p>
+          </div>
+          <div className="final-design-figure">
+          <img src={FDI} alt="Final Design" />
         </div>
       </section>
 
@@ -131,11 +170,35 @@ const InGateCaseStudyPage = () => {
       <section className="frame">
         <h2 className="section-title">Learnings</h2>
         <div className="three-spot">
-          <div className="spot">Security first</div>
-          <div className="spot">Simple approvals</div>
-          <div className="spot">Clear logs</div>
+          <div className="spot">Security must feel simple</div>
+          <div className="spot">Speed matters at the gate</div>
+          <div className="spot">Clear logs build accountability</div>
         </div>
+        <div className="problem-box-ingate">
+            {/* <strong>Definition:</strong> */}
+            <p>This project strengthened my ability to design role-based systems, simplify complex workflows, 
+              and translate real-world operational needs into intuitive digital experiences.</p>
+          </div>
       </section>
+
+      <div className="footer-cta">
+        <button
+          className="next-project-btn"
+          onClick={() => {
+            window.location.href = "/case-study/investor";
+          }}
+        >
+
+          Nxt Study
+          <svg
+            className="arrowForward"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M5 12h14M13 5l6 7-6 7" />
+          </svg>
+        </button>
+      </div>
 
     </main>
   );
