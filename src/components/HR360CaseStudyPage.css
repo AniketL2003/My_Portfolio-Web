@@ -113,14 +113,15 @@ body {
   font-size: clamp(36px, 4.4vw, 56px);
   font-weight: 700;
   margin-bottom: 0.5rem;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 }
 
 .project-subtitle {
   font-size: 18px;
   color: var(--muted);
   margin-bottom: 1rem;
-  font-weight: 600
+  font-weight: 600;
+  margin-top: 3rem;
 }
 
 .lead {
