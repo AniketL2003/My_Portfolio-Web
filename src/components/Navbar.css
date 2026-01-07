@@ -6,7 +6,7 @@
   width: 100%;
   background: #ffffff;
   border-bottom: 1px solid #eee;
-  z-index: 1000;
+  z-index: 3000; /* always above overlay */
   transition: all 0.3s ease;
 }
 
@@ -18,7 +18,7 @@
 /* Container — align content like page sections */
 .navbar-container {
   width: 100%;
-  padding: 1.2rem 4.5rem; /* match this to your page section padding */
+  padding: 1.2rem 4.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,13 +38,7 @@
   width: auto;
 }
 
-.navbar-logo span {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #222;
-}
-
-/* Nav links */
+/* Nav links (Desktop) */
 .navbar-links {
   display: flex;
   gap: 3rem;
@@ -76,7 +70,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 2000;
+  z-index: 4000; /* keep clickable */
 }
 
 .hamburger span {
@@ -98,8 +92,11 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive */
+/* =========================
+        MOBILE 
+=========================*/
 @media (max-width: 768px) {
+
   .hamburger {
     display: flex;
   }
@@ -108,32 +105,51 @@
     padding: 1rem 2rem;
   }
 
+  /* Full-screen overlay that slides gently from behind navbar */
   .navbar-links {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     right: 0;
-    background: #F9E6F0;
-    flex-direction: column;
+
     width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    border-top: 1px solid #eee;
-    transition: all 0.3s ease;
+    height: 100vh;
+
+    background: rgba(249, 230, 240, 0.96);
+    backdrop-filter: blur(6px);
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    /* Start hidden */
+    opacity: 0;
+    pointer-events: none;
+
+    /* Gentle slower animation */
+    transform: translateY(-12%);
+    transition:
+      transform 0.6s cubic-bezier(.22,.61,.36,1),
+      opacity 0.55s ease-out;
+
+    z-index: 2000; /* below navbar-wrapper */
   }
 
   .navbar-links.open {
-    max-height: 300px;
-    padding: 1rem 0;
-  }
-
-  .navbar-links li {
-    text-align: center;
-    width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   .navbar-links li a {
-    display: block;
-    padding: 0.75rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .navbar-links li a:hover {
+    opacity: 0.7;
   }
 }

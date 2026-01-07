@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import ALGO from "../assets/ALGO.svg"; // your logo file
+import ALGO from "../assets/ALGO.svg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +26,10 @@ const Navbar = () => {
       const section = document.getElementById("latest-work");
       if (section) {
         const yOffset = -80;
-        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const y =
+          section.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     };
@@ -42,13 +45,13 @@ const Navbar = () => {
   return (
     <nav className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
-        {/* ✅ Logo */}
+
+        {/* Logo */}
         <NavLink to="/" className="navbar-logo" onClick={closeMenu}>
           <img src={ALGO} alt="Logo" />
-          
         </NavLink>
 
-        {/* ✅ Hamburger */}
+        {/* Hamburger */}
         <button
           className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={toggleMenu}
@@ -59,7 +62,7 @@ const Navbar = () => {
           <span></span>
         </button>
 
-        {/* ✅ Nav Links */}
+        {/* Nav Links */}
         <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
           <li>
             <a href="#latest-work" onClick={handleWorkClick}>
@@ -76,16 +79,6 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
-
-          {/* <li>
-            <NavLink
-              to="/contact"
-              onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active" : "")}
-            >
-              Contact
-            </NavLink>
-          </li> */}
         </ul>
       </div>
     </nav>
