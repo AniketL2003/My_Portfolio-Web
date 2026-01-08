@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Divider from "./components/AutoScrollDivider";
+import CurvedLoop from './CurvedLoop/CurvedLoop';
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import AboutSection from "./components/AboutSection";
@@ -20,7 +20,7 @@ import { initLenis } from "./lib/lenis";
 
 import "./App.css";
 import "./style.css";
-import "./components/AutoScrollDivider.css";
+import "./CurvedLoop/CurvedLoop.css";
 import "./components/Navbar.css";
 
 /* ----------------------------------
@@ -38,7 +38,12 @@ const HomePage = () => (
     </Helmet>
 
     <Hero />
-    <Divider />
+ <CurvedLoop
+  marqueeText="User Research ✦ UX Design ✦ App Design ✦ UI Kit ✦ Wireframing ✦ Prototyping ✦"
+  speed={2}
+  className="portfolio-curved-text"
+/>
+
     <Projects />
     <Contact />
   </>
@@ -96,6 +101,7 @@ export default function App() {
             }
           `}</script>
         </Helmet>
+
 
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -224,6 +230,7 @@ export default function App() {
           <Route path="*" element={<HomePage />} />
         </Routes>
       </ErrorBoundary>
+      
     </>
   );
 }
