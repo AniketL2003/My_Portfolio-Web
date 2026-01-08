@@ -25,7 +25,7 @@ const ProjectCard = ({ title, description, image, background, onClick }) => {
     rotateX.set(rotateXValue);
     rotateY.set(rotateYValue);
   }
-
+<script src="https://t.contentsquare.net/uxa/56fd7a75c5497.js"></script>
   return (
     <motion.div
       ref={ref}
