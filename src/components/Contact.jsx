@@ -15,7 +15,9 @@ const Contact = () => (
         className="lets-work-svg"
       />
     </div>
-  <script src="https://t.contentsquare.net/uxa/56fd7a75c5497.js"></script>
+    <head>
+<script src="https://t.contentsquare.net/uxa/56fd7a75c5497.js"></script>
+</head>
     {/* Footer */}
   
     <div className="contact-footer">

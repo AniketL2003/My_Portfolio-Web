@@ -17,7 +17,9 @@ const Hero = () => {
     hidden: { opacity: 0, y: 12 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
   };
-  <script src="https://t.contentsquare.net/uxa/56fd7a75c5497.js"></script>
+    <head>
+<script src="https://t.contentsquare.net/uxa/56fd7a75c5497.js"></script>
+</head>
   // ref for only the name span
   const nameRef = useRef(null);
 
