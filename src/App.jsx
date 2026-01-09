@@ -40,7 +40,7 @@ const HomePage = () => (
     <Hero />
  <CurvedLoop
   marqueeText="User Research ✦ UX Design ✦ App Design ✦ UI Kit ✦ Wireframing ✦ Prototyping ✦"
-  speed={2}
+  speed={4}
   className="portfolio-curved-text"
 />
 
