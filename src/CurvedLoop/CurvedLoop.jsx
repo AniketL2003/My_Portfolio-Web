@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import './CurvedLoop.css';
 
 const CurvedLoop = ({
-  marqueeText = '',
+  marqueeText="User Research ✦ UX Design ✦ App Design ✦ UI Kit ✦ Wireframing ✦ Prototyping ✦",
   speed = 1,
   className = ''
 }) => {
