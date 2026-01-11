@@ -147,7 +147,7 @@ const Hero = () => {
           }}
         >
           <span className="light-Hey">
-            <SplitReveal text={"From"} by="chars" delay={0.36} stagger={0.02} />
+            <SplitReveal text={"Product"} by="chars" delay={0.36} stagger={0.02} />
           </span>
 
           <span
