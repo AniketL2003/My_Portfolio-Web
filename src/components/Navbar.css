@@ -1,4 +1,6 @@
-/* Wrapper — full width, fixed at top */
+/* ===============================
+   NAVBAR WRAPPER
+================================ */
 .navbar-wrapper {
   position: fixed;
   top: 0;
@@ -6,16 +8,17 @@
   width: 100%;
   background: #ffffff;
   border-bottom: 1px solid #eee;
-  z-index: 3000; /* always above overlay */
+  z-index: 3000;
   transition: all 0.3s ease;
 }
 
-/* Optional shadow after scroll */
 .navbar-wrapper.scrolled {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
-/* Container — align content like page sections */
+/* ===============================
+   NAVBAR CONTAINER
+================================ */
 .navbar-container {
   width: 100%;
   padding: 1.2rem 4.5rem;
@@ -25,11 +28,12 @@
   box-sizing: border-box;
 }
 
-/* Logo */
+/* ===============================
+   LOGO
+================================ */
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   text-decoration: none;
 }
 
@@ -38,28 +42,54 @@
   width: auto;
 }
 
-/* Nav links (Desktop) */
+/* ===============================
+   NAV LINKS (DESKTOP)
+================================ */
 .navbar-links {
   display: flex;
   gap: 3rem;
   list-style: none;
   align-items: center;
-  transition: all 0.3s ease;
 }
 
+/* Base link */
 .navbar-links li a {
+  position: relative;
   color: #222;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 4px 0;
+  transition: color 0.25s ease;
 }
 
+/* Underline */
+.navbar-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+/* Hover & Active */
 .navbar-links li a:hover,
 .navbar-links li a.active {
-  color: #000;
+  color: #111;
 }
 
-/* Hamburger */
+.navbar-links li a:hover::after,
+.navbar-links li a.active::after {
+  transform: scaleX(1);
+}
+
+/* ===============================
+   HAMBURGER
+================================ */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -70,7 +100,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 4000; /* keep clickable */
+  z-index: 4000;
 }
 
 .hamburger span {
@@ -81,7 +111,6 @@
   transition: all 0.3s ease;
 }
 
-/* Hamburger open animation */
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -92,9 +121,9 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* =========================
-        MOBILE 
-=========================*/
+/* ===============================
+   MOBILE MENU
+================================ */
 @media (max-width: 768px) {
 
   .hamburger {
@@ -105,7 +134,7 @@
     padding: 1rem 2rem;
   }
 
-  /* Full-screen overlay that slides gently from behind navbar */
+  /* Full screen overlay */
   .navbar-links {
     position: fixed;
     top: 0;
@@ -122,17 +151,15 @@
     align-items: center;
     gap: 4rem;
 
-    /* Start hidden */
     opacity: 0;
     pointer-events: none;
-
-    /* Gentle slower animation */
     transform: translateY(-12%);
+
     transition:
       transform 0.6s cubic-bezier(.22,.61,.36,1),
       opacity 0.55s ease-out;
 
-    z-index: 2000; /* below navbar-wrapper */
+    z-index: 2000;
   }
 
   .navbar-links.open {
@@ -141,15 +168,22 @@
     transform: translateY(0);
   }
 
+  /* Mobile links */
   .navbar-links li a {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #111;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
+  /* Remove underline on mobile */
+  .navbar-links li a::after {
+    display: none;
+  }
+
+  /* Soft hover lift */
   .navbar-links li a:hover {
+    transform: translateY(-4px);
     opacity: 0.7;
   }
 }

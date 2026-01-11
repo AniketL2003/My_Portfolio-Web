@@ -54,15 +54,14 @@
 .hero-scroll-hint {
   font-size: 0.9rem;
   color: #A0A0A0;
-  margin-top: 5rem;
+  margin-top: 3rem;
   font-weight: 400;
 }
 
 .hero-text h2 {
-  font-family: 'Epilogue', sans-serif;
   font-weight: 500;
   font-size: 5.5rem;
-  margin-top: 0rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
   line-height: 1.5;
   /* cleaner spacing */
@@ -77,31 +76,34 @@
 .light-Hey {
   font-family: 'Epilogue', sans-serif;
   color: #D5D5D5;
-  font-weight: 400
+  font-weight: 400;
+  margin-right: 10px;
 }
 
 .light-of {
-  font-family: 'Epilogue', sans-serif;
-  color: #D5D5D5;
-  font-weight: 400
+  font-family: 'Lufga', sans-serif;
+  color: #111;
+  font-weight: 300;
 }
 
 .light-based {
-  font-family: 'Epilogue', sans-serif;
-  color: #D5D5D5;
-  font-weight: 400
+  font-family: 'Lufga', sans-serif;
+  color: #111;
+  font-weight: 300;
+  margin-right: 14px;
 }
 
 .peach {
   font-family: 'Epilogue', sans-serif;
   font-weight: 400;
   color: #D5D5D5;
+  margin-right: 14px;
 }
 
 .hero-tagline {
-  font-size: 1.25rem;
-  color: #747878;
-  font-weight: 500;
+  font-size: 1.5rem;
+  color: #A0A0A0;
+  font-weight: 400;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
@@ -172,20 +174,20 @@
     flex-direction: column;
     text-align: center;
     padding-top: 6rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
   .hero-text h2 {
     font-size: 4rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
 
   .hero-description,
   .hero-tagline {
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
 
   .hero-StarIcon {
@@ -199,6 +201,9 @@
   /* .hero-imgs img {
     width: 320px;
   } */
+
+
+
 }
 
 @media (max-width: 480px) {
@@ -216,11 +221,11 @@
   }
 
 
-  /* .hero-text h2 {
+  .hero-text h2 {
     font-size: 3.25rem;
     letter-spacing: 0.2rem;
     margin-bottom: 1rem;
-  } */
+  } 
 
   .hero-description {
     font-size: 1.1rem;
@@ -231,6 +236,7 @@
   .hero-tagline {
     font-size: 1.1rem;
     margin: 1rem;
+    margin-top: 1.5rem ;
   }
 
   .hero-StarIcon {
@@ -243,4 +249,22 @@
   /* .hero-profile-img {
     width: 250px;
   } */
+
+.light-Hey {
+  margin-right: 10px;
+}
+
+.light-based {
+  margin-right: 10px;
+  font-family: 'Lufga', sans-serif;
+}
+
+.peach {
+  margin-right: 10px;
+}
+
+.light-of {
+  font-family: 'Lufga', sans-serif;
+}
+
 }

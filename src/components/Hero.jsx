@@ -17,9 +17,9 @@ const Hero = () => {
     hidden: { opacity: 0, y: 12 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
   };
-    <head>
-<script src="https://t.contentsquare.net/uxa/56fd7a75c5497.js"></script>
-</head>
+  <head>
+    <script src="https://t.contentsquare.net/uxa/56fd7a75c5497.js"></script>
+  </head>
   // ref for only the name span
   const nameRef = useRef(null);
 
@@ -135,7 +135,7 @@ const Hero = () => {
 
 
         <FadeIn delay={0.4}>
-          <p className="hero-tagline">UX/UI | Product Design</p>
+          <p className="hero-tagline">HEY! I’m Aniket, Crafting from Oxford of the East</p>
         </FadeIn>
 
         {/* Heading — only the name span (Aniket) has magnetic ref */}
@@ -147,7 +147,7 @@ const Hero = () => {
           }}
         >
           <span className="light-Hey">
-            <SplitReveal text={"HEY! I’m "} by="chars" delay={0.36} stagger={0.02} />
+            <SplitReveal text={"From"} by="chars" delay={0.36} stagger={0.02} />
           </span>
 
           <span
@@ -170,38 +170,38 @@ const Hero = () => {
                 pointerEvents: "none",
               }}
             >
-              <SplitReveal text={"Aniket"} by="chars" delay={0.42} stagger={0.02} />
+              {/* <SplitReveal text={"interaction"} by="chars" delay={0.42} stagger={0.02} /> */}
             </span>
           </span>
 
 
 
-          <span className="light-based" style={{ marginLeft: 8 }}>
-            <SplitReveal text={" Based In "} by="chars" delay={0.48} stagger={0.02} />
+          <span className="light-based" style={{ FontFamily: "'Lufga', sans-serif" }}>
+            <SplitReveal text={"Idea"} by="chars" delay={0.48} stagger={0.02} />
           </span>
 
-          <span className="peach" style={{ marginLeft: 4 }}>
-            <SplitReveal text={"Oxford "} by="chars" delay={0.54} stagger={0.02} />
+          <span className="peach" style={{}}>
+            <SplitReveal text={"To"} by="chars" delay={0.54} stagger={0.02} />
           </span>
 
-          <span className="light-of" style={{ marginLeft: 2 }}>
-            <SplitReveal text={" Of The "} by="chars" delay={0.60} stagger={0.02} />
+          <span className="light-of" style={{ fontFamily: "'Lufga', sans-serif" }}>
+            <SplitReveal text={"Interaction"} by="chars" delay={0.60} stagger={0.02} />
           </span>
 
-          <span className="peach" style={{ marginLeft: 4 }}>
+          {/* <span className="peach" style={{ marginLeft: 4 }}>
             <SplitReveal text={"East"} by="chars" delay={0.66} stagger={0.02} />
-          </span>
+          </span> */}
         </h2>
 
-        <FadeIn delay={0.4}>
+        {/* <FadeIn delay={0.4}>
           <p className="hero-description">
-            Fueled by curiosity and a love for tiny details.
+            Design is arranging these into a seamless experience.
           </p>
-        </FadeIn>
+        </FadeIn> */}
 
         <FadeIn delay={0.4}>
           <p className="hero-scroll-hint">
-            scroll  &#8595;
+            Scroll  &#8595;
           </p>
         </FadeIn>
       </div>
