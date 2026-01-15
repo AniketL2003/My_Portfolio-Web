@@ -142,15 +142,14 @@ const Hero = () => {
         <h2
           className="hero-text"
           style={{
-            lineHeight: 1.05,
             transformStyle: "preserve-3d",
           }}
         >
           <span className="light-Hey">
-            <SplitReveal text={""} by="chars" delay={0.36} stagger={0.02} />
+            <SplitReveal text={"Idea"} by="chars" delay={0.36} stagger={0.02} />
           </span>
 
-          <span
+          {/* <span
             className="name-wrapper"
             style={{
               position: "relative",
@@ -170,15 +169,15 @@ const Hero = () => {
                 pointerEvents: "none",
               }}
             >
-              {/* <SplitReveal text={"interaction"} by="chars" delay={0.42} stagger={0.02} /> */}
+              <SplitReveal text={"interaction"} by="chars" delay={0.42} stagger={0.02} />
             </span>
-          </span>
+          </span> */}
 
 
 
-          <span className="light-based" style={{ FontFamily: "'Lufga', sans-serif" }}>
+          {/* <span className="light-based" style={{ FontFamily: "'Lufga', sans-serif" }}>
             <SplitReveal text={"Idea"} by="chars" delay={0.48} stagger={0.02} />
-          </span>
+          </span> */}
 
           <span className="peach" style={{}}>
             <SplitReveal text={"To"} by="chars" delay={0.54} stagger={0.02} />
@@ -201,7 +200,7 @@ const Hero = () => {
 
         <FadeIn delay={0.4}>
           <p className="hero-scroll-hint">
-            Scroll  &#8595;
+            Scroll &#8595;
           </p>
         </FadeIn>
       </div>
