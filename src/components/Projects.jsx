@@ -64,17 +64,26 @@ const Projects = () => {
           description="Optimising HR workflows to improve efficiency, accuracy, and employee experience."
           image={imageHr}
           bg="#f9f9f9"
-          tags={["SaaS", "Optimisation"]}
+          tags={["SaaS", "Optimisation", "HR"]}
           onClick={() => navigate("/case-study/hr360")}
         />
 
         <ProjectCard
           title="InGate"
-          description="A smart visitor management system for streamline access, security, and tracking."
+          description="A smart visitor system for streamline access, security, and tracking."
           image={InGateCover}
           bg="#f9f9f9"
-          tags={["Mobile App", "Security"]}
+          tags={["Mobile App", "Security", "B2B"]}
           onClick={() => navigate("/case-study/ingate")}
+        />
+
+        <ProjectCard
+          title="OBA"
+          description="An order booking and management system that simplifies distributor-to-retailer operations."
+          image={OBACover}
+          bg="#f9f9f9"
+          tags={["B2B", "Operations"]}
+          onClick={() => navigate("/case-study/oba")}
         />
 
         <ProjectCard
@@ -86,14 +95,7 @@ const Projects = () => {
           onClick={() => navigate("/case-study/investor")}
         />
 
-        <ProjectCard
-          title="OBA"
-          description="An order booking and management system that simplifies distributor-to-retailer operations."
-          image={OBACover}
-          bg="#f9f9f9"
-          tags={["B2B", "Operations"]}
-          onClick={() => navigate("/case-study/oba")}
-        />
+        
       </div>
     </section>
   );
