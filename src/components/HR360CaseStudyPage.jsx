@@ -87,12 +87,22 @@ const HR360CaseStudyPage = () => {
       {/* IA */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Information Architecture</h2>
+        <p>
+          I created an information architecture diagram to map out the
+          structure of the HR360 platform, ensuring intuitive navigation
+          and logical grouping of features.
+        </p>
         <img src={IA} alt="Information Architecture" className="bm-image" />
       </motion.section>
 
       {/* USER FLOW */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>User Flow</h2>
+        <p>
+          The user flow diagram illustrates the steps HR managers and team
+          leads take to complete key tasks within the platform, highlighting
+          areas for efficiency improvements.
+        </p>
         <img src={HRFlow} alt="User Flow" className="bm-image" />
       </motion.section>
 
@@ -116,8 +126,7 @@ const HR360CaseStudyPage = () => {
           <div>
             <h3>Amit Verma</h3>
             <p>
-              Team Lead who
-              Needs a single HR dashboard to manage team workflows efficiently.
+              Team Lead who needs a single HR dashboard to manage team workflows efficiently.
             </p>
           </div>
         </div>
