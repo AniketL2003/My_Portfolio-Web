@@ -11,7 +11,9 @@ import sketches from "../assets/sketches.svg";
 import IA from "../assets/InformationArchi.svg";
 import HRFlow from "../assets/HRFlow.png";
 import Wireframes from "../assets/WireframesHR360.svg";
+import Iterations from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.svg";
+import Color from "../assets/ColorHR360.svg";
 
 const HR360CaseStudyPage = () => {
   React.useEffect(() => window.scrollTo(0, 0), []);
@@ -140,10 +142,34 @@ const HR360CaseStudyPage = () => {
         <img src={Wireframes} alt="Wireframes" className="bm-image" />
       </motion.section>
 
+      {/* Iteration */}
+      <motion.section className="bm-section" {...fadeProps}>
+        <h2>Iterations</h2>
+        <p>
+              After creating the wireframes, I made several iterations to improve the usability and visual hierarchy of the design. 
+              This involved refining the layout, adjusting spacing, and enhancing the overall user experience based on feedback.
+            </p>
+        <img src={Iterations} alt="Final Design" className="bm-image" />
+      </motion.section>
+
       {/* FINAL DESIGN */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Final Design</h2>
+        <p>
+              The final design incorporates all the feedback and iterations made during the design process. 
+              The end result is a clean, user-friendly interface that effectively meets the needs of HR professionals.
+            </p>
         <img src={mockups} alt="Final Design" className="bm-image" />
+      </motion.section>
+
+      {/*  DESIGN SYSTEM */}
+      <motion.section className="bm-section" {...fadeProps}>
+        <h2>Design System</h2>
+        <p>
+              To ensure consistency across the platform, I developed a design system that includes color schemes, typography, and UI components. 
+              This system helps maintain a cohesive look and feel throughout the application.
+            </p>
+        <img src={Color} alt="Design System" className="bm-image" />
       </motion.section>
 
       {/* LEARNINGS */}

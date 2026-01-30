@@ -8,10 +8,12 @@ import IHS from "../assets/SolutionIngate.svg";
 import IAI from "../assets/Information-Architecture-InGate.svg";
 import UFI from "../assets/User-Flow-InGate.svg";
 import UJI from "../assets/User-Journey-InGate.svg";
+import IUP from "../assets/IngatePersona.svg";
 import CSI from "../assets/Card-Sorting-Ingate.svg";
 import SI from "../assets/SketchesIngate.svg";
 import WSI from "../assets/WireframesIngate.svg";
 import FDI from "../assets/Final-Design-InGate.svg";
+import IDS from "../assets/IngateDesignSystem.svg";
 
 const fadeProps = {
   variants: fadeUp,
@@ -117,7 +119,7 @@ const InGateCaseStudyPage = () => {
 
       {/* USER FLOWS */}
       <motion.section className="bm-section" {...fadeProps}>
-        <h2>User Flows</h2>
+        <h2>User Flow</h2>
         <p>
           Role-specific flows ensure that granting access, logging visitors, and
           reviewing history happens smoothly without redundant steps.
@@ -125,12 +127,22 @@ const InGateCaseStudyPage = () => {
         <img src={UFI} alt="User Flows" className="bm-image" />
       </motion.section>
 
+    {/* USER Persona */}
+      <motion.section className="bm-section" {...fadeProps}>
+        <h2>User Persona</h2>
+        <p>
+          User personas help us understand the needs, goals, and pain points of
+          different types of users interacting with the system.
+        </p>
+        <img src={IUP} alt="User Persona" className="bm-image" />
+      </motion.section>
+
       {/* Sketches */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Sketches</h2>
         <p>
-          Sketches focused on speed and clarity—large CTAs, readable logs, and
-          real-time states optimized for on-ground security staff.
+          Sketches explored various layout options and interaction patterns
+          to quickly iterate on ideas before moving to high-fidelity designs.
         </p>
         <img src={SI} alt="Wireframes" className="bm-image" />
       </motion.section>
@@ -139,8 +151,8 @@ const InGateCaseStudyPage = () => {
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Wireframes</h2>
         <p>
-          Wireframes focused on speed and clarity—large CTAs, readable logs, and
-          real-time states optimized for on-ground security staff.
+          Wireframes fleshed out the structure and hierarchy—prioritizing
+          essential information and actions for quick decision-making.
         </p>
         <img src={WSI} alt="Wireframes" className="bm-image" />
       </motion.section>
@@ -174,6 +186,16 @@ const InGateCaseStudyPage = () => {
             <span>Resident satisfaction</span>
           </div>
         </div>
+      </motion.section>
+
+      {/* DESIGN SYSTEM */}
+      <motion.section className="bm-section" {...fadeProps}>
+        <h2>Design System</h2>
+        <p>
+          Design System includes reusable components, style guidelines, and interaction
+          patterns to ensure consistency and efficiency across the InGate platform.
+        </p>
+        <img src={IDS} alt="Design System" className="bm-image" />
       </motion.section>
 
       {/* LEARNINGS */}
