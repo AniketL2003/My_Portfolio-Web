@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { fadeUp } from "./animations";
 import "./InGateCaseStudy.css";
 
+import IC from "../assets/InGateCover.svg";
+import IHS from "../assets/SolutionIngate.svg";
 import IAI from "../assets/Information-Architecture-InGate.svg";
 import UFI from "../assets/User-Flow-InGate.svg";
 import UJI from "../assets/User-Journey-InGate.svg";
@@ -35,6 +37,10 @@ const InGateCaseStudyPage = () => {
           registers with verified, permission-based entry for residential and
           commercial properties.
         </p>
+
+        <div className="bm-hero-visual">
+          <img src={IC} alt="InGate Cover" />
+        </div>
       </section>
 
       {/* META */}
@@ -63,6 +69,7 @@ const InGateCaseStudyPage = () => {
           a simple digital workflow—giving residents control while improving
           security accountability.
         </p>
+        <img src={IHS} alt="Solution" className="bm-img"/>
       </motion.section>
 
       {/* DISCOVERY */}
