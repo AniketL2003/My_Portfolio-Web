@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { FadeIn } from "./Reveal";
 import SplitReveal from "./SplitReveal";
 import "./Hero.css";
-import HeroStarIcon from "../assets/HeroStarIcon.svg";
-import Profile from "../assets/Profile.svg";
-import Profile1 from "../assets/Profile1.svg";
+import Profile from "../assets/ProfileDark.svg";
+
 
 const Hero = () => {
   useEffect(() => {

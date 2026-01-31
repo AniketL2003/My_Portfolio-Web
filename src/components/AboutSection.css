@@ -3,7 +3,7 @@ body {
   font-family: 'Epilogue', sans-serif;
   margin: 0;
   padding: 0;
-  color: #1a1a1a;
+  color: #111;
   background-color: #ffffff;
 }
 
@@ -16,7 +16,7 @@ body {
 
 /* ===== Bio Section Styling ===== */
 .about-bio-section {
-  background-color: #F9E6F0;
+  background-color: #f9f9f9;
   border-radius: 6px;
   padding: 6rem 10rem;
 }
@@ -46,7 +46,7 @@ body {
   width: 200px;
   height: 220px;
   flex-shrink: 0;
-  background-color: #000;
+  background-color: #111;
   border-radius: 8px;
 }
 
@@ -79,7 +79,7 @@ body {
 .bio-text p {
   font-size: 1.25rem;
   line-height: 1.75;
-  color: #333;
+  color: #111;
 }
 
 /* ===== Story Section ===== */
@@ -89,7 +89,7 @@ body {
   margin-right: 4rem;
   font-size: 1.5rem;
   line-height: 1.9;
-  color: #1a1a1a;
+  color: #111;
   font-weight: 500;
 }
 
@@ -103,7 +103,7 @@ body {
 
 .tag {
   padding: 0.75rem 1.25rem;
-  color: #000000;
+  color: #111;
   font-weight: 500;
   font-size: 1.5rem;
   width: fit-content;
@@ -112,15 +112,15 @@ body {
 
 /* Specific Colors */
 .green {
-  background-color: #e7e7e7;
+  background-color: #eaeaea;
 }
 
 .blue {
-  background-color: #e7e7e7;
+  background-color: #eaeaea;
 }
 
 .darkgreen {
-  background-color: #e7e7e7;
+  background-color: #eaeaea;
 }
 
 /* ===== Availability Section ===== */
@@ -128,7 +128,7 @@ body {
   margin: 1.5rem 4rem 3rem 4rem;
   font-size: 1.3rem;
   line-height: 1.75;
-  color: #333;
+  color: #111;
   max-width: auto;
 }
 
@@ -137,8 +137,8 @@ body {
   margin-top: 12px;
   padding: 10px 40px;
   background: none;
-  color: #2D2D2D;
-  border: 2px solid #2D2D2D;
+  color: #111;
+  border: 2px solid #111;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
@@ -146,7 +146,7 @@ body {
 }
 
 .resume-btn:hover {
-  background: #2D2D2D;
+  background: #111;
   color: #fff;
   transform: translateY(-2px);
   /* subtle lift effect */

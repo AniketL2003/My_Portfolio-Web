@@ -210,7 +210,7 @@ const InGateCaseStudyPage = () => {
 
       {/* FOOTER */}
       <div className="bm-footer">
-        <button onClick={() => (window.location.href = "/case-study/investor")}>
+        <button onClick={() => (window.location.href = "/case-study/oba")}>
           Next Case Study →
         </button>
       </div>

@@ -33,7 +33,17 @@
 } */
 
 /* Flex Containers with spacing */
-.bottom,
+.bottom{
+  display: flex;
+  justify-content: space-between; /* Push left & right sides apart */
+  align-items: center;
+  flex-wrap: nowrap;  
+  width: 100%;
+  max-width: 1300px; /* Limit width for alignment with page content */
+  margin: 0 auto; /* Center container horizontally */
+  padding-top: 0.5rem; /* Top/Bottom: 2rem, Left/Right: 10rem */
+  box-sizing: border-box;
+}
 .c-s {
   display: flex;
   justify-content: space-between; /* Push left & right sides apart */
@@ -198,7 +208,7 @@
   }
 
   .contact-section {
-    padding: 6rem 1.5rem;
+    padding: 3rem 1.5rem;
   } 
   .contact-footer {
     flex-direction: column;
