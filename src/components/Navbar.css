@@ -186,4 +186,8 @@
     transform: translateY(-4px);
     opacity: 0.7;
   }
+
+ .hamburger.open span {
+    background: #ffffff;
+  }
 }
