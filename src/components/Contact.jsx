@@ -49,7 +49,7 @@ const Contact = () => (
         {/* Crafted Text & Back Button*/}
         <div className="bottom">
           <p className="crafted">
-            Crafted with passion by Aniket Lamkhade | UI/UX Designer | © 2026
+            Crafted with passion by Aniket Lamkhade | Product (UI/UX) Designer | © 2026
           </p>
           <div className="back-button">
             <img

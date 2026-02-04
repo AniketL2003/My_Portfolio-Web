@@ -146,8 +146,8 @@ body {
 }
 
 .resume-btn:hover {
-  background: #111;
-  color: #fff;
+  background: #C4B5FF;
+  color: #111;
   transform: translateY(-2px);
   /* subtle lift effect */
   box-shadow: 0 4px 10px rgba(48, 55, 53, 0.3);

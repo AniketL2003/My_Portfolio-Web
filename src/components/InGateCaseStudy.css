@@ -139,7 +139,7 @@ body {
 .bm-footer button {
   padding: 12px 36px;
   border: 2px solid var(--text);
-  background: transparent;
+  background: #C4B5FF;
   font-weight: 600;
   cursor: pointer;
 }

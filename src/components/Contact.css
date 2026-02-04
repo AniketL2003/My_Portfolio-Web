@@ -112,7 +112,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #2D2D2D, #5a5858);
+  background: linear-gradient(135deg, #C4B5FF, #C4B5FF);
   border-radius: 6px;
   transform: scaleX(0);
   transform-origin: left;
@@ -125,7 +125,7 @@
 }
 
 .contact-footer .email:hover {
-  color: #fff;
+  color: #111;
 }
 
 /* === FOOTER CONTENT === */
@@ -144,7 +144,7 @@
 
 .back-button img:hover {
   transform: scale(1.1) translateY(-2px);
-  filter: drop-shadow(0 0 8px #2D2D2D);
+  filter: drop-shadow(0 0 8px #C4B5FF);
   opacity: 0.9;
 }
 
@@ -197,7 +197,7 @@
 
 .social-icons img:hover {
   transform: translateY(-2px) scale(1.1);
-  filter: drop-shadow(0 0 8px #2D2D2D);
+  filter: drop-shadow(0 0 8px #C4B5FF);
 }
 
 /* 📱 Mobile view */

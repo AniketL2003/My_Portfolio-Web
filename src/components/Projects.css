@@ -72,8 +72,8 @@
 }
 
 .ref-tags span {
-  background: #eaeaea;
-  color: #6a6a6a;
+  background: #e2dbff;
+  color: #545454;
   padding: 0.45rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -103,8 +103,8 @@
 
 /* Hover */
 .ref-card:hover .ref-arrow {
-  background: #000;
-  color: #fff;
+  background: #C4B5FF;
+  color: #111;
 }
 
 .ref-card:hover .ref-image img {
