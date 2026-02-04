@@ -4,7 +4,7 @@ import "./Projects.css";
 
 import imageHr from "../assets/imageHr.png";
 import InGateCover from "../assets/InGateCover.svg";
-import Estate from "../assets/InvestC.svg";
+import Estate from "../assets/InvestorCover.png";
 import OBACover from "../assets/ImageOBA.svg";
 
 const ProjectCard = ({ title, description, image, bg, tags, onClick }) => {

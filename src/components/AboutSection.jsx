@@ -1,7 +1,7 @@
 // src/components/AboutSection.jsx
 import React, { useEffect } from 'react';
 import './AboutSection.css';
-import avatar from '../assets/avatar.png';
+import avatar from '../assets/ProfileAbout.png';
 import Contact from './Contact';
 import MyResume from "../assets/Aniket_Lamkhade_UI_UX_Product_Designer_SaaS_Web_Mobile.pdf";
 import CircularGallery from './CircularGallery'

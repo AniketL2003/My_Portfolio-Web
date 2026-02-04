@@ -39,6 +39,8 @@ body {
 .span2 {
   font-size: 54px;
   line-height: 0;
+  color: #C4B5FF;
+  
 }
 
 /* ===== Image Section ===== */
@@ -46,7 +48,7 @@ body {
   width: 200px;
   height: 220px;
   flex-shrink: 0;
-  background-color: #111;
+  background-color: #C4B5FF;
   border-radius: 8px;
 }
 
@@ -112,15 +114,15 @@ body {
 
 /* Specific Colors */
 .green {
-  background-color: #eaeaea;
+  background-color: #e9e4ff;
 }
 
 .blue {
-  background-color: #eaeaea;
+  background-color: #e9e4ff;
 }
 
 .darkgreen {
-  background-color: #eaeaea;
+  background-color: #e9e4ff;
 }
 
 /* ===== Availability Section ===== */

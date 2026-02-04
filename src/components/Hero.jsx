@@ -51,7 +51,7 @@ const Hero = () => {
       {/* Meta */}
       <FadeIn delay={0.5}>
         <p className="hero-meta">
-          Aniket — designing with clarity, usability, and intent
+          Aniket Lamkhade — designing with clarity, usability, and intent
         </p>
       </FadeIn>
 
