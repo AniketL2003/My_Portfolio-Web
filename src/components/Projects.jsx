@@ -56,7 +56,7 @@ const Projects = () => {
 
   return (
     <section id="latest-work" className="projects">
-      <h2 className="projects-title">Work, Crafted From Curiosity</h2>
+      <h2 className="projects-title">Work, Crafted For Humans</h2>
 
       <div className="project-grid">
         <ProjectCard
