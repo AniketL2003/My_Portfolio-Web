@@ -24,7 +24,7 @@ body {
 .case-study {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
 }
 
 /* HERO */

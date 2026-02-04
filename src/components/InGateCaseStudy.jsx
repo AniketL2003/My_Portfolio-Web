@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp } from "./animations";
 import "./InGateCaseStudy.css";
+import Contact from "./Contact";
 
 import IC from "../assets/InGateCover.svg";
 import IHS from "../assets/SolutionIngate.svg";
@@ -214,7 +215,7 @@ const InGateCaseStudyPage = () => {
           Next Case Study →
         </button>
       </div>
-
+<Contact />
     </main>
   );
 };

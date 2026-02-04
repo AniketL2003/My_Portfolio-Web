@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { fadeUp } from "./animations";
 import "./HR360CaseStudyPage.css";
 
+
 import hr360Hero from "../assets/hr360-hero.svg";
 import hr360Preview from "../assets/SolutionImg.svg";
 import persona1 from "../assets/persona1.svg";
@@ -14,6 +15,7 @@ import Wireframes from "../assets/WireframesHR360.svg";
 import Iterations from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.svg";
 import Color from "../assets/ColorHR360.svg";
+import Contact from "./Contact";
 
 const HR360CaseStudyPage = () => {
   React.useEffect(() => window.scrollTo(0, 0), []);
@@ -197,6 +199,8 @@ const HR360CaseStudyPage = () => {
           Next Case Study →
         </button>
       </div>
+
+    <Contact />
 
     </main>
   );

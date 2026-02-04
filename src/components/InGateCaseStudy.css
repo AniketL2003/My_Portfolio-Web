@@ -24,7 +24,7 @@ body {
 .case-study {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
 }
 
 /* HERO */
@@ -134,6 +134,7 @@ body {
 .bm-footer {
   text-align: center;
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .bm-footer button {
