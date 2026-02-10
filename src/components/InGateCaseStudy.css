@@ -170,6 +170,6 @@ body {
   .bm-section {
     max-width: var(--content-width);
     margin: 72px auto;
-    padding: 0 24px;
+    padding: 24px 24px;
   } 
 }
