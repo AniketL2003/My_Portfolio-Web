@@ -16,6 +16,9 @@ import Iterations from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.svg";
 import Color from "../assets/ColorHR360.svg";
 import Contact from "./Contact";
+import EP from "../assets/EmployeeProblem.png";
+import HP from "../assets/HRProblem.png";
+import UUH from "../assets/UnderstandingUser.png";
 
 const HR360CaseStudyPage = () => {
   React.useEffect(() => window.scrollTo(0, 0), []);
@@ -62,6 +65,8 @@ const HR360CaseStudyPage = () => {
           leave, and employee records. Manual coordination increased
           errors, slowed approvals, and reduced visibility.
         </p>
+        <img src={EP} alt="Employee Problem Visual" className="pm-image" />
+        <img src={HP} alt="HR Problem Visual" className="pm-image" />
       </motion.section>
 
       {/* SOLUTION */}
@@ -84,6 +89,7 @@ const HR360CaseStudyPage = () => {
           team leads approving requests at scale, and employees expecting
           clarity and real-time updates.
         </p>
+        <img src={UUH} alt="Understanding User" className="uu-image" />
       </motion.section>
 
       {/* IA */}

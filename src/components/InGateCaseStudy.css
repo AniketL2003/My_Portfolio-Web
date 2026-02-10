@@ -103,6 +103,11 @@ body {
   border: 1px solid var(--border);
 }
 
+.vm-img {
+  width: 100%;  
+   margin-top: 40px;
+}
+
 /* IMPACT */
 .bm-impact {
   display: flex;
@@ -161,4 +166,10 @@ body {
   .bm-impact {
     flex-direction: column;
   }
+
+  .bm-section {
+    max-width: var(--content-width);
+    margin: 72px auto;
+    padding: 0 24px;
+  } 
 }

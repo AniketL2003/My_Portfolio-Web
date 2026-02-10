@@ -15,6 +15,8 @@ import SI from "../assets/SketchesIngate.svg";
 import WSI from "../assets/WireframesIngate.svg";
 import FDI from "../assets/Final-Design-InGate.svg";
 import IDS from "../assets/IngateDesignSystem.svg";
+import VM from "../assets/VisitorProblem.png";
+import DRV from "../assets/Discovery&ResearchV.png";
 
 const fadeProps = {
   variants: fadeUp,
@@ -62,6 +64,7 @@ const InGateCaseStudyPage = () => {
           guard-dependent decisions. This resulted in inaccurate logs, security
           blind spots, and friction for residents and security teams.
         </p>
+          <img src={VM} alt="Visitor Problem" className="vm-img"/>
       </motion.section>
 
       {/* SOLUTION */}
@@ -85,6 +88,7 @@ const InGateCaseStudyPage = () => {
           <li>No standardized verification process existed</li>
           <li>Security outcomes depended on individual guards</li>
         </ul>
+        <img src={DRV} alt="Discovery & Research" className="vm-img"/>
       </motion.section>
 
       {/* USER JOURNEY */}

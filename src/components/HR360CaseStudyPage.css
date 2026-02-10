@@ -111,6 +111,16 @@ body {
   margin-top: 40px;
 }
 
+.pm-image {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.uu-image {
+  width: 100%;
+  margin-top: 40px;
+}
+
 /* PERSONA */
 .bm-persona {
   display: flex;
