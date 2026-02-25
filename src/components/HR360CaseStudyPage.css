@@ -4,7 +4,7 @@
   --text: #0f172a;
   --muted: #64748b;
   --border: #e5e7eb;
-  --hero-bg: #e9f4e8;
+  --hero-bgH: #f0f7ff;
 
   --page-width: 1440px;
   --content-width: 720px;
@@ -29,7 +29,7 @@ body {
 
 /* HERO */
 .bm-hero {
-  background: var(--hero-bg);
+  background: var(--hero-bgH);
   padding: 120px 24px 100px;
   text-align: center;
 }
@@ -121,6 +121,24 @@ body {
   margin-top: 40px;
 }
 
+.bm-goal {
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 16px;
+  margin-top: 32px;
+}
+
+.bm-Impact {
+  background: #f0f7ff;
+  padding: 24px;
+  border-radius: 16px;
+  margin-top: 32px;
+}
+
+.bm-subsection-title{
+  margin-top: 56px;
+}
+
 /* PERSONA */
 .bm-persona {
   display: flex;
@@ -136,7 +154,7 @@ body {
 
 /* TAKEAWAY */
 .bm-takeaway {
-  background: #f8fafc;
+  background: #f0f7ff;
   padding: 80px 24px;
   border-radius: 24px;
 }

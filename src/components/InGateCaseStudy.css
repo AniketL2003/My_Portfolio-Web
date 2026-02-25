@@ -4,7 +4,7 @@
   --text: #0f172a;
   --muted: #64748b;
   --border: #e5e7eb;
-  --hero-bg: #f4f4ff;
+  --hero-bg: #f9f4ff;
 
   --page-width: 1440px;
   --content-width: 720px;
@@ -129,8 +129,8 @@ body {
 }
 
 /* TAKEAWAY */
-.bm-takeaway {
-  background: #f8fafc;
+.bm-takeawayI {
+  background: #f9f4ff;
   padding: 80px 24px;
   border-radius: 24px;
 }

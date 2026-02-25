@@ -12,6 +12,10 @@ import sketches from "../assets/sketches.svg";
 import IA from "../assets/InformationArchi.svg";
 import HRFlow from "../assets/HRFlow.png";
 import Wireframes from "../assets/WireframesHR360.svg";
+import HDHR from "../assets/HomeDecisionsHR.png";
+import ASHR from "../assets/AttendanceDecisionsHR.png";
+import LS from "../assets/LeaveDecisionsHR.png";
+import PS from "../assets/ProfileDecisionsHR.png";
 import Iterations from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.svg";
 import Color from "../assets/ColorHR360.svg";
@@ -140,42 +144,88 @@ const HR360CaseStudyPage = () => {
         </div>
       </motion.section>
 
-    {/* Sketches */}
-    <motion.section className="bm-section" {...fadeProps}>
+      {/* Sketches */}
+      <motion.section className="bm-section" {...fadeProps}>
         <h2>Sketches</h2>
         <p>
-              I started with several basic sketches of how I wanted the overall layout to be structured to begin the design stage.
-            </p>
+          I started with several basic sketches of how I wanted the overall layout to be structured to begin the design stage.
+        </p>
         <img src={sketches} alt="Sketches" className="bm-image" />
       </motion.section>
 
-      {/* Wireframes */}
-    {/* <motion.section className="bm-section" {...fadeProps}>
-        <h2>Wireframes</h2>
-        <p>
-              Once the final sketch layout was completed, it was time to incorporate those ideas into wireframes. To help visualize how the app should be structured, 
-              I created low-fidelity wireframes for the main pages in Figma.
-            </p>
-        <img src={Wireframes} alt="Wireframes" className="bm-image" />
-      </motion.section> */}
+      {/* Design Decisions */}
+      <motion.section className="bm-section" {...fadeProps}>
+        <h2>Key Screens & Design Decisions</h2>
+        <h3>
+          Home Dashboard
+        </h3>
+        <img src={HDHR} alt="Home Dashboard" className="bm-image" />
+        <div className="bm-goal">
+          <h4>Goal</h4>
+          <p>
+            Enable employees to quickly view their daily attendance status and access key HR features from a single, centralized dashboard.
+          </p>
+        </div>
+
+      
+        <h3 className="bm-subsection-title">
+          Attendance Screen
+        </h3>
+        <img src={ASHR} alt="Attendance Screen" className="bm-image" />
+        <div className="bm-goal">
+          <h4>Goal</h4>
+          <p>
+            Help employees easily track, review, and understand their attendance history with clear visual status and summaries.
+          </p>
+        </div>
+
+        <h3 className="bm-subsection-title">
+          Leave Screen
+        </h3>
+        <img src={LS} alt="Leave Screen" className="bm-image" />
+        <div className="bm-goal">
+          <h4>Goal</h4>
+          <p>
+           Allow employees to efficiently manage leave balances, track requests, and apply for leave with full transparency.
+          </p>
+        </div>
+
+
+        <h3 className="bm-subsection-title">
+          Profile Screen
+        </h3>
+        <img src={PS} alt="Profile Screen" className="bm-image" />
+        <div className="bm-goal">
+          <h4>Goal</h4>
+          <p>
+           Enable users to manage personal details and account settings in an organized and accessible way.
+          </p>
+        </div>
+        <div className="bm-Impact">
+          <h4>Overall Impact</h4>
+          <p>
+           Improved accessibility and reduced interaction effort for employees.
+          </p>
+        </div>
+      </motion.section>
 
       {/* Iteration */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Iterations</h2>
         <p>
-              After creating the wireframes, I made several iterations to improve the usability and visual hierarchy of the design. 
-              This involved refining the layout, adjusting spacing, and enhancing the overall user experience based on feedback.
-            </p>
+          After creating the wireframes, I made several iterations to improve the usability and visual hierarchy of the design.
+          This involved refining the layout, adjusting spacing, and enhancing the overall user experience based on feedback.
+        </p>
         <img src={Iterations} alt="Final Design" className="bm-image" />
       </motion.section>
 
       {/* FINAL DESIGN */}
       <motion.section className="bm-section" {...fadeProps}>
-        <h2>Final Design</h2>
+        <h2>All Design Screens</h2>
         <p>
-              The final design incorporates all the feedback and iterations made during the design process. 
-              The end result is a clean, user-friendly interface that effectively meets the needs of HR professionals.
-            </p>
+          The final design incorporates all the feedback and iterations made during the design process.
+          The end result is a clean, user-friendly interface that effectively meets the needs of HR professionals.
+        </p>
         <img src={mockups} alt="Final Design" className="bm-image" />
       </motion.section>
 
@@ -183,9 +233,9 @@ const HR360CaseStudyPage = () => {
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Design System</h2>
         <p>
-              To ensure consistency across the platform, I developed a design system that includes color schemes, typography, and UI components. 
-              This system helps maintain a cohesive look and feel throughout the application.
-            </p>
+          To ensure consistency across the platform, I developed a design system that includes color schemes, typography, and UI components.
+          This system helps maintain a cohesive look and feel throughout the application.
+        </p>
         <img src={Color} alt="Design System" className="bm-image" />
       </motion.section>
 
@@ -206,7 +256,7 @@ const HR360CaseStudyPage = () => {
         </button>
       </div>
 
-    <Contact />
+      <Contact />
 
     </main>
   );

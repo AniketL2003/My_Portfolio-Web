@@ -204,7 +204,7 @@ const InGateCaseStudyPage = () => {
       </motion.section>
 
       {/* LEARNINGS */}
-      <motion.section className="bm-section bm-takeaway" {...fadeProps}>
+      <motion.section className="bm-section bm-takeawayI" {...fadeProps}>
         <h2>Key Learnings</h2>
         <ul>
           <li>Security must feel simple to be effective</li>
