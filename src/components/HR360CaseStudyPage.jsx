@@ -150,14 +150,14 @@ const HR360CaseStudyPage = () => {
       </motion.section>
 
       {/* Wireframes */}
-    <motion.section className="bm-section" {...fadeProps}>
+    {/* <motion.section className="bm-section" {...fadeProps}>
         <h2>Wireframes</h2>
         <p>
               Once the final sketch layout was completed, it was time to incorporate those ideas into wireframes. To help visualize how the app should be structured, 
               I created low-fidelity wireframes for the main pages in Figma.
             </p>
         <img src={Wireframes} alt="Wireframes" className="bm-image" />
-      </motion.section>
+      </motion.section> */}
 
       {/* Iteration */}
       <motion.section className="bm-section" {...fadeProps}>
