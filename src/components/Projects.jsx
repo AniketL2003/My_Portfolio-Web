@@ -77,7 +77,7 @@ const Projects = () => {
           onClick={() => navigate("/case-study/ingate")}
         />
 
-        <ProjectCard
+        {/* <ProjectCard
           title="OBA"
           description="An order booking and management system that simplifies distributor-to-retailer operations."
           image={OBACover}
@@ -93,7 +93,7 @@ const Projects = () => {
           bg="#f9f9f9"
           tags={["Finance", "Web App"]}
           onClick={() => navigate("/case-study/investor")}
-        />
+        /> */}
 
         
       </div>
