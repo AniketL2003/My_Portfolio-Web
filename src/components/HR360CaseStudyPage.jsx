@@ -213,7 +213,7 @@ const HR360CaseStudyPage = () => {
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Iterations</h2>
         <p>
-          After creating the wireframes, I made several iterations to improve the usability and visual hierarchy of the design.
+          After sketching the wireframes, I made several iterations to improve the usability and visual hierarchy of the design.
           This involved refining the layout, adjusting spacing, and enhancing the overall user experience based on feedback.
         </p>
         <img src={Iterations} alt="Final Design" className="bm-image" />
