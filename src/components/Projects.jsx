@@ -60,8 +60,8 @@ const Projects = () => {
 
       <div className="project-grid">
         <ProjectCard
-          title="HR360"
-          description="Optimising HR workflows to improve efficiency, accuracy, and employee experience."
+          title="From Friction to Flow: Reinventing HR360"
+          description="Faster, clearer, and more reliable employee experience"
           image={imageHr}
           bg="#f9f9f9"
           tags={["SaaS", "Optimisation", "HR"]}
@@ -69,8 +69,8 @@ const Projects = () => {
         />
 
         <ProjectCard
-          title="InGate"
-          description="A smart visitor system for streamline access, security, and tracking."
+          title="Fixing the First Impression: Visitor Experience in InGate"
+          description="Creating a faster, smarter, and more secure visitor flow"
           image={InGateCover}
           bg="#f9f9f9"
           tags={["Mobile App", "Security", "B2B"]}

@@ -67,9 +67,9 @@ const AboutSection = () => {
             Project history includes: rebranding asteroid cafes, retrofitting moon craters into minimalist lounges, and decoding ancient alien wireframes.
           </p>
         </section>
-<div style={{ marginTop: '4rem', justifyItems: 'center' }}>
-      <CircularGallery />
-    </div>
+        <div style={{ marginTop: '4rem', justifyItems: 'center' }}>
+          {/* <CircularGallery /> */}
+        </div>
         {/* Contact Section */}
         <Contact />
       </div>
