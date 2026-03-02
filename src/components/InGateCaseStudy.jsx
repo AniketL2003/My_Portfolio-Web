@@ -204,7 +204,7 @@ const InGateCaseStudyPage = () => {
       </motion.section>
 
       {/* LEARNINGS */}
-      <motion.section className="bm-section bm-takeawayI" {...fadeProps}>
+      <motion.section className="bm-Learnings bm-section" {...fadeProps}>
         <h2>Key Learnings</h2>
         <ul>
           <li>Security must feel simple to be effective</li>
@@ -215,8 +215,8 @@ const InGateCaseStudyPage = () => {
 
       {/* FOOTER */}
       <div className="bm-footer">
-        <button onClick={() => (window.location.href = "/case-study/oba")}>
-          Next Case Study →
+        <button onClick={() => (window.location.href = "/case-study/home")}>
+          Back to Home →
         </button>
       </div>
 <Contact />

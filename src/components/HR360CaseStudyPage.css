@@ -85,7 +85,6 @@ body {
 .bm-section {
   max-width: var(--content-width);
   margin: 120px auto;
-  padding: 0 24px;
 }
 
 .bm-section h2 {
@@ -152,11 +151,15 @@ body {
   border-radius: 50%;
 }
 
-/* TAKEAWAY */
-.bm-takeaway {
+.bm-Learnings{
+  max-width: var(--content-width);
   background: #f0f7ff;
-  padding: 80px 24px;
+  padding: 24px;
   border-radius: 24px;
+}
+
+.bm-Learnings ul {
+  padding-left: 18px;
 }
 
 /* FOOTER */

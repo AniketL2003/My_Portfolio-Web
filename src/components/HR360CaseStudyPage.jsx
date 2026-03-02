@@ -17,7 +17,7 @@ import ASHR from "../assets/AttendanceDecisionsHR.png";
 import LS from "../assets/LeaveDecisionsHR.png";
 import PS from "../assets/ProfileDecisionsHR.png";
 import Iterations from "../assets/iterationall.svg";
-import mockups from "../assets/mockups.svg";
+import mockups from "../assets/mockups.png";
 import Color from "../assets/ColorHR360.svg";
 import Contact from "./Contact";
 import HPH from "../assets/ImageProblemHr.png";
@@ -239,13 +239,14 @@ const HR360CaseStudyPage = () => {
       </motion.section>
 
       {/* LEARNINGS */}
-      <motion.section className="bm-section bm-takeaway" {...fadeProps}>
+      <motion.section className="bm-Learnings bm-section" {...fadeProps}>
         <h2>Key Learnings</h2>
         <ul>
           <li>Clear information architecture matters more than feature depth</li>
           <li>Approval speed defines enterprise UX quality</li>
           <li>Design systems reduce long-term complexity</li>
         </ul>
+        
       </motion.section>
 
       {/* FOOTER */}
