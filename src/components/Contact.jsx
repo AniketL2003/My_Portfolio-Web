@@ -2,7 +2,7 @@ import React from 'react';
 import behance from '../assets/VectorB.svg';
 import linkedin from '../assets/Vectorl.svg';
 import BackArrow from '../assets/BackArrow.svg';
-import LetsWorkTogether from '../assets/Let’s work together.svg';
+import LetsWorkTogether from '../assets/Letswork.svg';
 import '../components/Contact.css';
 
 const Contact = () => (

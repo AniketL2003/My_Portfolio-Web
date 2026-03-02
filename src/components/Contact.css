@@ -17,11 +17,11 @@
 }
 
 .lets-work-svg {
-  width: 90%;
-  max-width: 1300px; /* Limit on large screens */
-  height: 90%;
+width: 100%; 
+  max-width: 1200px; /* Limit on large screens */
+  height: 40%;
   display: block;
-  margin-top: 8rem;
+  margin-top: 0rem;
 }
 
 /* .bottom{
@@ -62,7 +62,7 @@
 /* === Responsive Adjustments === */
 @media (max-width: 1024px) {
   .lets-work-svg {
-    max-width: 900px;
+    max-width: 1000px;
     margin-top: 4rem;
   }
 }
@@ -204,11 +204,11 @@
 @media (max-width: 768px) {
   .lets-work-svg {
     width: 100%;
-    max-width: 350px; /* smaller SVG size on mobile */
+    max-width: 1000px; /* smaller SVG size on mobile */
   }
 
   .contact-section {
-    padding: 3rem 1.5rem;
+    padding: 3rem 2.5rem;
   } 
   .contact-footer {
     flex-direction: column;
