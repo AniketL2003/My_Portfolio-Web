@@ -21,22 +21,7 @@ const Hero = () => {
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       >
         {/* Line 1 */}
-        <div className="headline-line">
-          <FadeIn delay={0.5}>
-          <span className="headline-strong">
-            Human-centered design,
-          </span>
-          </FadeIn>
-        </div>
-
-        {/* Line 2 */}
-        <div className="headline-line">
-          <FadeIn delay={0.5}>
-          <span className="headline-emphasis">
-            crafted ßy
-          </span>
-          </FadeIn>
-          <FadeIn delay={0.5}>
+        <FadeIn delay={0.5}>
           <span className="by-me">
             <img
               src={Profile}
@@ -45,13 +30,19 @@ const Hero = () => {
             />
           </span>
           </FadeIn>
+        <div className="headline-line">
+          <FadeIn delay={0.5}>
+          <span className="headline-strong">
+            Hey, I’m Anikeʈ Lamkhade
+          </span>
+          </FadeIn>
         </div>
       </motion.div>
 
       {/* Meta */}
       <FadeIn delay={0.5}>
         <p className="hero-meta">
-          Anikeʈ Lamkhade — designing with clarity, usability, and intent
+         I design digital products that are simple, intuitive, and delightful to use.
         </p>
       </FadeIn>
 

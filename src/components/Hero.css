@@ -40,6 +40,7 @@
   display: inline-flex;
   align-items: center;
   white-space: nowrap; /* 🔒 never break */
+  margin-bottom: 2rem;
 }
 
 /* Profile image */
