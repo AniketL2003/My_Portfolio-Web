@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { fadeUp } from "./animations";
 import "./HR360CaseStudyPage.css";
 
-
 import hr360Hero from "../assets/hr360-hero.svg";
 import hr360Preview from "../assets/SolutionImg.svg";
 import persona1 from "../assets/persona1.svg";
@@ -19,7 +18,6 @@ import PS from "../assets/ProfileDecisionsHR.png";
 import Iterations from "../assets/iterationall.svg";
 import mockups from "../assets/mockups.png";
 import Color from "../assets/ColorHR360.svg";
-import Contact from "./Contact";
 import HPH from "../assets/ImageProblemHr.png";
 import UUH from "../assets/UnderstandingUser.png";
 
@@ -29,7 +27,7 @@ const HR360CaseStudyPage = () => {
   return (
     <main className="case-study">
 
-      {/* HERO (DO NOT ANIMATE) */}
+      {/* HERO */}
       <section className="bm-hero">
         <p className="bm-eyebrow">HR360 • Case Study</p>
 
@@ -55,13 +53,7 @@ const HR360CaseStudyPage = () => {
       </section>
 
       {/* PROBLEM */}
-      <motion.section
-        className="bm-section"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
+      <motion.section className="bm-section" {...fadeProps}>
         <h2>Problem</h2>
         <p>
           HR teams relied on fragmented tools for attendance, payroll,
@@ -94,7 +86,7 @@ const HR360CaseStudyPage = () => {
         <img src={UUH} alt="Understanding User" className="uu-image" />
       </motion.section>
 
-      {/* IA */}
+      {/* INFORMATION ARCHITECTURE */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Information Architecture</h2>
         <p>
@@ -110,8 +102,7 @@ const HR360CaseStudyPage = () => {
         <h2>User Flow</h2>
         <p>
           The user flow diagram illustrates the steps HR managers and team
-          leads take to complete key tasks within the platform, highlighting
-          areas for efficiency improvements.
+          leads take to complete key tasks within the platform.
         </p>
         <img src={HRFlow} alt="User Flow" className="bm-image" />
       </motion.section>
@@ -126,143 +117,93 @@ const HR360CaseStudyPage = () => {
             <h3>Riya Sharma</h3>
             <p>
               HR Manager who needs faster approvals, reliable reporting,
-              and centralized employee data to reduce daily overhead.
+              and centralized employee data.
             </p>
           </div>
         </div>
 
         <div className="bm-persona">
-          <img src={persona} alt="HR Manager Persona" />
+          <img src={persona} alt="Team Lead Persona" />
           <div>
             <h3>Amit Verma</h3>
             <p>
-              Team Lead who needs a single HR dashboard to manage team workflows efficiently.
+              Team Lead who needs a single HR dashboard to manage workflows.
             </p>
           </div>
         </div>
       </motion.section>
 
-      {/* Sketches */}
+      {/* SKETCHES */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Sketches</h2>
         <p>
-          I started with several basic sketches of how I wanted the overall layout to be structured to begin the design stage.
+          I started with basic sketches to explore layout structures
+          and task flows.
         </p>
         <img src={sketches} alt="Sketches" className="bm-image" />
       </motion.section>
 
-      {/* Iteration */}
+      {/* ITERATIONS */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Iterations</h2>
         <p>
-          After sketching the wireframes, I made several iterations to improve the usability and visual hierarchy of the design.
-          This involved refining the layout, adjusting spacing, and enhancing the overall user experience based on feedback.
+          Multiple iterations were done to improve usability,
+          spacing, and hierarchy.
         </p>
-        <img src={Iterations} alt="Final Design" className="bm-image" />
+        <img src={Iterations} alt="Iterations" className="bm-image" />
       </motion.section>
 
-      {/* Design Decisions */}
+      {/* DESIGN DECISIONS */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Key Screens & Design Decisions</h2>
-        <h3>
-          Home Dashboard
-        </h3>
+
+        <h3>Home Dashboard</h3>
         <img src={HDHR} alt="Home Dashboard" className="bm-image" />
-        <div className="bm-goal">
-          <h4>Goal</h4>
-          <p>
-            Enable employees to quickly view their daily attendance status and access key HR features from a single, centralized dashboard.
-          </p>
-        </div>
 
-      
-        <h3 className="bm-subsection-title">
-          Attendance Screen
-        </h3>
+        <h3>Attendance Screen</h3>
         <img src={ASHR} alt="Attendance Screen" className="bm-image" />
-        <div className="bm-goal">
-          <h4>Goal</h4>
-          <p>
-            Help employees easily track, review, and understand their attendance history with clear visual status and summaries.
-          </p>
-        </div>
 
-        <h3 className="bm-subsection-title">
-          Leave Screen
-        </h3>
+        <h3>Leave Screen</h3>
         <img src={LS} alt="Leave Screen" className="bm-image" />
-        <div className="bm-goal">
-          <h4>Goal</h4>
-          <p>
-           Allow employees to efficiently manage leave balances, track requests, and apply for leave with full transparency.
-          </p>
-        </div>
 
-
-        <h3 className="bm-subsection-title">
-          Profile Screen
-        </h3>
+        <h3>Profile Screen</h3>
         <img src={PS} alt="Profile Screen" className="bm-image" />
-        <div className="bm-goal">
-          <h4>Goal</h4>
-          <p>
-           Enable users to manage personal details and account settings in an organized and accessible way.
-          </p>
-        </div>
-        <div className="bm-Impact">
-          <h4>Overall Impact</h4>
-          <p>
-           Improved accessibility and reduced interaction effort for employees.
-          </p>
-        </div>
       </motion.section>
-
 
       {/* FINAL DESIGN */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>All Design Screens</h2>
-        <p>
-          The final design incorporates all the feedback and iterations made during the design process.
-          The end result is a clean, user-friendly interface that effectively meets the needs of HR professionals.
-        </p>
         <img src={mockups} alt="Final Design" className="bm-image" />
       </motion.section>
 
-      {/*  DESIGN SYSTEM */}
+      {/* DESIGN SYSTEM */}
       <motion.section className="bm-section" {...fadeProps}>
         <h2>Design System</h2>
-        <p>
-          To ensure consistency across the platform, I developed a design system that includes color schemes, typography, and UI components.
-          This system helps maintain a cohesive look and feel throughout the application.
-        </p>
         <img src={Color} alt="Design System" className="bm-image" />
       </motion.section>
 
       {/* LEARNINGS */}
-      <motion.section className="bm-Learnings bm-section" {...fadeProps}>
+      <motion.section className="bm-section" {...fadeProps}>
         <h2>Key Learnings</h2>
         <ul>
-          <li>Clear information architecture matters more than feature depth</li>
+          <li>Clear information architecture improves usability</li>
           <li>Approval speed defines enterprise UX quality</li>
           <li>Design systems reduce long-term complexity</li>
         </ul>
-        
       </motion.section>
 
       {/* FOOTER */}
       <div className="bm-footer">
-        <button onClick={() => (window.location.href = "/case-study/ingate")}>
+        <button onClick={() => (window.location.href = "/ingate")}>
           Next Case Study →
         </button>
       </div>
-
-      <Contact />
 
     </main>
   );
 };
 
-/* Shared animation props */
+/* Animation props */
 const fadeProps = {
   variants: fadeUp,
   initial: "hidden",
