@@ -175,7 +175,7 @@ const InGateCaseStudyPage = () => {
 
       {/* FOOTER */}
       <div className="bm-footer">
-        <button onClick={() => (window.location.href = "/")}>
+        <button onClick={() => (window.location.href = "https://www.anisux.com")}>
           Back to Home →
         </button>
       </div>
