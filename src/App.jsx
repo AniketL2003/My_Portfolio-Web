@@ -10,8 +10,8 @@ import "./style.css";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HR360CaseStudyPage />} />
-      <Route path="/ingate" element={<InGateCaseStudy />} />
+      <Route path="/" element={<InGateCaseStudy />} />
+      <Route path="/hr360" element={<HR360CaseStudyPage />} />
     </Routes>
   );
 }
